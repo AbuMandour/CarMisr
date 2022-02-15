@@ -17,7 +17,7 @@ class MainCoordinator: AppCoordinator {
     }
     
     func start() {
-        let makersViewController = MakerViewController()
+        let makersViewController = MakeViewController()
         navigationController.pushViewController(makersViewController, animated: true)
     }
     

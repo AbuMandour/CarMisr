@@ -19,9 +19,15 @@
 		EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */; };
 		EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */; };
 		EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */; };
-		EA0F9F5E27BC07730096CFB0 /* MakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */; };
-		EA0F9F5F27BC07730096CFB0 /* MakerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */; };
+		EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */; };
+		EA0F9F5F27BC07730096CFB0 /* MakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F5D27BC07730096CFB0 /* MakeViewController.xib */; };
 		EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F6227BC3DEB0096CFB0 /* Colors.swift */; };
+		EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F6627BC40180096CFB0 /* MakeTableViewCell.swift */; };
+		EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F6727BC40180096CFB0 /* MakeTableViewCell.xib */; };
+		EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F6D27BC45BD0096CFB0 /* ModelViewController.swift */; };
+		EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */; };
+		EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */; };
+		EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +64,15 @@
 		EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
 		EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerViewController.swift; sourceTree = "<group>"; };
-		EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakerViewController.xib; sourceTree = "<group>"; };
+		EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewController.swift; sourceTree = "<group>"; };
+		EA0F9F5D27BC07730096CFB0 /* MakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeViewController.xib; sourceTree = "<group>"; };
 		EA0F9F6227BC3DEB0096CFB0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EA0F9F6627BC40180096CFB0 /* MakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTableViewCell.swift; sourceTree = "<group>"; };
+		EA0F9F6727BC40180096CFB0 /* MakeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeTableViewCell.xib; sourceTree = "<group>"; };
+		EA0F9F6D27BC45BD0096CFB0 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelViewController.xib; sourceTree = "<group>"; };
+		EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewCell.swift; sourceTree = "<group>"; };
+		EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,21 +260,35 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EA0F9F6027BC07880096CFB0 /* Makers */ = {
+		EA0F9F6027BC07880096CFB0 /* Makes */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */,
-				EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */,
+				EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */,
+				EA0F9F5D27BC07730096CFB0 /* MakeViewController.xib */,
+				EA0F9F6627BC40180096CFB0 /* MakeTableViewCell.swift */,
+				EA0F9F6727BC40180096CFB0 /* MakeTableViewCell.xib */,
 			);
-			path = Makers;
+			path = Makes;
 			sourceTree = "<group>";
 		};
 		EA0F9F6127BC07BF0096CFB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F6027BC07880096CFB0 /* Makers */,
+				EA0F9F6A27BC456B0096CFB0 /* Models */,
+				EA0F9F6027BC07880096CFB0 /* Makes */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EA0F9F6A27BC456B0096CFB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F6D27BC45BD0096CFB0 /* ModelViewController.swift */,
+				EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */,
+				EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */,
+				EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,9 +395,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0F9F5F27BC07730096CFB0 /* MakerViewController.xib in Resources */,
+				EA0F9F5F27BC07730096CFB0 /* MakeViewController.xib in Resources */,
 				EA0F9EF327BBFB780096CFB0 /* LaunchScreen.storyboard in Resources */,
 				EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */,
+				EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */,
+				EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */,
+				EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +431,10 @@
 				EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
-				EA0F9F5E27BC07730096CFB0 /* MakerViewController.swift in Sources */,
+				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
+				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
+				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
+				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 			);
