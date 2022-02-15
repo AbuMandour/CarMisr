@@ -21,6 +21,7 @@
 		EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */; };
 		EA0F9F5E27BC07730096CFB0 /* MakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */; };
 		EA0F9F5F27BC07730096CFB0 /* MakerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */; };
+		EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F6227BC3DEB0096CFB0 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerViewController.swift; sourceTree = "<group>"; };
 		EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakerViewController.xib; sourceTree = "<group>"; };
+		EA0F9F6227BC3DEB0096CFB0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				EA0F9EEF27BBFB780096CFB0 /* Assets.xcassets */,
 				EA0F9EF127BBFB780096CFB0 /* LaunchScreen.storyboard */,
+				EA0F9F6227BC3DEB0096CFB0 /* Colors.swift */,
 			);
 			path = SystemDesign;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
+				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
 				EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
