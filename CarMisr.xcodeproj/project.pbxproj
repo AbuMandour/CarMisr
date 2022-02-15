@@ -14,6 +14,9 @@
 		EA0F9F0827BBFB780096CFB0 /* CarMisrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */; };
 		EA0F9F0A27BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */; };
 		EA0F9F4227BC02480096CFB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4127BC02480096CFB0 /* ViewController.swift */; };
+		EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4E27BC03700096CFB0 /* ApiError.swift */; };
+		EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */; };
+		EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5027BC03700096CFB0 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITests.swift; sourceTree = "<group>"; };
 		EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA0F9F4127BC02480096CFB0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA0F9F4E27BC03700096CFB0 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
+		EA0F9F5027BC03700096CFB0 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,9 @@
 		EA0F9F4427BC02970096CFB0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F4E27BC03700096CFB0 /* ApiError.swift */,
+				EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */,
+				EA0F9F5027BC03700096CFB0 /* ApiService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -371,8 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
+				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
 				EA0F9F4227BC02480096CFB0 /* ViewController.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
+				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
