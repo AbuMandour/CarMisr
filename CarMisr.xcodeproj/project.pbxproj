@@ -13,11 +13,14 @@
 		EA0F9EFE27BBFB780096CFB0 /* CarMisrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9EFD27BBFB780096CFB0 /* CarMisrTests.swift */; };
 		EA0F9F0827BBFB780096CFB0 /* CarMisrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */; };
 		EA0F9F0A27BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */; };
-		EA0F9F4227BC02480096CFB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4127BC02480096CFB0 /* ViewController.swift */; };
 		EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4E27BC03700096CFB0 /* ApiError.swift */; };
 		EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */; };
 		EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5027BC03700096CFB0 /* ApiService.swift */; };
 		EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */; };
+		EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */; };
+		EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */; };
+		EA0F9F5E27BC07730096CFB0 /* MakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */; };
+		EA0F9F5F27BC07730096CFB0 /* MakerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +51,14 @@
 		EA0F9F0327BBFB780096CFB0 /* CarMisrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarMisrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITests.swift; sourceTree = "<group>"; };
 		EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EA0F9F4127BC02480096CFB0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA0F9F4E27BC03700096CFB0 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
 		EA0F9F5027BC03700096CFB0 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerViewController.swift; sourceTree = "<group>"; };
+		EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,7 @@
 				EA0F9F3E27BC02470096CFB0 /* Application */,
 				EA0F9F3F27BC02470096CFB0 /* Core */,
 				EA0F9F3D27BC02470096CFB0 /* Repository */,
-				EA0F9F4027BC02480096CFB0 /* View */,
+				EA0F9F4027BC02480096CFB0 /* Presentation */,
 				EA0F9EF427BBFB780096CFB0 /* Info.plist */,
 			);
 			path = CarMisr;
@@ -153,14 +159,13 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		EA0F9F4027BC02480096CFB0 /* View */ = {
+		EA0F9F4027BC02480096CFB0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F4D27BC02F80096CFB0 /* ViewCells */,
+				EA0F9F6127BC07BF0096CFB0 /* Views */,
 				EA0F9F4A27BC02CD0096CFB0 /* ViewModels */,
-				EA0F9F4927BC02C30096CFB0 /* ViewControllers */,
 			);
-			path = View;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		EA0F9F4327BC02970096CFB0 /* Infrastructure */ = {
@@ -204,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				EA0F9EE627BBFB760096CFB0 /* AppDelegate.swift */,
+				EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */,
+				EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -215,14 +222,6 @@
 				EA0F9EF127BBFB780096CFB0 /* LaunchScreen.storyboard */,
 			);
 			path = SystemDesign;
-			sourceTree = "<group>";
-		};
-		EA0F9F4927BC02C30096CFB0 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				EA0F9F4127BC02480096CFB0 /* ViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		EA0F9F4A27BC02CD0096CFB0 /* ViewModels */ = {
@@ -246,11 +245,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EA0F9F4D27BC02F80096CFB0 /* ViewCells */ = {
+		EA0F9F6027BC07880096CFB0 /* Makers */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F5C27BC07730096CFB0 /* MakerViewController.swift */,
+				EA0F9F5D27BC07730096CFB0 /* MakerViewController.xib */,
 			);
-			path = ViewCells;
+			path = Makers;
+			sourceTree = "<group>";
+		};
+		EA0F9F6127BC07BF0096CFB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F6027BC07880096CFB0 /* Makers */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0F9F5F27BC07730096CFB0 /* MakerViewController.xib in Resources */,
 				EA0F9EF327BBFB780096CFB0 /* LaunchScreen.storyboard in Resources */,
 				EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */,
 			);
@@ -384,11 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
+				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
 				EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
-				EA0F9F4227BC02480096CFB0 /* ViewController.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
+				EA0F9F5E27BC07730096CFB0 /* MakerViewController.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
+				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
