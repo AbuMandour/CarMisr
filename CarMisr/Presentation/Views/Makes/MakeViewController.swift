@@ -18,7 +18,7 @@ class MakeViewController: UIViewController {
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Car Makers"
+        title = "Car Makes"
         setupMakeTableView()
     }
     

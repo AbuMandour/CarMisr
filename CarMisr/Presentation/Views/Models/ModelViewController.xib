@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModelViewController" customModule="CarMisr" customModuleProvider="target">
             <connections>
+                <outlet property="modelsTableView" destination="xk5-MI-adi" id="wqt-pD-ImR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
