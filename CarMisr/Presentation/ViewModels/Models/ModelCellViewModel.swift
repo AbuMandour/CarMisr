@@ -10,18 +10,20 @@ import RxCocoa
 
 
 final class ModelCellViewModel{
+    
+    //MARK: - Properties
     let model: Model
-    
-    init(model: Model) {
-        self.model = model
-    }
-    
     struct Input{
         let tigger: Driver<Void>
     }
     struct Output{
         let name: Driver<String>
         let imageUrl: Driver<URL>
+    }
+    
+    //MARK: - Initailizer
+    init(model: Model) {
+        self.model = model
     }
     
     //MARK: - Internal Method

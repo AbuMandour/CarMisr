@@ -10,12 +10,10 @@ import RxSwift
 
 final class MakeCellViewModel {
     
+    //MARK: - Properties
+    
     let model: Make
-    
-    init(model: Make) {
-        self.model = model
-    }
-    
+        
     struct Input{
         let tigger: Driver<Void>
     }
@@ -23,9 +21,14 @@ final class MakeCellViewModel {
         let name: Driver<String>
     }
     
+    //MARK: - Initailizer
+    
+    init(model: Make) {
+        self.model = model
+    }
+    
     //MARK: - Internal Method
-    
-    
+        
     func transform(input: Input) -> Output {
         let name: Driver<String> = input.tigger
             .flatMapLatest { [weak self] (_) in

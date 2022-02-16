@@ -11,22 +11,22 @@ import RxCocoa
 
 class MakeTableViewCell: UITableViewCell, ViewCellDelegate {
         
+    //MARK: - Properties
     typealias ViewModel = MakeCellViewModel
     private var disposeBag = DisposeBag()
     private var viewModel : ViewModel!
     @IBOutlet weak var makeNameLabel: UILabel!
     
+    //MARK: - Overrides
     override func prepareForReuse() {
         makeNameLabel.text = nil
-    }
-    
-    
+    }        
     func configure(_ viewModel: MakeCellViewModel) {
         self.viewModel = viewModel
         bindViewModel()
     }
     
-    
+    //MARK: - Internal Method
     private func bindViewModel() {
         let layoutSubViews = rx.sentMessage(#selector(UITableViewCell.layoutSubviews))
             .take(1)

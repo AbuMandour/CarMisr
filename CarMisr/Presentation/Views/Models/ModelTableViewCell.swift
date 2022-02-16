@@ -11,24 +11,25 @@ import RxCocoa
 import Kingfisher
 
 class ModelTableViewCell: UITableViewCell , ViewCellDelegate {
-    
+
+    //MARK: - Properties
     typealias ViewModel = ModelCellViewModel    
     private var viewModel : ViewModel!
     private var disposeBag = DisposeBag()
-    
     @IBOutlet weak var modelNameLabel: UILabel!
     @IBOutlet weak var modelImageView: UIImageView!
-    
+        
+    //MARK: - Overrides
     override func prepareForReuse() {
         modelImageView.image = nil
         modelNameLabel.text = nil
     }
-    
     func configure(_ viewModel: ModelCellViewModel) {
         self.viewModel = viewModel
         bindViewModel()
     }
     
+    //MARK: - Internal Method
     private func bindViewModel() {
         let layoutSubViews = rx.sentMessage(#selector(UITableViewCell.layoutSubviews))
             .take(1)
@@ -46,8 +47,6 @@ class ModelTableViewCell: UITableViewCell , ViewCellDelegate {
                 self.modelImageView.kf.setImage(with: url)
             })
             .disposed(by: disposeBag)
-            
-
     }
     
 }
