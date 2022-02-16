@@ -19,7 +19,6 @@
 		EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4E27BC03700096CFB0 /* ApiError.swift */; };
 		EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */; };
 		EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5027BC03700096CFB0 /* ApiService.swift */; };
-		EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */; };
 		EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */; };
 		EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */; };
 		EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */; };
@@ -31,6 +30,13 @@
 		EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */; };
 		EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */; };
 		EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */; };
+		EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7727BC4AC90096CFB0 /* MakeViewModel.swift */; };
+		EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7927BC4ADA0096CFB0 /* MakeCellViewModel.swift */; };
+		EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7B27BC4B200096CFB0 /* Make.swift */; };
+		EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F7E27BC4CC90096CFB0 /* ViewCellDelegate.swift */; };
+		EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */; };
+		EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */; };
+		EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8427BC51C70096CFB0 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +78,6 @@
 		EA0F9F4E27BC03700096CFB0 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		EA0F9F4F27BC03700096CFB0 /* ApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
 		EA0F9F5027BC03700096CFB0 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
 		EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +89,13 @@
 		EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelViewController.xib; sourceTree = "<group>"; };
 		EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewCell.swift; sourceTree = "<group>"; };
 		EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelTableViewCell.xib; sourceTree = "<group>"; };
+		EA0F9F7727BC4AC90096CFB0 /* MakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewModel.swift; sourceTree = "<group>"; };
+		EA0F9F7927BC4ADA0096CFB0 /* MakeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCellViewModel.swift; sourceTree = "<group>"; };
+		EA0F9F7B27BC4B200096CFB0 /* Make.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make.swift; sourceTree = "<group>"; };
+		EA0F9F7E27BC4CC90096CFB0 /* ViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCellDelegate.swift; sourceTree = "<group>"; };
+		EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellViewModel.swift; sourceTree = "<group>"; };
+		EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
+		EA0F9F8427BC51C70096CFB0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FEBAE772881C22B82EA3DEFC /* Pods-CarMisrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisrTests.debug.xcconfig"; path = "Target Support Files/Pods-CarMisrTests/Pods-CarMisrTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +147,6 @@
 				FEBAE772881C22B82EA3DEFC /* Pods-CarMisrTests.debug.xcconfig */,
 				D43F064CF816FE4C432D82FE /* Pods-CarMisrTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -226,9 +237,9 @@
 		EA0F9F4327BC02970096CFB0 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F7D27BC4C9E0096CFB0 /* Delegates */,
 				EA0F9F4427BC02970096CFB0 /* Networking */,
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
-				EA0F9F4627BC02970096CFB0 /* Bases */,
 				EA0F9F4727BC02970096CFB0 /* Routing */,
 				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
 			);
@@ -250,14 +261,6 @@
 			children = (
 			);
 			path = Extenstions;
-			sourceTree = "<group>";
-		};
-		EA0F9F4627BC02970096CFB0 /* Bases */ = {
-			isa = PBXGroup;
-			children = (
-				EA0F9F5627BC05120096CFB0 /* BaseViewCell.swift */,
-			);
-			path = Bases;
 			sourceTree = "<group>";
 		};
 		EA0F9F4727BC02970096CFB0 /* Routing */ = {
@@ -283,6 +286,8 @@
 		EA0F9F4A27BC02CD0096CFB0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F7627BC4AAA0096CFB0 /* Models */,
+				EA0F9F7527BC4AA30096CFB0 /* Makes */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -297,6 +302,8 @@
 		EA0F9F4C27BC02E90096CFB0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F7B27BC4B200096CFB0 /* Make.swift */,
+				EA0F9F8427BC51C70096CFB0 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,6 +337,32 @@
 				EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EA0F9F7527BC4AA30096CFB0 /* Makes */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F7727BC4AC90096CFB0 /* MakeViewModel.swift */,
+				EA0F9F7927BC4ADA0096CFB0 /* MakeCellViewModel.swift */,
+			);
+			path = Makes;
+			sourceTree = "<group>";
+		};
+		EA0F9F7627BC4AAA0096CFB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */,
+				EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA0F9F7D27BC4C9E0096CFB0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F7E27BC4CC90096CFB0 /* ViewCellDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,18 +607,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
+				EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */,
 				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
-				EA0F9F5727BC05120096CFB0 /* BaseViewCell.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
+				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
+				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
 				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
+				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
+				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
 				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
+				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
