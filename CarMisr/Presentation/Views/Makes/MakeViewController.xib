@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeViewController" customModule="CarMisr" customModuleProvider="target">
             <connections>
+                <outlet property="loadMoreActivityIndicator" destination="94w-ZO-L7G" id="PdV-Z9-8lc"/>
+                <outlet property="mainActivityIndicator" destination="O2b-3u-0qc" id="cVG-h4-i3v"/>
                 <outlet property="makersTableView" destination="n7k-Ny-uAI" id="SQs-mf-s28"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,18 +28,28 @@
                         <navigationItem title="Title" id="yKF-8v-3WF"/>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7k-Ny-uAI" userLabel="makersTableView">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7k-Ny-uAI" userLabel="makersTableView">
                     <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="O2b-3u-0qc" userLabel="mainActivityIndicator">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="94w-ZO-L7G" userLabel="loadMoreActivityIndicator">
+                    <rect key="frame" x="197" y="842" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="mainBackgroundColor"/>
             <constraints>
+                <constraint firstItem="94w-ZO-L7G" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="7bb-vm-eqQ"/>
                 <constraint firstItem="n7k-Ny-uAI" firstAttribute="top" secondItem="KIr-tC-j0C" secondAttribute="bottom" id="HjI-Pq-8bk"/>
                 <constraint firstAttribute="bottom" secondItem="n7k-Ny-uAI" secondAttribute="bottom" id="M3e-HG-iDB"/>
+                <constraint firstItem="94w-ZO-L7G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OZ8-aR-VqQ"/>
                 <constraint firstItem="KIr-tC-j0C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SZG-e8-IlO"/>
+                <constraint firstItem="O2b-3u-0qc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SZf-hI-fzx"/>
                 <constraint firstAttribute="trailing" secondItem="KIr-tC-j0C" secondAttribute="trailing" id="YhL-hZ-c59"/>
+                <constraint firstItem="O2b-3u-0qc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dUU-VC-DzJ"/>
                 <constraint firstItem="KIr-tC-j0C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uI4-qk-1yu"/>
                 <constraint firstItem="n7k-Ny-uAI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w0U-zA-oOz"/>
                 <constraint firstItem="n7k-Ny-uAI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="x4o-77-NT3"/>

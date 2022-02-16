@@ -37,6 +37,9 @@
 		EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */; };
 		EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */; };
 		EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8427BC51C70096CFB0 /* Model.swift */; };
+		EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */; };
+		EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183427BDC11F00065763 /* TableViewExtension.swift */; };
+		EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183627BDC17400065763 /* ReactiveExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellViewModel.swift; sourceTree = "<group>"; };
 		EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		EA0F9F8427BC51C70096CFB0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtension.swift; sourceTree = "<group>"; };
+		EAE2183427BDC11F00065763 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		EAE2183627BDC17400065763 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
 		FEBAE772881C22B82EA3DEFC /* Pods-CarMisrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisrTests.debug.xcconfig"; path = "Target Support Files/Pods-CarMisrTests/Pods-CarMisrTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +265,9 @@
 		EA0F9F4527BC02970096CFB0 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */,
+				EAE2183427BDC11F00065763 /* TableViewExtension.swift */,
+				EAE2183627BDC17400065763 /* ReactiveExtension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -608,7 +617,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
+				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
+				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
 				EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */,
 				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
@@ -625,6 +636,7 @@
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
+				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

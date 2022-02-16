@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Foundation
 
 
 final class MakeViewModel{
@@ -17,21 +18,20 @@ final class MakeViewModel{
     private var tempMakes = [Make]()
     private var isLoading = BehaviorRelay<Bool>(value: false)
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
-    private var message = PublishRelay<String>()
     private var canLoadMore = true
     private var pageNumber = 0
+    private var itemsCount = 0
     
     struct Input {
-        let didAppear: ControlEvent<Void>
+        let didAppear: Driver<Void>
         let makeSelected: ControlEvent<Make>
-        let loadMore: Driver<Bool>
+        let prefetchRows: ControlEvent<[IndexPath]>
     }
     
     struct Output{
         let makes: Observable<[Make]>
         let isloading: Observable<Bool>
         let isloadMore: Observable<Bool>
-        let message: Observable<String>
     }
     
     //MARK: - Initailizer
@@ -41,7 +41,7 @@ final class MakeViewModel{
     func transform(input: Input) -> Output{
         
         input.didAppear
-            .bind { [weak self] (_) in
+            .drive { [weak self] (_) in
                 guard let self = self else { return }
                 self.loadData()
             }.disposed(by: disposeBag)
@@ -52,13 +52,13 @@ final class MakeViewModel{
                 self.showModels(make: make)
             }.disposed(by: disposeBag)
         
-        input.loadMore
-            .drive { [weak self] shouldLoadMore in
+        input.prefetchRows
+            .bind { [weak self] indexPaths in
                 guard let self = self else { return }
-                self.loadMore(shouldLoadMore: shouldLoadMore)
+                self.loadMore(prefetchRowsAt: indexPaths)
             }.disposed(by: disposeBag)
         
-        return Output(makes: makes.asObservable(), isloading: isLoading.asObservable(), isloadMore: isLoadMore.asObservable(), message: message.asObservable())
+        return Output(makes: makes.asObservable(), isloading: isLoading.asObservable(), isloadMore: isLoadMore.asObservable())
     }
     
     //MARK: - Internal Method
@@ -71,12 +71,15 @@ final class MakeViewModel{
         isLoading.accept(false)
     }
         
-    private func loadMore(shouldLoadMore: Bool){
-        if shouldLoadMore && self.canLoadMore && !self.tempMakes.isEmpty{
-            isLoadMore.accept(true)
-            pageNumber += 1
-            Task{ await requestMakes() }
-            isLoadMore.accept(false)
+    private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
+        for index in indexPaths {
+            if index.row >= itemsCount - 3 && canLoadMore && !isLoading.value {
+                isLoadMore.accept(true)
+                pageNumber += 1
+                Task{ await requestMakes() }
+                isLoadMore.accept(false)
+                break
+            }
         }
     }
     
