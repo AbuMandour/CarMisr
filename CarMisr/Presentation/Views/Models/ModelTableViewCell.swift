@@ -33,8 +33,8 @@ class ModelTableViewCell: UITableViewCell , ViewCellDelegate {
     private func bindViewModel() {
         let layoutSubViews = rx.sentMessage(#selector(UITableViewCell.layoutSubviews))
             .take(1)
-            .map{ _ in }
-            .asDriver(onErrorRecover: {(error) in return Driver.empty() })
+            .mapToVoid()
+            .asDriverComplete()
         let input = ViewModel.Input(tigger: layoutSubViews)
         
         let output = viewModel.transform(input: input)
