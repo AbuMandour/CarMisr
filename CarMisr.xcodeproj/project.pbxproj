@@ -51,6 +51,11 @@
 		EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */; };
 		EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */; };
 		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
+		EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */; };
+		EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */; };
+		EA8725C527BECFD200860CB4 /* CarMakeStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C427BECFD200860CB4 /* CarMakeStub.swift */; };
+		EA8725CA27BED54300860CB4 /* CarMakeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */; };
+		EA8725CC27BED60500860CB4 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725CB27BED60500860CB4 /* DataError.swift */; };
 		EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */; };
 		EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183427BDC11F00065763 /* TableViewExtension.swift */; };
 		EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183627BDC17400065763 /* ReactiveExtension.swift */; };
@@ -127,6 +132,11 @@
 		EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
 		EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
 		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectMake.swift; sourceTree = "<group>"; };
+		EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
+		EA8725C427BECFD200860CB4 /* CarMakeStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeStub.swift; sourceTree = "<group>"; };
+		EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeProtocol.swift; sourceTree = "<group>"; };
+		EA8725CB27BED60500860CB4 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtension.swift; sourceTree = "<group>"; };
 		EAE2183427BDC11F00065763 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		EAE2183627BDC17400065763 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
@@ -222,6 +232,9 @@
 		EA0F9EFC27BBFB780096CFB0 /* CarMisrTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA8725C327BECFA700860CB4 /* Stub */,
+				EA8725C027BECA1B00860CB4 /* Mocks */,
+				EA8725BD27BEC82600860CB4 /* UnitTest */,
 				EA0F9EFD27BBFB780096CFB0 /* CarMisrTests.swift */,
 			);
 			path = CarMisrTests;
@@ -276,6 +289,7 @@
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
 				EA0F9F4727BC02970096CFB0 /* Routing */,
 				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
+				EA8725CD27BED67D00860CB4 /* Utilities */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -334,6 +348,7 @@
 		EA0F9F4B27BC02E20096CFB0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -478,6 +493,38 @@
 				EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */,
 			);
 			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EA8725BD27BEC82600860CB4 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		EA8725C027BECA1B00860CB4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EA8725C327BECFA700860CB4 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				EA8725C427BECFD200860CB4 /* CarMakeStub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		EA8725CD27BED67D00860CB4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EA8725CB27BED60500860CB4 /* DataError.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -746,6 +793,7 @@
 				EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */,
 				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
+				EA8725CA27BED54300860CB4 /* CarMakeProtocol.swift in Sources */,
 				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
 				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
 				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
@@ -755,6 +803,7 @@
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
+				EA8725CC27BED60500860CB4 /* DataError.swift in Sources */,
 				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 			);
@@ -764,7 +813,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */,
 				EA0F9EFE27BBFB780096CFB0 /* CarMisrTests.swift in Sources */,
+				EA8725C527BECFD200860CB4 /* CarMakeStub.swift in Sources */,
+				EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
