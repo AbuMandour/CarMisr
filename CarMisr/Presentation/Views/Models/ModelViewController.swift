@@ -20,6 +20,7 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadMoreActivityIndicator: UIActivityIndicatorView!
     private let modelViewModel: ModelViewModel!
+    let refreshControl = UIRefreshControl()
     private let disposeBag = DisposeBag()
     //MARK: - Overrides
     override func viewDidLoad() {
@@ -41,12 +42,15 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
     private func setupMakeTableView(){
         modelsTableView.register(ModelTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         modelsTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        modelsTableView.refreshControl = refreshControl
     }
     
     private func bind(){
+        let refreshTable = refreshControl.rx.controlEvent(.valueChanged).mapToVoid().asDriverComplete()
         let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
         let prefetchDataSource = modelsTableView.rx.prefetchRows
-        let input = ModelViewModel.Input(didAppear: viewDidAppear,
+        let input = ModelViewModel.Input(refresh: refreshTable,
+                                         didAppear: viewDidAppear,
                                          modelSelected: modelsTableView.rx.modelSelected(Model.self),
                                          prefetchRows: prefetchDataSource)
         let outup = modelViewModel.transform(input: input)
@@ -64,6 +68,10 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
             .observe(on: MainScheduler.instance)
             .map(!)
             .bind(to: mainActivityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+        outup.isloading
+            .observe(on: MainScheduler.instance)
+            .bind(to: refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
         outup.isloadMore
             .observe(on: MainScheduler.instance)

@@ -23,6 +23,7 @@ final class ModelViewModel{
     private var itemsCount = 0
     
     struct Input {
+        let refresh: Driver<Void>
         let didAppear: Driver<Void>
         let modelSelected: ControlEvent<Model>
         let prefetchRows: ControlEvent<[IndexPath]>
@@ -42,6 +43,12 @@ final class ModelViewModel{
     func transform(input: Input) -> Output{
         
         input.didAppear
+            .drive { [weak self] (_) in
+                guard let self = self else { return }
+                self.loadData()
+            }.disposed(by: disposeBag)
+        
+        input.refresh
             .drive { [weak self] (_) in
                 guard let self = self else { return }
                 self.loadData()

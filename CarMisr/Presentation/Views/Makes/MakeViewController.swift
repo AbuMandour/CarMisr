@@ -18,6 +18,7 @@ class MakeViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var makersTableView: UITableView!
     @IBOutlet weak var loadMoreActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
+    let refreshControl = UIRefreshControl()
     private var makeViewModel: MakeViewModel
     private var disposeBag = DisposeBag()
     
@@ -42,12 +43,15 @@ class MakeViewController: UIViewController, UITableViewDelegate {
     private func setupMakeTableView(){
         makersTableView.register(MakeTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         makersTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        makersTableView.refreshControl = refreshControl
     }
     
     private func bind(){
+        let refreshTable = refreshControl.rx.controlEvent(.valueChanged).mapToVoid().asDriverComplete()
         let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
         let prefetchDataSource = makersTableView.rx.prefetchRows
         let input = MakeViewModel.Input(didAppear: viewDidAppear,
+                                        refresh: refreshTable,
                                         makeSelected: makersTableView.rx.modelSelected(Make.self),
                                         prefetchRows: prefetchDataSource)
         let outup = makeViewModel.transform(input: input)
@@ -65,6 +69,10 @@ class MakeViewController: UIViewController, UITableViewDelegate {
             .observe(on: MainScheduler.instance)
             .map(!)
             .bind(to: mainActivityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+        outup.isloading
+            .observe(on: MainScheduler.instance)
+            .bind(to: refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
         outup.isloadMore
             .observe(on: MainScheduler.instance)

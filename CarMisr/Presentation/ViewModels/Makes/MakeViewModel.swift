@@ -24,6 +24,7 @@ final class MakeViewModel{
     
     struct Input {
         let didAppear: Driver<Void>
+        let refresh: Driver<Void>
         let makeSelected: ControlEvent<Make>
         let prefetchRows: ControlEvent<[IndexPath]>
     }
@@ -41,6 +42,12 @@ final class MakeViewModel{
     func transform(input: Input) -> Output{
         
         input.didAppear
+            .drive { [weak self] (_) in
+                guard let self = self else { return }
+                self.loadData()
+            }.disposed(by: disposeBag)
+        
+        input.refresh
             .drive { [weak self] (_) in
                 guard let self = self else { return }
                 self.loadData()
