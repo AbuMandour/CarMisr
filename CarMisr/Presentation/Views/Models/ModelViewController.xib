@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModelViewController" customModule="CarMisr" customModuleProvider="target">
             <connections>
+                <outlet property="loadMoreActivityIndicator" destination="Mxp-bo-B3u" id="yJD-bg-hi2"/>
+                <outlet property="mainActivityIndicator" destination="zmY-PL-oR8" id="fkh-2U-Nyr"/>
                 <outlet property="modelsTableView" destination="xk5-MI-adi" id="wqt-pD-ImR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,27 +21,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bU-fS-tIs">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="ROP-QS-zcA"/>
-                    </items>
-                </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-MI-adi" userLabel="modelTableView">
-                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zmY-PL-oR8" userLabel="mainActivityIndicator">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-bo-B3u" userLabel="loadMoreActivityIndicator">
+                    <rect key="frame" x="197" y="842" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7bU-fS-tIs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3WW-an-Cuo"/>
                 <constraint firstItem="xk5-MI-adi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Eb-gO-JQN"/>
-                <constraint firstAttribute="trailing" secondItem="7bU-fS-tIs" secondAttribute="trailing" id="65h-wp-so4"/>
-                <constraint firstItem="7bU-fS-tIs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BGV-Ci-An9"/>
-                <constraint firstItem="xk5-MI-adi" firstAttribute="top" secondItem="7bU-fS-tIs" secondAttribute="bottom" id="HUp-mI-wK1"/>
                 <constraint firstAttribute="trailing" secondItem="xk5-MI-adi" secondAttribute="trailing" id="Nrc-tS-y44"/>
                 <constraint firstAttribute="bottom" secondItem="xk5-MI-adi" secondAttribute="bottom" id="XA2-r0-A8d"/>
+                <constraint firstItem="Mxp-bo-B3u" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="e1g-Wv-hHx"/>
+                <constraint firstItem="xk5-MI-adi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oII-kU-zo2"/>
+                <constraint firstItem="Mxp-bo-B3u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wO2-BZ-Y3D"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
         </view>
