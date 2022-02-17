@@ -77,7 +77,7 @@ final class ModelViewModel{
             tempModels.removeAll()
             pageNumber = 0
             canLoadMore = true
-            await requestMakes()
+            await requestModels()
             isLoading.accept(false)
         }
     }
@@ -87,14 +87,14 @@ final class ModelViewModel{
             if index.row >= itemsCount - 3 && canLoadMore && !isLoading.value {
                 isLoadMore.accept(true)
                 pageNumber += 1
-                Task{ await requestMakes() }
+                Task{ await requestModels() }
                 isLoadMore.accept(false)
                 break
             }
         }
     }
     
-    private func requestMakes() async{
+    private func requestModels() async{
         try? await Task.sleep(nanoseconds: 3000000000)
         models.accept([Model]())
     }

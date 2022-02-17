@@ -37,6 +37,20 @@
 		EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */; };
 		EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */; };
 		EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F8427BC51C70096CFB0 /* Model.swift */; };
+		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
+		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
+		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
+		EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */; };
+		EA5904CE27BE2D8700AF22A7 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */; };
+		EA5904CF27BE2D8700AF22A7 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */; };
+		EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */; };
+		EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */; };
+		EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */; };
+		EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D627BE348400AF22A7 /* ModelSpec.swift */; };
+		EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */; };
+		EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */; };
+		EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */; };
+		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
 		EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */; };
 		EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183427BDC11F00065763 /* TableViewExtension.swift */; };
 		EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183627BDC17400065763 /* ReactiveExtension.swift */; };
@@ -99,6 +113,20 @@
 		EA0F9F8027BC50810096CFB0 /* ModelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellViewModel.swift; sourceTree = "<group>"; };
 		EA0F9F8227BC50900096CFB0 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		EA0F9F8427BC51C70096CFB0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewController.swift; sourceTree = "<group>"; };
+		EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelDetailsViewController.xib; sourceTree = "<group>"; };
+		EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewModel.swift; sourceTree = "<group>"; };
+		EA5904D627BE348400AF22A7 /* ModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSpec.swift; sourceTree = "<group>"; };
+		EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
+		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtension.swift; sourceTree = "<group>"; };
 		EAE2183427BDC11F00065763 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		EAE2183627BDC17400065763 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
@@ -268,6 +296,7 @@
 				EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */,
 				EAE2183427BDC11F00065763 /* TableViewExtension.swift */,
 				EAE2183627BDC17400065763 /* ReactiveExtension.swift */,
+				EA8725BB27BEC39100860CB4 /* ColorExtension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -295,6 +324,7 @@
 		EA0F9F4A27BC02CD0096CFB0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EA5904AE27BE03E100AF22A7 /* ModelDetails */,
 				EA0F9F7627BC4AAA0096CFB0 /* Models */,
 				EA0F9F7527BC4AA30096CFB0 /* Makes */,
 			);
@@ -313,6 +343,7 @@
 			children = (
 				EA0F9F7B27BC4B200096CFB0 /* Make.swift */,
 				EA0F9F8427BC51C70096CFB0 /* Model.swift */,
+				EA5904D627BE348400AF22A7 /* ModelSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,10 +351,8 @@
 		EA0F9F6027BC07880096CFB0 /* Makes */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */,
-				EA0F9F5D27BC07730096CFB0 /* MakeViewController.xib */,
-				EA0F9F6627BC40180096CFB0 /* MakeTableViewCell.swift */,
-				EA0F9F6727BC40180096CFB0 /* MakeTableViewCell.xib */,
+				EA5904BF27BE2C9C00AF22A7 /* ViewControllers */,
+				EA5904C027BE2CA700AF22A7 /* ViewCells */,
 			);
 			path = Makes;
 			sourceTree = "<group>";
@@ -331,6 +360,7 @@
 		EA0F9F6127BC07BF0096CFB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA5904AD27BE03D700AF22A7 /* ModelDetails */,
 				EA0F9F6A27BC456B0096CFB0 /* Models */,
 				EA0F9F6027BC07880096CFB0 /* Makes */,
 			);
@@ -340,10 +370,8 @@
 		EA0F9F6A27BC456B0096CFB0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F6D27BC45BD0096CFB0 /* ModelViewController.swift */,
-				EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */,
-				EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */,
-				EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */,
+				EA5904BD27BE2C8300AF22A7 /* ViewControllers */,
+				EA5904BE27BE2C9000AF22A7 /* ViewCells */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +400,84 @@
 				EA0F9F7E27BC4CC90096CFB0 /* ViewCellDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EA5904C127BE2CB100AF22A7 /* ViewControllers */,
+				EA5904C327BE2CDB00AF22A7 /* ViewCells */,
+			);
+			path = ModelDetails;
+			sourceTree = "<group>";
+		};
+		EA5904AE27BE03E100AF22A7 /* ModelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */,
+				EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */,
+				EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */,
+				EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */,
+			);
+			path = ModelDetails;
+			sourceTree = "<group>";
+		};
+		EA5904BD27BE2C8300AF22A7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F6D27BC45BD0096CFB0 /* ModelViewController.swift */,
+				EA0F9F6E27BC45BD0096CFB0 /* ModelViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EA5904BE27BE2C9000AF22A7 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F7127BC46760096CFB0 /* ModelTableViewCell.swift */,
+				EA0F9F7227BC46760096CFB0 /* ModelTableViewCell.xib */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EA5904BF27BE2C9C00AF22A7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F5C27BC07730096CFB0 /* MakeViewController.swift */,
+				EA0F9F5D27BC07730096CFB0 /* MakeViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EA5904C027BE2CA700AF22A7 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F9F6627BC40180096CFB0 /* MakeTableViewCell.swift */,
+				EA0F9F6727BC40180096CFB0 /* MakeTableViewCell.xib */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EA5904C127BE2CB100AF22A7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */,
+				EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EA5904C327BE2CDB00AF22A7 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */,
+				EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */,
+				EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */,
+				EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */,
+				EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */,
+				EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */,
+			);
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,10 +591,14 @@
 			files = (
 				EA0F9F5F27BC07730096CFB0 /* MakeViewController.xib in Resources */,
 				EA0F9EF327BBFB780096CFB0 /* LaunchScreen.storyboard in Resources */,
+				EA5904CF27BE2D8700AF22A7 /* ColorCollectionViewCell.xib in Resources */,
 				EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */,
 				EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */,
 				EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */,
+				EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */,
+				EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */,
 				EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */,
+				EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,11 +726,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */,
+				EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */,
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
+				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
 				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
+				EA5904CE27BE2D8700AF22A7 /* ColorCollectionViewCell.swift in Sources */,
 				EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */,
+				EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */,
 				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
@@ -628,14 +743,19 @@
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
+				EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */,
+				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
 				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
 				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
+				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
+				EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */,
 				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
+				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
