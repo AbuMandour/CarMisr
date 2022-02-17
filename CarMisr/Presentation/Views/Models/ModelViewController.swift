@@ -8,8 +8,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxAlertViewable
 
-class ModelViewController: UIViewController , UITableViewDelegate{
+class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelegate{
 
     //MARK: - Constants
     let cellIdentifier = "modelViewCell"
@@ -68,6 +69,10 @@ class ModelViewController: UIViewController , UITableViewDelegate{
             .observe(on: MainScheduler.instance)
             .map(!)
             .bind(to: loadMoreActivityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+        outup.alert
+            .observe(on: MainScheduler.instance)
+            .bind(to: self.rx.alert)
             .disposed(by: disposeBag)
     }
 }

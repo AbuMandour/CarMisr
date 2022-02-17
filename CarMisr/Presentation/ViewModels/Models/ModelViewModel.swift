@@ -8,11 +8,13 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import RxAlertViewable
 
 final class ModelViewModel{
     // MARK: - Properties
     private var disposeBag = DisposeBag()
     private var models = PublishRelay<[Model]>()
+    private let alert = PublishRelay<RxAlert>()
     private var tempModels = [Model]()
     private var isLoading = BehaviorRelay<Bool>(value: false)
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
@@ -30,6 +32,7 @@ final class ModelViewModel{
         let models: Observable<[Model]>
         let isloading: Observable<Bool>
         let isloadMore: Observable<Bool>
+        let alert: Observable<RxAlert>
     }
     
     //MARK: - Initailizer
@@ -56,7 +59,8 @@ final class ModelViewModel{
                 self.loadMore(prefetchRowsAt: indexPaths)
             }.disposed(by: disposeBag)
         
-        return Output(models: models.asObservable(), isloading: isLoading.asObservable(), isloadMore: isLoadMore.asObservable())
+        return Output(models: models.asObservable(), isloading: isLoading.asObservable(),
+                      isloadMore: isLoadMore.asObservable(), alert: alert.asObservable())
     }
     
     //MARK: - Internal Method
