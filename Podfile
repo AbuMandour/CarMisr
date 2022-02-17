@@ -10,6 +10,8 @@ target 'CarMisr' do
 	pod 'RxSwift'
 	pod 'RxCocoa'
 	pod 'Kingfisher'
+	pod 'RxViewController'
+	pod 'RxAlertViewable'
 
   target 'CarMisrTests' do
     inherit! :search_paths

@@ -1,30 +1,42 @@
 PODS:
   - Kingfisher (6.3.1)
+  - RxAlertViewable (1.2):
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - RxAlertViewable
   - RxCocoa
   - RxSwift
+  - RxViewController
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - RxAlertViewable
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxViewController
 
 SPEC CHECKSUMS:
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  RxAlertViewable: 8b8b82e6c22b974813e67a79b0c3d500bb08b676
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
 
-PODFILE CHECKSUM: 72db3c61a6b6a70875e8ebf9442dcc10c931684c
+PODFILE CHECKSUM: de0f15c377f302f38c28d9c20794184c6e11cf2a
 
 COCOAPODS: 1.11.2
