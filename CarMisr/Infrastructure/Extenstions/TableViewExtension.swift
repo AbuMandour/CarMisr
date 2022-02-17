@@ -13,6 +13,8 @@ extension UITableView{
     func setNoDataPlaceholder(_ message: String) {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         label.text = message
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.sizeToFit()
         self.isScrollEnabled = false
         self.backgroundView = label

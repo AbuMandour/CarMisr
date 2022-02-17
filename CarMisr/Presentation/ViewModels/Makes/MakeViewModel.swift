@@ -63,12 +63,14 @@ final class MakeViewModel{
     
     //MARK: - Internal Method
     private func loadData(){
-        isLoading.accept(true)
-        tempMakes.removeAll()
-        pageNumber = 0
-        canLoadMore = true
-        Task{ await requestMakes() }
-        isLoading.accept(false)
+        Task{
+            isLoading.accept(true)
+            tempMakes.removeAll()
+            pageNumber = 0
+            canLoadMore = true
+            await requestMakes()
+            isLoading.accept(false)
+        }
     }
         
     private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
@@ -85,6 +87,7 @@ final class MakeViewModel{
     
     private func requestMakes() async{
         try? await Task.sleep(nanoseconds: 3000000000)
+        makes.accept([Make]())
     }
     
     private func showModels(make: Make){

@@ -24,9 +24,9 @@ class MakeViewController: UIViewController, UITableViewDelegate {
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Car Makes"
         setupMakeTableView()
         bind()
+        title = "Car Makes"
     }
     
     //MARK: - Initializer
@@ -41,7 +41,7 @@ class MakeViewController: UIViewController, UITableViewDelegate {
     //MARK: - Internal Method
     private func setupMakeTableView(){
         makersTableView.register(MakeTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        makersTableView.rx.setDelegate(self).disposed(by: disposeBag)        
+        makersTableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
     private func bind(){
@@ -63,11 +63,13 @@ class MakeViewController: UIViewController, UITableViewDelegate {
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)
-            .bind(to: mainActivityIndicator.rx.isAnimating)
+            .map(!)
+            .bind(to: mainActivityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
         outup.isloadMore
             .observe(on: MainScheduler.instance)
-            .bind(to: loadMoreActivityIndicator.rx.isAnimating)
+            .map(!)
+            .bind(to: loadMoreActivityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
     }
     
