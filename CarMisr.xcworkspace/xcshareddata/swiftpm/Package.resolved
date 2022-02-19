@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MockSwift",
+        "repositoryURL": "https://github.com/leoture/MockSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "f91fa2077bc2993873738cb26687e9ecb5c5dc08",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

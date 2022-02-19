@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Make {
+struct Make : Equatable{
     var name: String
 }

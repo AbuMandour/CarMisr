@@ -11,24 +11,21 @@ import Foundation
 
 class ApiServiceMock : ApiProtocol{
     
-    enum Behavior {
-        case alwaysFail
-        case alwaysSucceed(Codable)
-    }
+    var behavior: Behavior!
     
-    static var behavior: Behavior!
-    
-    func fetchItem<T>(urlString: String) async -> Result<T, ApiError> where T : Decodable & Encodable {
-        switch Self.behavior{
+    func fetchItem<T: Codable>(urlString: String) async -> Result<T, ApiError>  {
+        switch self.behavior{
         case .alwaysFail:
-            return .failure(.InvaildData(nil))
+            return .failure(.defaultError)
         case .alwaysSucceed(let codable):
             return .success(codable as! T)
         case .none:
-            return .failure(.InvaildData(nil))
+            return .failure(.defaultError)
         }
     }
-    
-    
 }
 
+enum Behavior {
+    case alwaysFail
+    case alwaysSucceed(Codable)
+}

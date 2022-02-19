@@ -13,6 +13,7 @@ public enum ApiError : Error {
     case InvaildStatusCode(Int)
     case InvaildData(Error?)
     case SerializeError(Error)
+    case defaultError
 }
 
 extension ApiError : CustomStringConvertible{
@@ -29,6 +30,8 @@ extension ApiError : CustomStringConvertible{
             return "invaild data \(String(describing: error?.localizedDescription))"
         case .SerializeError(let error):
             return "error in data serialize: \(error)"
+        case .defaultError:
+            return ""
         }
     }
 }

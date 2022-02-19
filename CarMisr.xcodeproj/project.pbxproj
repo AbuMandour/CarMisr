@@ -13,7 +13,6 @@
 		EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9EE627BBFB760096CFB0 /* AppDelegate.swift */; };
 		EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9EEF27BBFB780096CFB0 /* Assets.xcassets */; };
 		EA0F9EF327BBFB780096CFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0F9EF127BBFB780096CFB0 /* LaunchScreen.storyboard */; };
-		EA0F9EFE27BBFB780096CFB0 /* CarMisrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9EFD27BBFB780096CFB0 /* CarMisrTests.swift */; };
 		EA0F9F0827BBFB780096CFB0 /* CarMisrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */; };
 		EA0F9F0A27BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */; };
 		EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F9F4E27BC03700096CFB0 /* ApiError.swift */; };
@@ -56,6 +55,11 @@
 		EA8725C527BECFD200860CB4 /* CarMakeStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C427BECFD200860CB4 /* CarMakeStub.swift */; };
 		EA8725CA27BED54300860CB4 /* CarMakeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */; };
 		EA8725CC27BED60500860CB4 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725CB27BED60500860CB4 /* DataError.swift */; };
+		EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */; };
+		EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3B627BFDC8E00B0D85B /* Urls.swift */; };
+		EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3B827BFDCDF00B0D85B /* Keys.swift */; };
+		EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */; };
+		EA93A3BE27C14B8100B0D85B /* MockSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA93A3BD27C14B8100B0D85B /* MockSwift */; };
 		EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */; };
 		EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183427BDC11F00065763 /* TableViewExtension.swift */; };
 		EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183627BDC17400065763 /* ReactiveExtension.swift */; };
@@ -93,7 +97,6 @@
 		EA0F9EF227BBFB780096CFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0F9EF427BBFB780096CFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0F9EF927BBFB780096CFB0 /* CarMisrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarMisrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA0F9EFD27BBFB780096CFB0 /* CarMisrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrTests.swift; sourceTree = "<group>"; };
 		EA0F9F0327BBFB780096CFB0 /* CarMisrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarMisrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0F9F0727BBFB780096CFB0 /* CarMisrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITests.swift; sourceTree = "<group>"; };
 		EA0F9F0927BBFB780096CFB0 /* CarMisrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMisrUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -137,6 +140,10 @@
 		EA8725C427BECFD200860CB4 /* CarMakeStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeStub.swift; sourceTree = "<group>"; };
 		EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeProtocol.swift; sourceTree = "<group>"; };
 		EA8725CB27BED60500860CB4 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeService.swift; sourceTree = "<group>"; };
+		EA93A3B627BFDC8E00B0D85B /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		EA93A3B827BFDCDF00B0D85B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeData.swift; sourceTree = "<group>"; };
 		EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtension.swift; sourceTree = "<group>"; };
 		EAE2183427BDC11F00065763 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		EAE2183627BDC17400065763 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA93A3BE27C14B8100B0D85B /* MockSwift in Frameworks */,
 				1C8DB3F11D2FD1600925E383 /* Pods_CarMisrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +243,6 @@
 				EA8725C327BECFA700860CB4 /* Stub */,
 				EA8725C027BECA1B00860CB4 /* Mocks */,
 				EA8725BD27BEC82600860CB4 /* UnitTest */,
-				EA0F9EFD27BBFB780096CFB0 /* CarMisrTests.swift */,
 			);
 			path = CarMisrTests;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 		EA0F9F3D27BC02470096CFB0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -259,6 +267,8 @@
 		EA0F9F3E27BC02470096CFB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				EA93A3B527BFDC8400B0D85B /* Constant */,
+				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -527,6 +537,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		EA93A3B527BFDC8400B0D85B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				EA93A3B627BFDC8E00B0D85B /* Urls.swift */,
+				EA93A3B827BFDCDF00B0D85B /* Keys.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,6 +583,9 @@
 				EA0F9EFB27BBFB780096CFB0 /* PBXTargetDependency */,
 			);
 			name = CarMisrTests;
+			packageProductDependencies = (
+				EA93A3BD27C14B8100B0D85B /* MockSwift */,
+			);
 			productName = CarMisrTests;
 			productReference = EA0F9EF927BBFB780096CFB0 /* CarMisrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -620,6 +642,9 @@
 				Base,
 			);
 			mainGroup = EA0F9EDA27BBFB760096CFB0;
+			packageReferences = (
+				EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */,
+			);
 			productRefGroup = EA0F9EE427BBFB760096CFB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -789,13 +814,16 @@
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
+				EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
 				EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */,
+				EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */,
 				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
 				EA8725CA27BED54300860CB4 /* CarMakeProtocol.swift in Sources */,
 				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
 				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
+				EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */,
 				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
 				EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */,
@@ -806,6 +834,7 @@
 				EA8725CC27BED60500860CB4 /* DataError.swift in Sources */,
 				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
+				EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +843,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */,
-				EA0F9EFE27BBFB780096CFB0 /* CarMisrTests.swift in Sources */,
 				EA8725C527BECFD200860CB4 /* CarMakeStub.swift in Sources */,
 				EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */,
 			);
@@ -1142,6 +1170,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leoture/MockSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA93A3BD27C14B8100B0D85B /* MockSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */;
+			productName = MockSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA0F9EDB27BBFB760096CFB0 /* Project object */;
 }

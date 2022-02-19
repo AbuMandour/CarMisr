@@ -7,8 +7,17 @@
 
 import Foundation
 
+//return 
 
-struct CarMakeStub : Codable{
-    var name: String
+struct CarMakeStub: Codable {
+    let makes: [MakeStub]
 }
-//return [CarMakeStub(name: "Honda"), CarMakeStub(name: "Audi") , CarMakeStub(name: "Sokda") , CarMakeStub(name: "Peugeot")]
+
+// MARK: - Result
+struct MakeStub: Codable {
+    let name:String
+
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+    }
+}

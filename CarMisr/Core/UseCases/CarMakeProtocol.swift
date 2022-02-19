@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CarMakeProtocol{
-    func getCarMakes() async -> Result<[Make],DataError>
+    func getCarMakes(pageNumber: Int) async -> Result<[Make],DataError>
 }
