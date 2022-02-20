@@ -9,4 +9,5 @@ import Foundation
 
 struct Make : Equatable{
     var name: String
+    var niceName: String
 }

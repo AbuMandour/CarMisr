@@ -10,4 +10,6 @@ import Foundation
 struct Model {
     var name: String
     var imageUrl: String
+    var year: Int
+    var isNew: Bool
 }

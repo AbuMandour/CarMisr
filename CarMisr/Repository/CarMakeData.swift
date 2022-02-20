@@ -21,12 +21,12 @@ struct MakeData: Codable {
     let niceName: String?
     let adTargetID: String?
     let niceID: String?
-    let useInUsed: UseIn?
-    let useInNew: UseIn?
-    let useInPreProduction: UseIn?
-    let useInFuture: UseIn?
-    let attributeGroups: AttributeGroups?
-    let models: [ModelData]?
+    let useInUsed: String?
+    let useInNew: String?
+    let useInPreProduction: String?
+    let useInFuture: String?
+    let attributeGroups: MakeAttributeGroups?
+    let models: [ModelMakeData]?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -44,18 +44,14 @@ struct MakeData: Codable {
 }
 
 // MARK: - AttributeGroups
-struct AttributeGroups: Codable {
+struct MakeAttributeGroups: Codable {
 }
 
 // MARK: - Model
-struct ModelData: Codable {
+struct ModelMakeData: Codable {
     let id: String?
     let name: String?
     let niceName: String?
     let href: String?
 }
 
-enum UseIn: String, Codable {
-    case n = "N"
-    case y = "Y"
-}
