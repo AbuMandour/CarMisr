@@ -65,6 +65,7 @@ class Test_SelectMake : XCTestCase{
         let makes = try result.get()    
         let firstCharFromFirstWord = makes.first?.name.lowercased() ?? ""
         let firstCharFromLastWord = makes.last?.name.lowercased() ?? ""
+        
         //then
         XCTAssertTrue(firstCharFromLastWord > firstCharFromFirstWord)
     }

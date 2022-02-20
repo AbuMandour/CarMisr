@@ -58,7 +58,7 @@
 		EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3B627BFDC8E00B0D85B /* Urls.swift */; };
 		EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3B827BFDCDF00B0D85B /* Keys.swift */; };
 		EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */; };
-		EA93A3BE27C14B8100B0D85B /* MockSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA93A3BD27C14B8100B0D85B /* MockSwift */; };
+		EA93A3C027C1721500B0D85B /* Test_SelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A3BF27C1721500B0D85B /* Test_SelectModel.swift */; };
 		EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */; };
 		EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183427BDC11F00065763 /* TableViewExtension.swift */; };
 		EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2183627BDC17400065763 /* ReactiveExtension.swift */; };
@@ -142,6 +142,7 @@
 		EA93A3B627BFDC8E00B0D85B /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		EA93A3B827BFDCDF00B0D85B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeData.swift; sourceTree = "<group>"; };
+		EA93A3BF27C1721500B0D85B /* Test_SelectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectModel.swift; sourceTree = "<group>"; };
 		EAE2183227BDB1E100065763 /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtension.swift; sourceTree = "<group>"; };
 		EAE2183427BDC11F00065763 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		EAE2183627BDC17400065763 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA93A3BE27C14B8100B0D85B /* MockSwift in Frameworks */,
 				1C8DB3F11D2FD1600925E383 /* Pods_CarMisrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */,
+				EA93A3BF27C1721500B0D85B /* Test_SelectModel.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -573,7 +574,6 @@
 			);
 			name = CarMisrTests;
 			packageProductDependencies = (
-				EA93A3BD27C14B8100B0D85B /* MockSwift */,
 			);
 			productName = CarMisrTests;
 			productReference = EA0F9EF927BBFB780096CFB0 /* CarMisrTests.xctest */;
@@ -632,7 +632,6 @@
 			);
 			mainGroup = EA0F9EDA27BBFB760096CFB0;
 			packageReferences = (
-				EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */,
 			);
 			productRefGroup = EA0F9EE427BBFB760096CFB0 /* Products */;
 			projectDirPath = "";
@@ -833,6 +832,7 @@
 			files = (
 				EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */,
 				EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */,
+				EA93A3C027C1721500B0D85B /* Test_SelectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,25 +1158,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/leoture/MockSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EA93A3BD27C14B8100B0D85B /* MockSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EA93A3BC27C14B8100B0D85B /* XCRemoteSwiftPackageReference "MockSwift" */;
-			productName = MockSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA0F9EDB27BBFB760096CFB0 /* Project object */;
 }
