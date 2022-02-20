@@ -44,10 +44,22 @@
                     <constraint firstItem="WhN-Nu-syh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="11V-zh-bTX"/>
                     <constraint firstItem="RMt-Nr-MrS" firstAttribute="leading" secondItem="C99-gn-rjB" secondAttribute="trailing" constant="8" symbolic="YES" id="Cc2-0q-ACT"/>
                     <constraint firstItem="RMt-Nr-MrS" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="DIC-nK-wQ8"/>
-                    <constraint firstAttribute="trailing" secondItem="RMt-Nr-MrS" secondAttribute="trailing" constant="15" id="ZKp-Jm-BLg"/>
+                    <constraint firstAttribute="trailing" secondItem="RMt-Nr-MrS" secondAttribute="trailing" constant="15" id="ZKp-Jm-BLg" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
                     <constraint firstItem="C99-gn-rjB" firstAttribute="leading" secondItem="WhN-Nu-syh" secondAttribute="trailing" constant="8" symbolic="YES" id="f0Y-Ni-6x2"/>
                     <constraint firstItem="RMt-Nr-MrS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fOj-dF-Phh"/>
-                    <constraint firstItem="WhN-Nu-syh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rtn-mX-0H3"/>
+                    <constraint firstItem="WhN-Nu-syh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rtn-mX-0H3" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
                     <constraint firstItem="C99-gn-rjB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="twM-gh-pvu"/>
                 </constraints>
             </tableViewCellContentView>

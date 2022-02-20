@@ -37,12 +37,36 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="6XC-H9-Jxi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2UC-MC-HOT"/>
-                    <constraint firstItem="6XC-H9-Jxi" firstAttribute="leading" secondItem="aDK-ta-k3j" secondAttribute="trailing" constant="15" id="2pa-nn-VIg"/>
+                    <constraint firstItem="6XC-H9-Jxi" firstAttribute="leading" secondItem="aDK-ta-k3j" secondAttribute="trailing" constant="15" id="2pa-nn-VIg" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
                     <constraint firstItem="aDK-ta-k3j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QR4-ku-ps6"/>
                     <constraint firstItem="RuZ-EX-hvK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U7D-S6-0IJ"/>
-                    <constraint firstItem="aDK-ta-k3j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="b8i-Ey-BfR"/>
-                    <constraint firstAttribute="trailing" secondItem="RuZ-EX-hvK" secondAttribute="trailing" constant="15" id="cKf-Ps-Gq5"/>
-                    <constraint firstItem="RuZ-EX-hvK" firstAttribute="leading" secondItem="6XC-H9-Jxi" secondAttribute="trailing" constant="15" id="oWK-F2-RYS"/>
+                    <constraint firstItem="aDK-ta-k3j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="b8i-Ey-BfR" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
+                    <constraint firstAttribute="trailing" secondItem="RuZ-EX-hvK" secondAttribute="trailing" constant="15" id="cKf-Ps-Gq5" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
+                    <constraint firstItem="RuZ-EX-hvK" firstAttribute="leading" secondItem="6XC-H9-Jxi" secondAttribute="trailing" constant="15" id="oWK-F2-RYS" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

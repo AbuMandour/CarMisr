@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Model {
+struct Model : Equatable , Hashable {
     var name: String
     var imageUrl: String
     var year: Int

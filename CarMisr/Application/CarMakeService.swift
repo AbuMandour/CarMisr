@@ -21,9 +21,15 @@ class CarMakeService : CarMakeProtocol{
         switch makesResult{
         case .success(let carMakesData):
             guard let makesData = carMakesData.makes , !makesData.isEmpty else {
-                return .failure(.empty("No data"))
+                return .failure(.empty(Defaults.noDataString))
             }
-            let makes = makesData.compactMap({ Make(name: $0.name ?? "default") }).sorted { $0.name < $1.name }
+            let makes = makesData.map { makeData -> Make? in
+                if let name = makeData.name, let niceName = makeData.niceName {
+                    return Make(name: name , niceName: niceName)
+                } else {
+                    return nil
+                }
+            }.compactMap({ $0 }).sorted { $0.name < $1.name }
             return .success(makes)
         case .failure(let error):
             return .failure(.error(error.description))

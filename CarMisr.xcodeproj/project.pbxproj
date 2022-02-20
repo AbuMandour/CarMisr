@@ -39,6 +39,8 @@
 		EA307D4827C272290034460F /* CarModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4727C272290034460F /* CarModelProtocol.swift */; };
 		EA307D4A27C272770034460F /* CarModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4927C272770034460F /* CarModelService.swift */; };
 		EA307D4C27C27C7C0034460F /* CarModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4B27C27C7C0034460F /* CarModelData.swift */; };
+		EA307D4E27C2D1520034460F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4D27C2D1520034460F /* Defaults.swift */; };
+		EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -126,6 +128,8 @@
 		EA307D4727C272290034460F /* CarModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelProtocol.swift; sourceTree = "<group>"; };
 		EA307D4927C272770034460F /* CarModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelService.swift; sourceTree = "<group>"; };
 		EA307D4B27C27C7C0034460F /* CarModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelData.swift; sourceTree = "<group>"; };
+		EA307D4D27C2D1520034460F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 		EA0F9F4327BC02970096CFB0 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA307D4F27C2D82A0034460F /* Bases */,
 				EA0F9F7D27BC4C9E0096CFB0 /* Delegates */,
 				EA0F9F4427BC02970096CFB0 /* Networking */,
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
@@ -433,6 +438,14 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		EA307D4F27C2D82A0034460F /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
 		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +554,7 @@
 			children = (
 				EA93A3B627BFDC8E00B0D85B /* Urls.swift */,
 				EA93A3B827BFDCDF00B0D85B /* Keys.swift */,
+				EA307D4D27C2D1520034460F /* Defaults.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -811,6 +825,7 @@
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
+				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
@@ -826,6 +841,7 @@
 				EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */,
 				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
+				EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */,
 				EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */,
 				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,

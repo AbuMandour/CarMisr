@@ -36,20 +36,20 @@ class Test_SelectModel : XCTestCase{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes =
-        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+//        let expectedMakes =
+//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model], DataError>
         //then
-        XCTAssertEqual(result, .failure(.empty("No data")))
+        XCTAssertEqual(result, .failure(.empty(Defaults.noDataString)))
     }
     
     func test_carModelShouldReturnArrayofModels() async throws{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes =
-        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+//        let expectedMakes =
+//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
@@ -63,13 +63,13 @@ class Test_SelectModel : XCTestCase{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes =
-        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+//        let expectedMakes =
+//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
         let models:[Model] = try result.get()
-        let hasModelsOtherThan2022 = models.contains { $0.modelYear != "2022" }
+        let hasModelsOtherThan2022 = models.contains { $0.year != 2022 }
         //then
         XCTAssertFalse(hasModelsOtherThan2022)
     }
@@ -78,23 +78,23 @@ class Test_SelectModel : XCTestCase{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes =
-        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+//        let expectedMakes =
+//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
         let models:[Model] = try result.get()
         let hasNoNewCars = models.contains { !$0.isNew }
         //then
-        XCTAssertFalse(hasNoNewsCars)
+        XCTAssertFalse(hasNoNewCars)
     }
     
     func test_carModelShouldNotReturnDuplicates() async throws{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes =
-        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+//        let expectedMakes =
+//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>

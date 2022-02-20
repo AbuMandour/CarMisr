@@ -21,7 +21,7 @@ class CarModelService: CarModelProtocol {
         switch modelsResult{
         case .success(let carModelsData):
             guard let modelsData = carModelsData.models , !modelsData.isEmpty else {
-                return .failure(.empty("No data"))
+                return .failure(.empty(Defaults.noDataString))
             }
             let models = modelsData.map { modelData -> Model in
                 Model(name: modelData.name!, imageUrl: "", year: 2022, isNew: true)

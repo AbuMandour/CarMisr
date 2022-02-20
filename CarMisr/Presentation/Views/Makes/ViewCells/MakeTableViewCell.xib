@@ -24,7 +24,13 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hY9-bz-8xp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="CnU-3q-HE4"/>
+                    <constraint firstItem="hY9-bz-8xp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="CnU-3q-HE4" customClass="PercentLayoutConstraint" customModule="CarMisr" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="constantPercent">
+                                <real key="value" value="0.046875"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
                     <constraint firstItem="hY9-bz-8xp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ldL-EL-5jK"/>
                 </constraints>
             </tableViewCellContentView>
