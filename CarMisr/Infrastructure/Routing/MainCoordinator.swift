@@ -8,17 +8,17 @@
 import UIKit
 
 class MainCoordinator: AppCoordinator {
+    var navigationStack: NavigationStackProtocol
     
     var childern = [AppCoordinator]()
-    var navigationController : UINavigationController
     
-    init(navigationController : UINavigationController) {
-        self.navigationController = navigationController
+    init( navigationStack: NavigationStackProtocol) {
+        self.navigationStack = navigationStack
     }
     
     func start() {
         let makersViewController = MakeViewController(makeViewModel: MakeViewModel())
-        navigationController.pushViewController(makersViewController, animated: true)
+        navigationStack.push(viewController: makersViewController)
     }
     
 }

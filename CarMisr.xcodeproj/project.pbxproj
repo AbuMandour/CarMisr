@@ -41,6 +41,8 @@
 		EA307D4C27C27C7C0034460F /* CarModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4B27C27C7C0034460F /* CarModelData.swift */; };
 		EA307D4E27C2D1520034460F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D4D27C2D1520034460F /* Defaults.swift */; };
 		EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */; };
+		EA307D5427C3136A0034460F /* NavigationStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5327C3136A0034460F /* NavigationStackProtocol.swift */; };
+		EA307D5627C313C90034460F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5527C313C90034460F /* NavigationStack.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -130,6 +132,8 @@
 		EA307D4B27C27C7C0034460F /* CarModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelData.swift; sourceTree = "<group>"; };
 		EA307D4D27C2D1520034460F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
+		EA307D5327C3136A0034460F /* NavigationStackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackProtocol.swift; sourceTree = "<group>"; };
+		EA307D5527C313C90034460F /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,8 +270,8 @@
 		EA0F9F3D27BC02470096CFB0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
-				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
+				EA0F9F4427BC02970096CFB0 /* Networking */,
+				EA307D5227C313200034460F /* Data */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -305,7 +309,6 @@
 			children = (
 				EA307D4F27C2D82A0034460F /* Bases */,
 				EA0F9F7D27BC4C9E0096CFB0 /* Delegates */,
-				EA0F9F4427BC02970096CFB0 /* Networking */,
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
 				EA0F9F4727BC02970096CFB0 /* Routing */,
 				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
@@ -341,6 +344,8 @@
 				EA0F9EE627BBFB760096CFB0 /* AppDelegate.swift */,
 				EA0F9F5827BC056F0096CFB0 /* AppCoordinator.swift */,
 				EA0F9F5A27BC064D0096CFB0 /* MainCoordinator.swift */,
+				EA307D5327C3136A0034460F /* NavigationStackProtocol.swift */,
+				EA307D5527C313C90034460F /* NavigationStack.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -444,6 +449,15 @@
 				EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */,
 			);
 			path = Bases;
+			sourceTree = "<group>";
+		};
+		EA307D5227C313200034460F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
+				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
@@ -831,10 +845,12 @@
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
 				EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */,
 				EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */,
+				EA307D5627C313C90034460F /* NavigationStack.swift in Sources */,
 				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
 				EA307D4C27C27C7C0034460F /* CarModelData.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
 				EA8725CA27BED54300860CB4 /* CarMakeProtocol.swift in Sources */,
+				EA307D5427C3136A0034460F /* NavigationStackProtocol.swift in Sources */,
 				EA0F9F5E27BC07730096CFB0 /* MakeViewController.swift in Sources */,
 				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
 				EA307D4A27C272770034460F /* CarModelService.swift in Sources */,

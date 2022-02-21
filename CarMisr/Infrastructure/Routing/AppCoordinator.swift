@@ -11,6 +11,6 @@ import UIKit
 protocol AppCoordinator{
     
     var childern: [AppCoordinator] {get set}
-    var navigationController: UINavigationController {get set}
+    var navigationStack: NavigationStackProtocol {get set}
     func start()
 }
