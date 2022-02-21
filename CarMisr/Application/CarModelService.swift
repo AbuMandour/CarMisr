@@ -16,8 +16,8 @@ class CarModelService: CarModelProtocol {
     }
     
     func getCarModels(makeNiceName: String, pageNumber: Int) async -> Result<[Model], DataError> {
-        
-        let modelsResult = await apiService.fetchItem(urlString: Urls.getModelsUrl(makeNiceName: makeNiceName, pageNumber: pageNumber, pageSize: 10)) as Result<CarModelData,ApiError>
+        let modelEndPoint = MainEndPoints.models((pageNumber, makeNiceName))
+        let modelsResult = await apiService.fetchItem(urlRequest:modelEndPoint.urlRequest) as Result<CarModelData,ApiError>
         switch modelsResult{
         case .success(let carModelsData):
             guard let modelsData = carModelsData.models , !modelsData.isEmpty else {
@@ -27,7 +27,7 @@ class CarModelService: CarModelProtocol {
                 guard let modelName = modelData.name,let niceName = modelData.niceName else {
                     return nil
                 }
-                return Model(name: modelName, niceName: niceName, imageUrl: "", year: 2022, isNew: true)
+                return Model(name: modelName, niceName: niceName, imageUrl: "")
             }.compactMap{$0}
             return.success(models)
         case .failure(let error):

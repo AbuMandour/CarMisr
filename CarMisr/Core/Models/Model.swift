@@ -11,6 +11,4 @@ struct Model : Equatable , Hashable {
     var name: String
     var niceName: String
     var imageUrl: String
-    var year: Int
-    var isNew: Bool
 }

@@ -20,7 +20,6 @@ final class ModelViewModel{
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
     private var canLoadMore = true
     private var pageNumber = 1
-    private var itemsCount = 0
     var makeNiceName:String?
     weak var coordinator: MainCoordinator?
     var carModelService: CarModelProtocol!
@@ -97,7 +96,7 @@ final class ModelViewModel{
     
     private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
         for index in indexPaths {
-            if index.row >= itemsCount - 3 && canLoadMore && !isLoading.value {
+            if index.row >= tempModels.count - 3 && canLoadMore && !isLoading.value {
                 isLoadMore.accept(true)
                 pageNumber += 1
                 Task{ await requestModels() }

@@ -17,7 +17,8 @@ class CarMakeService : CarMakeProtocol{
     }
     
     func getCarMakes(pageNumber: Int) async -> Result<[Make], DataError> {
-        let makesResult = await apiService.fetchItem(urlString: Urls.getMakesUrl(pageNumber: pageNumber, pageSize: 10)) as Result<CarMakeData,ApiError>
+        let makeEndPoint = MainEndPoints.makes(pageNumber: pageNumber)
+        let makesResult = await apiService.fetchItem(urlRequest: makeEndPoint.urlRequest) as Result<CarMakeData,ApiError>
         switch makesResult{
         case .success(let carMakesData):
             guard let makesData = carMakesData.makes , !makesData.isEmpty else {
@@ -29,7 +30,7 @@ class CarMakeService : CarMakeProtocol{
                 } else {
                     return nil
                 }
-            }.compactMap({ $0 }).sorted { $0.name < $1.name }
+            }.compactMap({ $0 }).sorted(by: {$0.name < $1.name})
             return .success(makes)
         case .failure(let error):
             return .failure(.error(error.description))

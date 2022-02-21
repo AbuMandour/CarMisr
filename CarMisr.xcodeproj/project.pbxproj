@@ -47,6 +47,8 @@
 		EA307D6027C3CC260034460F /* Test_ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5F27C3CC260034460F /* Test_ApiService.swift */; };
 		EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */; };
 		EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6327C3E52D0034460F /* NameDescribable.swift */; };
+		EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7027C409E20034460F /* BaseEndPoint.swift */; };
+		EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7227C40DA70034460F /* MainEndPoints.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -142,6 +144,8 @@
 		EA307D5F27C3CC260034460F /* Test_ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ApiService.swift; sourceTree = "<group>"; };
 		EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExtension.swift; sourceTree = "<group>"; };
 		EA307D6327C3E52D0034460F /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
+		EA307D7027C409E20034460F /* BaseEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndPoint.swift; sourceTree = "<group>"; };
+		EA307D7227C40DA70034460F /* MainEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEndPoints.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,7 +293,9 @@
 		EA0F9F3E27BC02470096CFB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				EA307D6B27C409790034460F /* EndPoint */,
 				EA93A3B527BFDC8400B0D85B /* Constant */,
+				EA8725CD27BED67D00860CB4 /* Utilities */,
 				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
 				EA307D4927C272770034460F /* CarModelService.swift */,
 			);
@@ -322,7 +328,6 @@
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
 				EA0F9F4727BC02970096CFB0 /* Routing */,
 				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
-				EA8725CD27BED67D00860CB4 /* Utilities */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -486,6 +491,15 @@
 				EA307D5D27C3CC080034460F /* UserStubData.swift */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		EA307D6B27C409790034460F /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				EA307D7027C409E20034460F /* BaseEndPoint.swift */,
+				EA307D7227C40DA70034460F /* MainEndPoints.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
@@ -851,12 +865,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */,
 				EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */,
 				EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */,
 				EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */,
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
 				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
+				EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
 				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
 				EA5904CE27BE2D8700AF22A7 /* ColorCollectionViewCell.swift in Sources */,

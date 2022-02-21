@@ -10,11 +10,7 @@ import Foundation
 
 public class ApiService : ApiProtocol {
             
-    public func fetchItem<T:Codable>(urlString: String) async -> Result<T,ApiError> {
-        guard let url = URL(string: urlString) else {
-            return .failure(.InvaildUrl)
-        }
-        let urlRequest = URLRequest(url: url)
+    public func fetchItem<T:Codable>(urlRequest: URLRequest) async -> Result<T,ApiError> {
         let urlSessionConfiguration = URLSessionConfiguration.default
         let urlSession = URLSession(configuration: urlSessionConfiguration)
         do{

@@ -9,5 +9,5 @@ import Foundation
 
 public protocol ApiProtocol {
     
-    func fetchItem<T:Codable>(urlString: String) async -> Result<T,ApiError>    
+    func fetchItem<T:Codable>(urlRequest: URLRequest) async -> Result<T,ApiError>    
 }
