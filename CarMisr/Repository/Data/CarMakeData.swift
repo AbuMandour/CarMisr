@@ -12,6 +12,12 @@ struct CarMakeData: Codable {
     let totalNumber: Int?
     let totalPages: Int?
     let makes: [MakeData]?
+    
+    enum CodingKeys: String, CodingKey {
+        case totalNumber = "totalNumber"
+        case totalPages = "totalPages"
+        case makes = "results"
+    }
 }
 
 // MARK: - Result

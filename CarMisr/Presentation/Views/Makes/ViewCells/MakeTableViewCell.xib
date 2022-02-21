@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-bz-8xp" userLabel="makeNameLabel">
-                        <rect key="frame" x="15" y="11.5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="15" y="5.5" width="66.5" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,7 +36,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="makeTitleLabel" destination="hY9-bz-8xp" id="1ui-Lw-qGd"/>
+                <outlet property="makeNameLabel" destination="hY9-bz-8xp" id="J9y-vg-ohy"/>
             </connections>
             <point key="canvasLocation" x="132" y="114"/>
         </tableViewCell>

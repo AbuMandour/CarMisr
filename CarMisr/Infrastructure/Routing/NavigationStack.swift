@@ -10,15 +10,15 @@ import UIKit
 
 class NavigationStack: NavigationStackProtocol {
     //MARK: - Properties
-    var navigationController: UINavigationController!
+    var navigationController: UINavigationController?
     
     //MARK: - Internal Method
     func pop() {
-        navigationController.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     func push(viewController: UIViewController) {
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
         

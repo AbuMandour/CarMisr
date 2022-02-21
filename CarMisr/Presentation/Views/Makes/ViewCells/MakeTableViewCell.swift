@@ -20,7 +20,8 @@ class MakeTableViewCell: UITableViewCell, ViewCellDelegate {
     //MARK: - Overrides
     override func prepareForReuse() {
         makeNameLabel.text = nil
-    }        
+    }
+    
     func configure(_ viewModel: MakeCellViewModel) {
         self.viewModel = viewModel
         bindViewModel()
@@ -33,10 +34,10 @@ class MakeTableViewCell: UITableViewCell, ViewCellDelegate {
             .mapToVoid()
             .asDriverComplete()
         let input = ViewModel.Input(tigger: layoutSubViews)
-        
+
         let output = viewModel.transform(input: input)
         output.name
             .drive(makeNameLabel.rx.text)
-            .disposed(by: disposeBag)
+            .disposed(by: disposeBag)        
     }
 }

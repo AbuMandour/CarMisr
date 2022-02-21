@@ -8,8 +8,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxAlertViewable
 
-class MakeViewController: UIViewController, UITableViewDelegate {
+class MakeViewController: UIViewController, UITableViewDelegate, RxAlertViewable {
 
     //MARK: - Constants
     let cellIdentifier = "makeViewCell"
@@ -41,9 +42,10 @@ class MakeViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Internal Method
     private func setupMakeTableView(){
-        makersTableView.register(MakeTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        makersTableView.register(MakeTableViewCell.nib(), forCellReuseIdentifier: cellIdentifier)
         makersTableView.rx.setDelegate(self).disposed(by: disposeBag)
         makersTableView.refreshControl = refreshControl
+        makersTableView.rowHeight = 88
     }
     
     private func bind(){
@@ -63,7 +65,7 @@ class MakeViewController: UIViewController, UITableViewDelegate {
         outup.makes
             .map ({ $0.count <= 0})
             .distinctUntilChanged()
-            .bind(to: makersTableView.rx.isEmpty(message: "No data"))
+            .bind(to: makersTableView.rx.isEmpty(message: Defaults.noDataString))
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)
@@ -78,6 +80,10 @@ class MakeViewController: UIViewController, UITableViewDelegate {
             .observe(on: MainScheduler.instance)
             .map(!)
             .bind(to: loadMoreActivityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+        outup.alert
+            .observe(on: MainScheduler.instance)
+            .bind(to: self.rx.alert)
             .disposed(by: disposeBag)
     }
     

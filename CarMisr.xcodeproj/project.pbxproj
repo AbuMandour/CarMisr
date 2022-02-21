@@ -45,6 +45,8 @@
 		EA307D5627C313C90034460F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5527C313C90034460F /* NavigationStack.swift */; };
 		EA307D5E27C3CC080034460F /* UserStubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5D27C3CC080034460F /* UserStubData.swift */; };
 		EA307D6027C3CC260034460F /* Test_ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5F27C3CC260034460F /* Test_ApiService.swift */; };
+		EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */; };
+		EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6327C3E52D0034460F /* NameDescribable.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -138,6 +140,8 @@
 		EA307D5527C313C90034460F /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		EA307D5D27C3CC080034460F /* UserStubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStubData.swift; sourceTree = "<group>"; };
 		EA307D5F27C3CC260034460F /* Test_ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ApiService.swift; sourceTree = "<group>"; };
+		EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExtension.swift; sourceTree = "<group>"; };
+		EA307D6327C3E52D0034460F /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 				EAE2183427BDC11F00065763 /* TableViewExtension.swift */,
 				EAE2183627BDC17400065763 /* ReactiveExtension.swift */,
 				EA8725BB27BEC39100860CB4 /* ColorExtension.swift */,
+				EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */,
+				EA307D6327C3E52D0034460F /* NameDescribable.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -847,6 +853,7 @@
 			files = (
 				EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */,
 				EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */,
+				EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */,
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
 				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
@@ -889,6 +896,7 @@
 				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 				EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */,
+				EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

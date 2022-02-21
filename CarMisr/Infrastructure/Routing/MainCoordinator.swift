@@ -15,12 +15,12 @@ class MainCoordinator: AppCoordinator {
     
     // MARK: Initializers
     init( navigationStack: NavigationStackProtocol) {
-        self.navigationStack = navigationStack
+        self.navigationStack = navigationStack        
     }
     
     // MARK: Public Methods
     func start() {
-        let makeViewModel = MakeViewModel()
+        let makeViewModel = MakeViewModel(carMakeService: CarMakeService(apiService: ApiService()))
         makeViewModel.coordinator = self
         let makersViewController = MakeViewController(makeViewModel: makeViewModel)
         navigationStack.push(viewController: makersViewController)
