@@ -43,6 +43,8 @@
 		EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */; };
 		EA307D5427C3136A0034460F /* NavigationStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5327C3136A0034460F /* NavigationStackProtocol.swift */; };
 		EA307D5627C313C90034460F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5527C313C90034460F /* NavigationStack.swift */; };
+		EA307D5E27C3CC080034460F /* UserStubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5D27C3CC080034460F /* UserStubData.swift */; };
+		EA307D6027C3CC260034460F /* Test_ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D5F27C3CC260034460F /* Test_ApiService.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -134,6 +136,8 @@
 		EA307D5027C2D8430034460F /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
 		EA307D5327C3136A0034460F /* NavigationStackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackProtocol.swift; sourceTree = "<group>"; };
 		EA307D5527C313C90034460F /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
+		EA307D5D27C3CC080034460F /* UserStubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStubData.swift; sourceTree = "<group>"; };
+		EA307D5F27C3CC260034460F /* Test_ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ApiService.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 		EA0F9EFC27BBFB780096CFB0 /* CarMisrTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA307D5C27C3CB690034460F /* Stubs */,
+				EA307D5B27C3CB220034460F /* IntegrationTest */,
 				EA8725C027BECA1B00860CB4 /* Mocks */,
 				EA8725BD27BEC82600860CB4 /* UnitTest */,
 			);
@@ -458,6 +464,22 @@
 				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		EA307D5B27C3CB220034460F /* IntegrationTest */ = {
+			isa = PBXGroup;
+			children = (
+				EA307D5F27C3CC260034460F /* Test_ApiService.swift */,
+			);
+			path = IntegrationTest;
+			sourceTree = "<group>";
+		};
+		EA307D5C27C3CB690034460F /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				EA307D5D27C3CC080034460F /* UserStubData.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
@@ -874,7 +896,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA307D5E27C3CC080034460F /* UserStubData.swift in Sources */,
 				EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */,
+				EA307D6027C3CC260034460F /* Test_ApiService.swift in Sources */,
 				EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */,
 				EA93A3C027C1721500B0D85B /* Test_SelectModel.swift in Sources */,
 			);
