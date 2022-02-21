@@ -27,7 +27,7 @@ class MainCoordinator: AppCoordinator {
     }
     
     func selectModel(makeNiceName: String) {
-        let modelViewModel = ModelViewModel()
+        let modelViewModel = ModelViewModel(carModelService: CarModelService(apiService: ApiService()))
         modelViewModel.coordinator = self
         modelViewModel.makeNiceName = makeNiceName
         let modelViewController = ModelViewController(modelViewModel: modelViewModel)

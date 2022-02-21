@@ -19,10 +19,11 @@ final class ModelViewModel{
     private var isLoading = BehaviorRelay<Bool>(value: false)
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
     private var canLoadMore = true
-    private var pageNumber = 0
+    private var pageNumber = 1
     private var itemsCount = 0
     var makeNiceName:String?
     weak var coordinator: MainCoordinator?
+    var carModelService: CarModelProtocol!
     struct Input {
         let refresh: Driver<Void>
         let didAppear: Driver<Void>
@@ -37,7 +38,9 @@ final class ModelViewModel{
     }
     
     //MARK: - Initailizer
-    init() { }
+    init(carModelService: CarModelProtocol) {
+        self.carModelService = carModelService
+    }
         
     //MARK: - Public Method
     func transform(input: Input) -> Output{
@@ -51,7 +54,7 @@ final class ModelViewModel{
         input.refresh
             .drive { [weak self] (_) in
                 guard let self = self else { return }
-                self.loadData()
+                self.refreshData()
             }.disposed(by: disposeBag)
         
         input.modelSelected
@@ -75,13 +78,23 @@ final class ModelViewModel{
         Task{
             isLoading.accept(true)
             tempModels.removeAll()
-            pageNumber = 0
+            pageNumber = 1
             canLoadMore = true
             await requestModels()
             isLoading.accept(false)
         }
     }
         
+    private func refreshData(){
+        Task{
+            tempModels.removeAll()
+            pageNumber = 1
+            canLoadMore = true
+            await requestModels()
+            isLoading.accept(false)
+        }
+    }
+    
     private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
         for index in indexPaths {
             if index.row >= itemsCount - 3 && canLoadMore && !isLoading.value {
@@ -95,8 +108,20 @@ final class ModelViewModel{
     }
     
     private func requestModels() async {
-        try? await Task.sleep(nanoseconds: 3000000000)
-        models.accept([Model]())
+        guard let makeNiceName = makeNiceName else {
+            return
+        }
+        let modelsResult = await carModelService.getCarModels(makeNiceName: makeNiceName, pageNumber: pageNumber) as Result<[Model],DataError>
+        switch modelsResult {
+        case .success(let newModels):
+            tempModels.append(contentsOf: newModels)
+            self.models.accept(tempModels)
+        case .failure(let failureState):
+            if failureState == .error(failureState.description){
+                alert.accept(.error(failureState.description))
+            }
+            canLoadMore = false
+        }
     }
     
     private func showModelDetails(model: Model){

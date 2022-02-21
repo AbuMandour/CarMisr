@@ -12,6 +12,12 @@ import Foundation
 struct CarModelData: Codable {
     let totalNumber, totalPages: Int?
     let models: [ModelData]?
+    
+    enum CodingKeys: String, CodingKey {
+        case totalNumber = "totalNumber"
+        case totalPages = "totalPages"
+        case models = "results"
+    }
 }
 
 // MARK: - Result

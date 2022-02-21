@@ -23,8 +23,11 @@ class CarModelService: CarModelProtocol {
             guard let modelsData = carModelsData.models , !modelsData.isEmpty else {
                 return .failure(.empty(Defaults.noDataString))
             }
-            let models = modelsData.map { modelData -> Model in
-                Model(name: modelData.name!, niceName: modelData.niceName ?? "", imageUrl: "", year: 2022, isNew: true)
+            let models = modelsData.map { modelData -> Model? in
+                guard let modelName = modelData.name,let niceName = modelData.niceName else {
+                    return nil
+                }
+                return Model(name: modelName, niceName: niceName, imageUrl: "", year: 2022, isNew: true)
             }.compactMap{$0}
             return.success(models)
         case .failure(let error):

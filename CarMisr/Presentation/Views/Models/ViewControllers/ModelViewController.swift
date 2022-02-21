@@ -25,8 +25,9 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Car Models"
         setupMakeTableView()
+        bind()
+        title = "Car Models"        
     }
     
     //MARK: - Initializer
@@ -40,9 +41,10 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
     
     //MARK: - Internal Method
     private func setupMakeTableView(){
-        modelsTableView.register(ModelTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        modelsTableView.register(ModelTableViewCell.nib(), forCellReuseIdentifier: cellIdentifier)
         modelsTableView.rx.setDelegate(self).disposed(by: disposeBag)
         modelsTableView.refreshControl = refreshControl
+        modelsTableView.rowHeight = 274
     }
     
     private func bind(){
@@ -62,7 +64,7 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
         outup.models
             .map ({ $0.count <= 0})
             .distinctUntilChanged()
-            .bind(to: modelsTableView.rx.isEmpty(message: "No data"))
+            .bind(to: modelsTableView.rx.isEmpty(message: Defaults.noDataString))
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)
