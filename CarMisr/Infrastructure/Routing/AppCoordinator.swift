@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AppCoordinator{
-    
+protocol AppCoordinator{    
     var childern: [AppCoordinator] {get set}
     var navigationStack: NavigationStackProtocol {get set}
     func start()

@@ -21,14 +21,14 @@ final class ModelViewModel{
     private var canLoadMore = true
     private var pageNumber = 0
     private var itemsCount = 0
-    
+    var makeNiceName:String?
+    weak var coordinator: MainCoordinator?
     struct Input {
         let refresh: Driver<Void>
         let didAppear: Driver<Void>
         let modelSelected: ControlEvent<Model>
         let prefetchRows: ControlEvent<[IndexPath]>
     }
-    
     struct Output{
         let models: Observable<[Model]>
         let isloading: Observable<Bool>
@@ -94,13 +94,13 @@ final class ModelViewModel{
         }
     }
     
-    private func requestModels() async{
+    private func requestModels() async {
         try? await Task.sleep(nanoseconds: 3000000000)
         models.accept([Model]())
     }
     
     private func showModelDetails(model: Model){
-        
+        coordinator?.showModelDetails(modelNiceName: model.niceName)
     }
 
 }

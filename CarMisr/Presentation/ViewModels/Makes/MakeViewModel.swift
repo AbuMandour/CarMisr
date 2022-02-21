@@ -21,14 +21,13 @@ final class MakeViewModel{
     private var canLoadMore = true
     private var pageNumber = 0
     private var itemsCount = 0
-    
+    weak var coordinator: MainCoordinator?
     struct Input {
         let didAppear: Driver<Void>
         let refresh: Driver<Void>
         let makeSelected: ControlEvent<Make>
         let prefetchRows: ControlEvent<[IndexPath]>
     }
-    
     struct Output{
         let makes: Observable<[Make]>
         let isloading: Observable<Bool>
@@ -98,6 +97,6 @@ final class MakeViewModel{
     }
     
     private func showModels(make: Make){
-        
+        coordinator?.selectModel(makeNiceName: make.niceName)
     }
 }

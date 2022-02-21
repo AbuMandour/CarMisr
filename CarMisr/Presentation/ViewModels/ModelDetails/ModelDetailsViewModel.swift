@@ -14,11 +14,11 @@ final class ModelDetailsViewModel{
     private var disposeBag = DisposeBag()
     private var modelSpecs = PublishRelay<[ModelSpecs]>()
     private var isLoading = BehaviorRelay<Bool>(value: false)
-    
+    weak var coordinator: MainCoordinator?
+    var modelNiceName: String?
     struct Input {
         let didAppear: Driver<Void>
-    }
-    
+    }    
     struct Output{
         let modelSpecs: Observable<[ModelSpecs]>
         let isloading: Observable<Bool>
