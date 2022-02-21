@@ -21,7 +21,6 @@ final class MakeViewModel{
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
     private var canLoadMore = true
     private var pageNumber = 1
-    private var itemsCount = 0
     weak var coordinator: MainCoordinator?
     var carMakeService: CarMakeProtocol!
     struct Input {
@@ -97,7 +96,7 @@ final class MakeViewModel{
     
     private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
         for index in indexPaths {
-            if index.row >= itemsCount - 3 && canLoadMore && !isLoading.value {
+            if index.row >= tempMakes.count - 3 && canLoadMore && !isLoading.value {
                 isLoadMore.accept(true)
                 pageNumber += 1
                 Task{ await requestMakes() }
@@ -106,8 +105,7 @@ final class MakeViewModel{
             }
         }
     }
-    
-    private func requestMakes() async{
+    private func requestMakes() async {
         let makesResult = await carMakeService.getCarMakes(pageNumber: pageNumber) as Result<[Make],DataError>
         switch makesResult {
         case .success(let makeModels):

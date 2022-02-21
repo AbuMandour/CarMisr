@@ -16,7 +16,7 @@ class MakeViewController: UIViewController, UITableViewDelegate, RxAlertViewable
     let cellIdentifier = "makeViewCell"
     
     //MARK: - Properties
-    @IBOutlet weak var makersTableView: UITableView!
+    @IBOutlet weak var makesTableView: UITableView!
     @IBOutlet weak var loadMoreActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
     let refreshControl = UIRefreshControl()
@@ -42,30 +42,30 @@ class MakeViewController: UIViewController, UITableViewDelegate, RxAlertViewable
     
     //MARK: - Internal Method
     private func setupMakeTableView(){
-        makersTableView.register(MakeTableViewCell.nib(), forCellReuseIdentifier: cellIdentifier)
-        makersTableView.rx.setDelegate(self).disposed(by: disposeBag)
-        makersTableView.refreshControl = refreshControl
-        makersTableView.rowHeight = 88
+        makesTableView.register(MakeTableViewCell.nib(), forCellReuseIdentifier: cellIdentifier)
+        makesTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        makesTableView.refreshControl = refreshControl
+        makesTableView.rowHeight = 88
     }
     
     private func bind(){
         let refreshTable = refreshControl.rx.controlEvent(.valueChanged).mapToVoid().asDriverComplete()
         let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
-        let prefetchDataSource = makersTableView.rx.prefetchRows
+        let prefetchDataSource = makesTableView.rx.prefetchRows
         let input = MakeViewModel.Input(didAppear: viewDidAppear,
                                         refresh: refreshTable,
-                                        makeSelected: makersTableView.rx.modelSelected(Make.self),
+                                        makeSelected: makesTableView.rx.modelSelected(Make.self),
                                         prefetchRows: prefetchDataSource)
         let outup = makeViewModel.transform(input: input)
         outup.makes
-            .bind(to: makersTableView.rx.items(cellIdentifier: cellIdentifier, cellType: MakeTableViewCell.self)) { (row, make, cell) in
+            .bind(to: makesTableView.rx.items(cellIdentifier: cellIdentifier, cellType: MakeTableViewCell.self)) { (row, make, cell) in
                 cell.configure(.init(model: make))
             }
             .disposed(by: disposeBag)
         outup.makes
             .map ({ $0.count <= 0})
             .distinctUntilChanged()
-            .bind(to: makersTableView.rx.isEmpty(message: Defaults.noDataString))
+            .bind(to: makesTableView.rx.isEmpty(message: Defaults.noDataString))
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)
