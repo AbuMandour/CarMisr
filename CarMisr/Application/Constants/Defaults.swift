@@ -8,6 +8,6 @@
 import Foundation
 
 struct Defaults {
-    static let imageUrl = ""
+    static let imageUrl = "https://icon-library.com/images/placeholder-icon/placeholder-icon-9.jpg"
     static let noDataString = "No data"
 }

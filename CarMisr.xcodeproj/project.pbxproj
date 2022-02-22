@@ -49,6 +49,8 @@
 		EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6327C3E52D0034460F /* NameDescribable.swift */; };
 		EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7027C409E20034460F /* BaseEndPoint.swift */; };
 		EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7227C40DA70034460F /* MainEndPoints.swift */; };
+		EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7427C4550C0034460F /* ModelImagesData.swift */; };
+		EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7627C46F770034460F /* MediaEndPoint.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -146,6 +148,8 @@
 		EA307D6327C3E52D0034460F /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		EA307D7027C409E20034460F /* BaseEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndPoint.swift; sourceTree = "<group>"; };
 		EA307D7227C40DA70034460F /* MainEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEndPoints.swift; sourceTree = "<group>"; };
+		EA307D7427C4550C0034460F /* ModelImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelImagesData.swift; sourceTree = "<group>"; };
+		EA307D7627C46F770034460F /* MediaEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEndPoint.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -293,11 +297,10 @@
 		EA0F9F3E27BC02470096CFB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				EA307D6B27C409790034460F /* EndPoint */,
-				EA93A3B527BFDC8400B0D85B /* Constant */,
+				EA307D6B27C409790034460F /* EndPoints */,
+				EA93A3B527BFDC8400B0D85B /* Constants */,
 				EA8725CD27BED67D00860CB4 /* Utilities */,
-				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
-				EA307D4927C272770034460F /* CarModelService.swift */,
+				EA307D7827C477A00034460F /* Services */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 		EA307D5227C313200034460F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EA307D7427C4550C0034460F /* ModelImagesData.swift */,
 				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
 				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
 			);
@@ -493,13 +497,23 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
-		EA307D6B27C409790034460F /* EndPoint */ = {
+		EA307D6B27C409790034460F /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
 				EA307D7027C409E20034460F /* BaseEndPoint.swift */,
 				EA307D7227C40DA70034460F /* MainEndPoints.swift */,
+				EA307D7627C46F770034460F /* MediaEndPoint.swift */,
 			);
-			path = EndPoint;
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		EA307D7827C477A00034460F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
+				EA307D4927C272770034460F /* CarModelService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
@@ -605,14 +619,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		EA93A3B527BFDC8400B0D85B /* Constant */ = {
+		EA93A3B527BFDC8400B0D85B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				EA93A3B627BFDC8E00B0D85B /* Urls.swift */,
 				EA93A3B827BFDCDF00B0D85B /* Keys.swift */,
 				EA307D4D27C2D1520034460F /* Defaults.swift */,
 			);
-			path = Constant;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -872,6 +886,7 @@
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
 				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
+				EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */,
 				EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
 				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
@@ -885,6 +900,7 @@
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,
+				EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,

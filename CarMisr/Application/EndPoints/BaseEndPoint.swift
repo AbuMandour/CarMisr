@@ -19,18 +19,16 @@ extension BaseEndPoint{
     public var urlRequest: URLRequest {
         guard let url = self.url else {
             fatalError("URL could not be built")
-        }
-        print(url.absoluteString)
+        }        
         return URLRequest(url: url)
     }
 
-    private var url: URL? {
+    public var url: URL? {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.path = path
-        guard let parameters = parameters as? [String: String] else {
-            fatalError("parameters for GET http method must conform to [String: String]")
-        }
-        urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        if let parameters = parameters as? [String: String] {
+            urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        }        
         return urlComponents?.url
     }
 }

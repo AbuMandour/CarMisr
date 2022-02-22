@@ -7,8 +7,24 @@
 
 import Foundation
 
-struct Model : Equatable , Hashable {
+class Model : Equatable , Hashable {
+        
+    internal init(id: String,name: String, niceName: String, imageUrl: URL) {
+        self.id = id
+        self.name = name
+        self.niceName = niceName
+        self.imageUrl = imageUrl
+    }
+    var id: String
     var name: String
     var niceName: String
-    var imageUrl: String
+    var imageUrl: URL
+    
+    static func == (lhs: Model, rhs: Model) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

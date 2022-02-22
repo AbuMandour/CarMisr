@@ -37,8 +37,7 @@ final class ModelCellViewModel{
         let imageUrl : Driver<URL> = input.tigger
             .flatMapLatest { [weak self] (_) in
                 guard let self = self else { return Driver.empty() }
-                guard let url = URL(string: self.model.imageUrl) else { return Driver.empty() }
-                return Driver.just(url)
+                return Driver.just(self.model.imageUrl)
             }
         return Output(name: name, imageUrl: imageUrl )
     }
