@@ -17,6 +17,7 @@ final class ModelViewModel{
     private let alert = PublishRelay<RxAlert>()
     private var tempModels = [Model]()
     private var isLoading = BehaviorRelay<Bool>(value: false)
+    private var isRefreshing = BehaviorRelay<Bool>(value: false)
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
     private var canLoadMore = true
     private var pageNumber = 1
@@ -33,6 +34,7 @@ final class ModelViewModel{
         let models: Observable<[Model]>
         let isloading: Observable<Bool>
         let isloadMore: Observable<Bool>
+        let isRefreshing: Observable<Bool>
         let alert: Observable<RxAlert>
     }
     
@@ -69,7 +71,7 @@ final class ModelViewModel{
             }.disposed(by: disposeBag)
         
         return Output(models: models.asObservable(), isloading: isLoading.asObservable(),
-                      isloadMore: isLoadMore.asObservable(), alert: alert.asObservable())
+                      isloadMore: isLoadMore.asObservable(), isRefreshing: isRefreshing.asObservable(), alert: alert.asObservable())
     }
     
     //MARK: - Internal Method
@@ -86,11 +88,12 @@ final class ModelViewModel{
         
     private func refreshData(){
         Task{
+            isRefreshing.accept(true)
             tempModels.removeAll()
             pageNumber = 1
             canLoadMore = true
             await requestModels()
-            isLoading.accept(false)
+            isRefreshing.accept(false)
         }
     }
     
@@ -116,15 +119,21 @@ final class ModelViewModel{
             tempModels.append(contentsOf: newModels)
             self.models.accept(tempModels)
         case .failure(let failureState):
-            if failureState == .error(failureState.description){
-                alert.accept(.error(failureState.description))
-            }
             canLoadMore = false
+            guard tempModels.isEmpty else {return}
+            showNoModelsAlert(message: failureState.description)
         }
     }
     
     private func showModelDetails(model: Model){
         coordinator?.showModelDetails(modelNiceName: model.niceName)
+    }
+    
+    private func showNoModelsAlert(message: String){
+        alert.accept(.error(message, onConfirm: { [weak self] in
+            guard let self = self else {return}
+            self.coordinator?.popModels()
+        }))
     }
 
 }

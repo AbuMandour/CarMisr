@@ -64,7 +64,7 @@ class ModelViewController: UIViewController ,RxAlertViewable , UITableViewDelega
         outup.models
             .map ({ $0.count <= 0})
             .distinctUntilChanged()
-            .bind(to: modelsTableView.rx.isEmpty(message: Defaults.noDataString))
+            .bind(to: modelsTableView.rx.isEmpty(message: Defaults.noDataMessage))
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)

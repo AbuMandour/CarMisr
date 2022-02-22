@@ -48,7 +48,13 @@ class MakeViewController: UIViewController, UITableViewDelegate, RxAlertViewable
         makesTableView.rowHeight = 88
     }
     
-    private func bind(){
+    private func bind(){        
+        makesTableView.rx.itemSelected
+            .bind { [weak self] indexPath in
+                guard let self = self else { return  }
+                self.makesTableView.deselectRow(at: indexPath, animated: false) }
+            .disposed(by: disposeBag)
+                
         let refreshTable = refreshControl.rx.controlEvent(.valueChanged).mapToVoid().asDriverComplete()
         let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
         let prefetchDataSource = makesTableView.rx.prefetchRows
@@ -65,7 +71,7 @@ class MakeViewController: UIViewController, UITableViewDelegate, RxAlertViewable
         outup.makes
             .map ({ $0.count <= 0})
             .distinctUntilChanged()
-            .bind(to: makesTableView.rx.isEmpty(message: Defaults.noDataString))
+            .bind(to: makesTableView.rx.isEmpty(message: Defaults.noDataMessage))
             .disposed(by: disposeBag)
         outup.isloading
             .observe(on: MainScheduler.instance)

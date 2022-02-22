@@ -22,7 +22,7 @@ class CarMakeService : CarMakeProtocol{
         switch makesResult{
         case .success(let carMakesData):
             guard let makesData = carMakesData.makes , !makesData.isEmpty else {
-                return .failure(.empty(Defaults.noDataString))
+                return .failure(.empty(Defaults.noDataMessage))
             }
             let makes = makesData.map { makeData -> Make? in
                 if let name = makeData.name, let niceName = makeData.niceName {

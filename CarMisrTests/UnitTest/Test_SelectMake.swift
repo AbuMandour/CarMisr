@@ -37,7 +37,7 @@ class Test_SelectMake : XCTestCase{
         //when
         let result = await carMakeService.getCarMakes(pageNumber: pageNumber) as Result<[Make], DataError>
         //then
-        XCTAssertEqual(result, .failure(.empty(Defaults.noDataString)))
+        XCTAssertEqual(result, .failure(.empty(Defaults.noDataMessage)))
     }
     
     func test_carMakesShouldReturnArrayOfMakes() async throws {

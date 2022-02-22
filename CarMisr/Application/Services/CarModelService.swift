@@ -21,7 +21,7 @@ class CarModelService: CarModelProtocol {
         switch modelsResult{
         case .success(let carModelsData):
             guard let modelsData = carModelsData.models , !modelsData.isEmpty else {
-                return .failure(.empty(Defaults.noDataString))
+                return .failure(.empty(Defaults.noModelsMessage))
             }
             let models = modelsData.map { modelData ->  Model? in
                 guard let modelName = modelData.name,let niceName = modelData.niceName else {

@@ -41,7 +41,7 @@ class Test_SelectModel : XCTestCase{
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model], DataError>
         //then
-        XCTAssertEqual(result, .failure(.empty(Defaults.noDataString)))
+        XCTAssertEqual(result, .failure(.empty(Defaults.noDataMessage)))
     }
     
     func test_carModelShouldReturnArrayofModels() async throws{

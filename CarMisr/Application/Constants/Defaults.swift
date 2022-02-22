@@ -9,5 +9,6 @@ import Foundation
 
 struct Defaults {
     static let imageUrl = "https://icon-library.com/images/placeholder-icon/placeholder-icon-9.jpg"
-    static let noDataString = "No data"
+    static let noDataMessage = "No data"
+    static let noModelsMessage = "No models available"
 }
