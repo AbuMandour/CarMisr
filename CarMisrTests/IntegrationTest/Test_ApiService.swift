@@ -23,8 +23,9 @@ class Test_ApiService: XCTestCase {
     func test_Fetch_Method_From_Api() async {
         // given
         let url = "https://randomuser.me/api/"
+        let urlRequest = URLRequest(url: URL(string: url)!)
         // when
-        let result = await apiService.fetchItem(urlString: url) as Result<UserStubData,ApiError>
+        let result = await apiService.fetchItem(urlRequest: urlRequest) as Result<UserStubData,ApiError>
         switch result{
         case .success(let apiCallSubData):
             self.apiCallStub = apiCallSubData

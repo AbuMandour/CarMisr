@@ -25,9 +25,8 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zmY-PL-oR8" userLabel="mainActivityIndicator">
-                    <rect key="frame" x="197" y="438" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zmY-PL-oR8" userLabel="mainActivityIndicator">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                 </activityIndicatorView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-bo-B3u" userLabel="loadMoreActivityIndicator">
                     <rect key="frame" x="197" y="842" width="20" height="20"/>
@@ -38,6 +37,8 @@
             <constraints>
                 <constraint firstItem="xk5-MI-adi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Eb-gO-JQN"/>
                 <constraint firstAttribute="trailing" secondItem="xk5-MI-adi" secondAttribute="trailing" id="Nrc-tS-y44"/>
+                <constraint firstItem="zmY-PL-oR8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P6a-yF-rlR"/>
+                <constraint firstItem="zmY-PL-oR8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RcF-cQ-4AG"/>
                 <constraint firstAttribute="bottom" secondItem="xk5-MI-adi" secondAttribute="bottom" id="XA2-r0-A8d"/>
                 <constraint firstItem="Mxp-bo-B3u" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="e1g-Wv-hHx"/>
                 <constraint firstItem="xk5-MI-adi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oII-kU-zo2"/>

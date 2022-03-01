@@ -11,9 +11,7 @@ import Foundation
 
 class ApiServiceMock : ApiProtocol{
     
-    var behavior: Behavior!
-    
-    func fetchItem<T: Codable>(urlString: String) async -> Result<T, ApiError>  {
+    func fetchItem<T>(urlRequest: URLRequest) async -> Result<T, ApiError> where T : Decodable, T : Encodable {
         switch self.behavior{
         case .alwaysFail:
             return .failure(.defaultError)
@@ -23,6 +21,7 @@ class ApiServiceMock : ApiProtocol{
             return .failure(.defaultError)
         }
     }
+    var behavior: Behavior!
 }
 
 enum Behavior {

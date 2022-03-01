@@ -32,74 +32,80 @@ class Test_SelectModel : XCTestCase{
         XCTAssertEqual(result, .failure(.error("")))
     }
     
-    func test_carModelShouldReturnEmpty() async {
+    func test_carModelShouldReturnNoModelsMessage() async {
         // given
         let pageNumber = 1
-        let makeNiceName = ""
-//        let expectedMakes =
-//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+        let makeNiceName = "honda"
+        let noModelsMessage = Defaults.noModelsMessage
+        let expectedMakes = CarModelData(totalNumber: 0, totalPages: 0, models: [ModelData]())
+        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model], DataError>
         //then
-        XCTAssertEqual(result, .failure(.empty(Defaults.noDataMessage)))
+        XCTAssertEqual(result, .failure(.empty(noModelsMessage)))
     }
     
-    func test_carModelShouldReturnArrayofModels() async throws{
+    func test_carModelShouldReturnArrayofModelNames() async throws{
         // given
         let pageNumber = 1
-        let makeNiceName = ""
-//        let expectedMakes =
-//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+        let makeNiceName = "honda"
+        let expectedMakes = CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "Civic", niceName: "civic")])
+        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
-        let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
+        let result = await carModelService.getCarModelNames(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],ApiError>
         let models = try result.get()
                 
         //then
         XCTAssertFalse(models.isEmpty)
     }
     
-//    func test_carModelShouldReturnOnly2022Models() async throws{
-//        // given
-//        let pageNumber = 1
-//        let makeNiceName = ""
-////        let expectedMakes =
-////        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
-//
-//        //when
-//        let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
-//        let models:[Model] = try result.get()
-//        let hasModelsOtherThan2022 = models.contains { $0.year != 2022 }
-//        //then
-//        XCTAssertFalse(hasModelsOtherThan2022)
-//    }
+    func test_carModelShouldReturnEmptyString() async throws{
+        // given
+        let makeNiceName = "honda"
+        let modelNiceName = "civic"
+        let expectedMakes = ModelImagesData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil,
+                                                                   sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil,
+                                                                   exactStyleIDS: nil)], photosCount: 1, links: nil)
+        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+        
+        //when
+        let result = await carModelService.getModelImage(makeNiceName: makeNiceName, modelNiceName: modelNiceName)
+        
+                
+        //then
+        XCTAssertNil(result)
+    }
     
-//    func test_carModelShouldReturnOnlyNewCars() async throws {
-//        // given
-//        let pageNumber = 1
-//        let makeNiceName = ""
-////        let expectedMakes =
-////        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
-//
-//        //when
-//        let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
-//        let models:[Model] = try result.get()
-//        let hasNoNewCars = models.contains { !$0.isNew }
-//        //then
-//        XCTAssertFalse(hasNoNewCars)
-//    }
+    func test_carModelShouldReturnExteriorModelImage() async throws{
+        // given
+        let makeNiceName = "honda"
+        let modelNiceName = "civic"
+        let category : ImageCategory = .exterior
+        let expectedMakes = ModelImagesData(photosData: [PhotoData(title: nil, category: category, tags: nil, provider: nil,
+                                                                   sources: [Source(link: Link(rel: nil, href: "audi/s7/2013/oem/2013_audi_s7_sedan_prestige_fq_oem_6_1600.jpg"), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil,
+                                                                   exactStyleIDS: nil)], photosCount: 1, links: nil)
+        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+        
+        //when
+        let result = await carModelService.getModelImage(makeNiceName: makeNiceName, modelNiceName: modelNiceName)
+                        
+        //then
+        XCTAssertNotNil(result)
+    }
     
     func test_carModelShouldNotReturnDuplicates() async throws{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-//        let expectedMakes =
-//        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
+        let expectedMakes = CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "Civic", niceName: "civic"),
+                                                                                 ModelData(id: "1", name: "Civic", niceName: "civic")])
+        apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
-        let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],DataError>
+        let result = await carModelService.getCarModelNames(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model],ApiError>
         let models = try result.get()
-        let duplicated = Dictionary(grouping: models, by: {$0}).filter { $1.count > 1 }.keys
+        let duplicated = Dictionary(grouping: models, by: {$0.id}).filter { $1.count > 1 }.keys
         //then
         XCTAssertTrue(duplicated.isEmpty)
     }

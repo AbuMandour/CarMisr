@@ -51,6 +51,7 @@
 		EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7227C40DA70034460F /* MainEndPoints.swift */; };
 		EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7427C4550C0034460F /* ModelImagesData.swift */; };
 		EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7627C46F770034460F /* MediaEndPoint.swift */; };
+		EA57AE6127CD8E8F00260F4B /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */; };
 		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
@@ -150,6 +151,7 @@
 		EA307D7227C40DA70034460F /* MainEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEndPoints.swift; sourceTree = "<group>"; };
 		EA307D7427C4550C0034460F /* ModelImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelImagesData.swift; sourceTree = "<group>"; };
 		EA307D7627C46F770034460F /* MediaEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEndPoint.swift; sourceTree = "<group>"; };
+		EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				EA8725BB27BEC39100860CB4 /* ColorExtension.swift */,
 				EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */,
 				EA307D6327C3E52D0034460F /* NameDescribable.swift */,
+				EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -927,6 +930,7 @@
 				EA8725CC27BED60500860CB4 /* DataError.swift in Sources */,
 				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
+				EA57AE6127CD8E8F00260F4B /* SequenceExtension.swift in Sources */,
 				EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */,
 				EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */,
 			);

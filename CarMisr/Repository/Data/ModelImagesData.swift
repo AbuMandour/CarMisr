@@ -36,7 +36,7 @@ enum Rel: String, Codable {
 // MARK: - Photo
 struct PhotoData: Codable {
     let title: String?
-    let category: Category?
+    let category: ImageCategory?
     let tags: [String]?
     let provider: Provider?
     let sources: [Source]?
@@ -54,7 +54,7 @@ struct PhotoData: Codable {
     }
 }
 
-enum Category: String, Codable {
+enum ImageCategory: String, Codable {
     case exterior = "EXTERIOR"
     case interior = "INTERIOR"
 }
