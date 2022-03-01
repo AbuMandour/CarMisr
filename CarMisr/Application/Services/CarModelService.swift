@@ -27,6 +27,10 @@ class CarModelService: CarModelProtocol {
                 if let imagePath = imagePath {
                     model.imageUrl = MediaEndPoint.image(path: imagePath).url ?? URL(string: Defaults.imageUrl)!
                 }
+                let colors = await getModelColors(styleId: model.styleId)
+                if let colors = colors {
+                    model.colors = colors
+                }
             }
             return.success(models)
         case .failure(let error):
@@ -84,19 +88,15 @@ class CarModelService: CarModelProtocol {
     }
     
     // here we will get colors only for 2022 only and without duplicated
-    func getModelColors(makeNiceName: String,modelNiceName: String) async -> String? {
-        let modelImagesEndPoint = MainEndPoints.modelImages((makeNiceName, modelNiceName))
-        let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<ModelImagesData,ApiError>
-        switch modelIamges{
-        case .success(let modelImageData):
-            guard let photosData = modelImageData.photosData,
-               let photoData = photosData.first(where: { $0.category == .exterior }),
-               let source = photoData.sources?.first,
-               let link = source.link,
-               let photoHref = link.href  else {
+    func getModelColors(styleId: Int) async -> [String]? {
+        let colorEndPoint = MainEndPoints.colors(styleId: styleId)
+        let modelColorResult = await apiService.fetchItem(urlRequest: colorEndPoint.urlRequest) as Result<CarColorData,ApiError>
+        switch modelColorResult {
+        case .success(let modelColorData):
+            guard let colors = modelColorData.colors , !colors.isEmpty else {
                 return nil
             }
-            return photoHref
+            return colors.compactMap { $0.colorChips?.primary?.hex }
         default:
             return nil
         }

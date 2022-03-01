@@ -12,7 +12,7 @@ enum MainEndPoints {
     case makes(pageNumber: Int)
     case models((pageNumber: Int, makeNiceName: String))
     case modelImages((makeNiceName: String, modelNiceName: String))    
-
+    case colors(styleId: Int)
 }
 
 extension MainEndPoints : BaseEndPoint{
@@ -29,6 +29,8 @@ extension MainEndPoints : BaseEndPoint{
             return "/api/vehicle/v3/styles"
         case .modelImages((let makeNiceName, let modelNiceName)):
             return "/api/media/v2/\(makeNiceName)/\(modelNiceName)/photos"
+        case .colors(let styleId):
+            return "/api/vehicle/v2/styles/\(styleId)/colors"
         }
     }
     
@@ -46,6 +48,8 @@ extension MainEndPoints : BaseEndPoint{
             params["publicationStates"] = "NEW"
             params["fields"] = "id,name,niceName,engineType,engineSize,transmissionType,numberOfSeats,categories,modelNiceName,modelId"
         case .modelImages((_,_)):
+            params["fmt"] = "json"
+        case .colors(_):
             params["fmt"] = "json"
         }
         params["api_key"] = Keys.edmundsKey
