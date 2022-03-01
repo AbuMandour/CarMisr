@@ -64,6 +64,7 @@
 		EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D627BE348400AF22A7 /* ModelSpec.swift */; };
 		EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */; };
 		EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */; };
+		EA7EFCA727CE603B00D64FC8 /* CarStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */; };
 		EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */; };
 		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
 		EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */; };
@@ -164,6 +165,7 @@
 		EA5904D627BE348400AF22A7 /* ModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSpec.swift; sourceTree = "<group>"; };
 		EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
 		EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleData.swift; sourceTree = "<group>"; };
 		EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
 		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectMake.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				EA307D7427C4550C0034460F /* ModelImagesData.swift */,
 				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
 				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
+				EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
 				EA307D4827C272290034460F /* CarModelProtocol.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
+				EA7EFCA727CE603B00D64FC8 /* CarStyleData.swift in Sources */,
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,

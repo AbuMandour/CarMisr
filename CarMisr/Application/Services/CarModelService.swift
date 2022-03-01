@@ -23,7 +23,7 @@ class CarModelService: CarModelProtocol {
                 return .failure(.empty(Defaults.noModelsMessage))
             }
             for model in models {
-                let imagePath = await getModelImage(makeNiceName: makeNiceName, modelNiceName: model.niceName)
+                let imagePath = await getModelImage(makeNiceName: makeNiceName, modelNiceName: model.modelNiceName)
                 if let imagePath = imagePath {
                     model.imageUrl = MediaEndPoint.image(path: imagePath).url ?? URL(string: Defaults.imageUrl)!
                 }
@@ -37,20 +37,27 @@ class CarModelService: CarModelProtocol {
     // we will get models name ,niceName and Id without duplicated values and only 2022
     func getCarModelNames(makeNiceName: String, pageNumber: Int) async -> Result<[Model],ApiError> {
         let modelEndPoint = MainEndPoints.models((pageNumber, makeNiceName))
-        let modelsDataResult = await apiService.fetchItem(urlRequest:modelEndPoint.urlRequest) as Result<CarModelData,ApiError>
-        switch modelsDataResult{
-        case .success(let carModelsData):
-            guard let modelsData = carModelsData.models , !modelsData.isEmpty else {
+        let stylesDataResult = await apiService.fetchItem(urlRequest:modelEndPoint.urlRequest) as Result<CarStyleData,ApiError>
+        switch stylesDataResult{
+        case .success(let carStylesData):
+            guard let stylesData = carStylesData.styles , !stylesData.isEmpty else {
                 return .success([Model]())
             }
-            let models = modelsData.map { modelData ->  Model? in
-                guard let modelName = modelData.name,let niceName = modelData.niceName else {
+            let models = stylesData.map { styleData ->  Model? in
+                guard let modelId = styleData.modelId , let id = styleData.id , let name = styleData.name, let modelNiceName = styleData.modelNiceName else {
                     return nil
                 }
-                return Model(id: modelData.id ?? "\(makeNiceName)_\(niceName)" ,
-                             name: modelName,
-                             niceName: niceName,
-                             imageUrl: URL(string: Defaults.imageUrl)!)
+                return Model(id: modelId,
+                             name: name,
+                             modelNiceName: modelNiceName,
+                             imageUrl: URL(string: Defaults.imageUrl)!, // we will add image later from another API call
+                             styleId: id,
+                             transmissionType: styleData.transmissionType ?? "-",
+                             engineType: styleData.engineType ?? "-",
+                             engineSize: String(styleData.engineSize ?? 0),
+                             numberOfSeats: String(styleData.numberOfSeats ?? 0),
+                             vehicleType: styleData.categories?.vehicleType?.first ?? "-",
+                             colors: [String]()) // we will add colors later from another API call
             }.compactMap{$0}.uniqueValues()
             return.success(models)
         case .failure(let error):
@@ -59,6 +66,25 @@ class CarModelService: CarModelProtocol {
     }
     // here we will get image url only for 2022 only and without duplicated
     func getModelImage(makeNiceName: String,modelNiceName: String) async -> String? {
+        let modelImagesEndPoint = MainEndPoints.modelImages((makeNiceName, modelNiceName))
+        let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<ModelImagesData,ApiError>
+        switch modelIamges{
+        case .success(let modelImageData):
+            guard let photosData = modelImageData.photosData,
+               let photoData = photosData.first(where: { $0.category == .exterior }),
+               let source = photoData.sources?.first,
+               let link = source.link,
+               let photoHref = link.href  else {
+                return nil
+            }
+            return photoHref
+        default:
+            return nil
+        }
+    }
+    
+    // here we will get colors only for 2022 only and without duplicated
+    func getModelColors(makeNiceName: String,modelNiceName: String) async -> String? {
         let modelImagesEndPoint = MainEndPoints.modelImages((makeNiceName, modelNiceName))
         let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<ModelImagesData,ApiError>
         switch modelIamges{

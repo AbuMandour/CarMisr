@@ -24,9 +24,9 @@ extension MainEndPoints : BaseEndPoint{
     var path: String {
         switch self {
         case .makes(_):
-            return "/api/vehicle/v3/makes"
+            return "/api/vehicle/v3/makes"        
         case .models((_, _)):
-            return "/api/vehicle/v3/models"
+            return "/api/vehicle/v3/styles"
         case .modelImages((let makeNiceName, let modelNiceName)):
             return "/api/media/v2/\(makeNiceName)/\(modelNiceName)/photos"
         }
@@ -44,7 +44,7 @@ extension MainEndPoints : BaseEndPoint{
             params["makeNiceName"] = "\(makeNiceName)"
             params["modelYears.year"] = "2022"
             params["publicationStates"] = "NEW"
-            params["fields"] = "id,name,niceName"
+            params["fields"] = "id,name,niceName,engineType,engineSize,transmissionType,numberOfSeats,categories,modelNiceName,modelId"
         case .modelImages((_,_)):
             params["fmt"] = "json"
         }

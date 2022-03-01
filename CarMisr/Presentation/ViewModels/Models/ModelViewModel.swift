@@ -126,7 +126,7 @@ final class ModelViewModel{
     }
     
     private func showModelDetails(model: Model){
-        coordinator?.showModelDetails(modelNiceName: model.niceName)
+        coordinator?.showModelDetails(modelNiceName: model.modelNiceName)
     }
     
     private func showNoModelsAlert(message: String){
