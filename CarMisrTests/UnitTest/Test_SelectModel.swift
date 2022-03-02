@@ -7,7 +7,6 @@
 
 import Foundation
 import XCTest
-
 @testable import CarMisr
 
 
@@ -25,7 +24,7 @@ class Test_SelectModel : XCTestCase{
         // given
         apiServiceMock.behavior = .alwaysFail
         let pageNumber = 1
-        let makeNiceName = ""
+        let makeNiceName = "honda"
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName, pageNumber: pageNumber) as Result<[Model], DataError>
         //then
@@ -37,7 +36,7 @@ class Test_SelectModel : XCTestCase{
         let pageNumber = 1
         let makeNiceName = "honda"
         let noModelsMessage = Defaults.noModelsMessage
-        let expectedMakes = CarModelData(totalNumber: 0, totalPages: 0, models: [ModelData]())
+        let expectedMakes = CarStyleData(totalNumber: 0, totalPages: 0, styles: [StylesData]())
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         //when
         let result = await carModelService.getCarModels(makeNiceName: makeNiceName,pageNumber: pageNumber) as Result<[Model], DataError>
@@ -49,7 +48,7 @@ class Test_SelectModel : XCTestCase{
         // given
         let pageNumber = 1
         let makeNiceName = "honda"
-        let expectedMakes = CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "Civic", niceName: "civic")])
+        let expectedMakes = CarStyleData(totalNumber: 1, totalPages: 1, styles: [StylesData(id: 1, modelNiceName: "civic", modelId: "1", transmissionType: "", engineType: "", engineSize: 1400, numberOfSeats: 5, categories: nil, name: "Civic", niceName: "civic")])
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
@@ -60,7 +59,7 @@ class Test_SelectModel : XCTestCase{
         XCTAssertFalse(models.isEmpty)
     }
     
-    func test_carModelShouldReturnEmptyString() async throws{
+    func test_carModelImageShouldReturnEmptyString() async throws{
         // given
         let makeNiceName = "honda"
         let modelNiceName = "civic"
@@ -98,8 +97,7 @@ class Test_SelectModel : XCTestCase{
         // given
         let pageNumber = 1
         let makeNiceName = ""
-        let expectedMakes = CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "Civic", niceName: "civic"),
-                                                                                 ModelData(id: "1", name: "Civic", niceName: "civic")])
+        let expectedMakes = CarStyleData(totalNumber: 2, totalPages: 2, styles: [StylesData(id: 1, modelNiceName: "civic", modelId: "1", transmissionType: "", engineType: "", engineSize: 1400, numberOfSeats: 5, categories: nil, name: "Civic", niceName: "civic"),StylesData(id: 1, modelNiceName: "civic", modelId: "1", transmissionType: "", engineType: "", engineSize: 1400, numberOfSeats: 5, categories: nil, name: "Civic", niceName: "civic")])
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
