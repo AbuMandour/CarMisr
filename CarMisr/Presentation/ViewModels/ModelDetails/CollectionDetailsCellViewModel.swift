@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 
-final class CollectionModelDetailsCellViewModel{
+final class CollectionDetailsCellViewModel{
     
     //MARK: - Properties
     private let multiModelSpecs: MultiModelSpecs

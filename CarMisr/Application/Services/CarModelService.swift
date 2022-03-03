@@ -48,7 +48,7 @@ class CarModelService: CarModelProtocol {
     // here we will get image url only for 2022 only and without duplicated
     func getCarModelImage(makeNiceName: String,modelNiceName: String) async -> String? {
         let modelImagesEndPoint = MainEndPoints.modelImages((makeNiceName, modelNiceName))
-        let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<ModelImagesData,ApiError>
+        let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<CarImageData,ApiError>
         switch modelIamges{
         case .success(let modelImageData):
             guard let photosData = modelImageData.photosData,

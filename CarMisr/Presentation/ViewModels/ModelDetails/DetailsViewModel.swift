@@ -9,23 +9,23 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class ModelDetailsViewModel{
+final class DetailsViewModel{
     // MARK: - Properties
     private var disposeBag = DisposeBag()
-    private var modelSpecs = PublishRelay<[ModelSpecs]>()
+    private var modelSpecs = PublishRelay<[Details]>()
     var style: Style?
     weak var coordinator: MainCoordinator?
-    var carModelDetailsService: CarModelDetailsProtocol?
+    var carDetailsService: CarDetailsProtocol?
     struct Input {
         let didAppear: Driver<Void>
     }    
     struct Output{
-        let modelSpecs: Observable<[ModelSpecs]>
+        let modelSpecs: Observable<[Details]>
     }
     
     //MARK: - Initailizer
-    init(carModelDetailsService: CarModelDetailsProtocol) {
-        self.carModelDetailsService = carModelDetailsService
+    init(carDetailsService: CarDetailsProtocol) {
+        self.carDetailsService = carDetailsService
     }
         
     //MARK: - Public Method
@@ -47,8 +47,8 @@ final class ModelDetailsViewModel{
             
     private func requestModelSpecs() {
         guard let style = style else {return}
-        let specs = carModelDetailsService?.getSpecsForModel(style: style)
-        modelSpecs.accept(specs ?? [ModelSpecs]())
+        let specs = carDetailsService?.getSpecsForModel(style: style)
+        modelSpecs.accept(specs ?? [Details]())
     }
 
 }

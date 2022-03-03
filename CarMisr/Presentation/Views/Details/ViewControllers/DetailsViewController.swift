@@ -9,16 +9,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ModelDetailsViewController: UIViewController , UITableViewDelegate {
+class DetailsViewController: UIViewController , UITableViewDelegate {
 
     //MARK: - Constants
-    let normalModelDetailsViewCell = "normalModelDetailsViewCell"
-    let collectionModelDetailsViewCell = "collectionModelDetailsViewCell"
+    let normalDetailsViewCell = "normalModelDetailsViewCell"
+    let collectionDetailsViewCell = "collectionModelDetailsViewCell"
     
     //MARK: - Properties
     @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
-    private let modelDetailsViewModel: ModelDetailsViewModel!
+    private let detailsViewModel: DetailsViewModel!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -28,8 +28,8 @@ class ModelDetailsViewController: UIViewController , UITableViewDelegate {
     }
     
     //MARK: - Initializer
-    init(modelDetailsViewModel: ModelDetailsViewModel) {
-        self.modelDetailsViewModel = modelDetailsViewModel
+    init(detailsViewModel: DetailsViewModel) {
+        self.detailsViewModel = detailsViewModel
         super.init(nibName: "ModelDetailsViewController", bundle: nil)
     }
     required init?(coder: NSCoder) {
@@ -38,27 +38,27 @@ class ModelDetailsViewController: UIViewController , UITableViewDelegate {
     
     //MARK: - Internal Method
       private func setupMakeTableView(){
-          detailsTableView.register(NormalModelDetailsTableViewCell.nib(), forCellReuseIdentifier: normalModelDetailsViewCell)
-          detailsTableView.register(CollectionModelDetailsTableViewCell.nib(), forCellReuseIdentifier: collectionModelDetailsViewCell)
+          detailsTableView.register(NormalDetailsTableViewCell.nib(), forCellReuseIdentifier: normalDetailsViewCell)
+          detailsTableView.register(CollectionDetailsTableViewCell.nib(), forCellReuseIdentifier: collectionDetailsViewCell)
           detailsTableView.rx.setDelegate(self).disposed(by: disposeBag)
       }
       
       private func bind(){
           let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
-          let input = ModelDetailsViewModel.Input(didAppear: viewDidAppear)
-          let outup = modelDetailsViewModel.transform(input: input)
+          let input = DetailsViewModel.Input(didAppear: viewDidAppear)
+          let outup = detailsViewModel.transform(input: input)
           outup.modelSpecs
               .bind(to: detailsTableView.rx.items){ [weak self] (tableView, row, modelSpecs) -> UITableViewCell in
                   guard let self = self else { return UITableViewCell()}
                   switch modelSpecs {
                   case .basic(let basicModelSpecs):
-                        let cell = tableView.dequeueReusableCell(withIdentifier: self.normalModelDetailsViewCell,
-                                                                 for: IndexPath.init(row: row, section: 0)) as! NormalModelDetailsTableViewCell
+                        let cell = tableView.dequeueReusableCell(withIdentifier: self.normalDetailsViewCell,
+                                                                 for: IndexPath.init(row: row, section: 0)) as! NormalDetailsTableViewCell
                       cell.configure(.init(basicModelSpecs: basicModelSpecs))
                       return cell
                   case .multi(let multiModelSpecs):
-                        let cell = tableView.dequeueReusableCell(withIdentifier: self.collectionModelDetailsViewCell,
-                                                                 for: IndexPath.init(row: row, section: 0)) as! CollectionModelDetailsTableViewCell
+                        let cell = tableView.dequeueReusableCell(withIdentifier: self.collectionDetailsViewCell,
+                                                                 for: IndexPath.init(row: row, section: 0)) as! CollectionDetailsTableViewCell
                       cell.configure(.init(multiModelSpecs: multiModelSpecs))
                       return cell
                   }

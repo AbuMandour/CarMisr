@@ -9,10 +9,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class NormalModelDetailsTableViewCell: UITableViewCell , ViewCellDelegate {
+class NormalDetailsTableViewCell: UITableViewCell , ViewCellDelegate {
     
     //MARK: - Properties
-    typealias ViewModel = NormalModelDetailsCellViewModel
+    typealias ViewModel = NormalDetailsCellViewModel
     private var disposeBag = DisposeBag()
     private var viewModel : ViewModel!
     @IBOutlet weak var keyLabel: UILabel!
@@ -23,7 +23,7 @@ class NormalModelDetailsTableViewCell: UITableViewCell , ViewCellDelegate {
         keyLabel.text = nil
         valueLabel.text = nil
     }
-    func configure(_ viewModel: NormalModelDetailsCellViewModel) {
+    func configure(_ viewModel: NormalDetailsCellViewModel) {
         self.viewModel = viewModel
         bindViewModel()
     }

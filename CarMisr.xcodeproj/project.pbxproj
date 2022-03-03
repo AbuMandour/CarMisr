@@ -49,28 +49,28 @@
 		EA307D6427C3E52D0034460F /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D6327C3E52D0034460F /* NameDescribable.swift */; };
 		EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7027C409E20034460F /* BaseEndPoint.swift */; };
 		EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7227C40DA70034460F /* MainEndPoints.swift */; };
-		EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7427C4550C0034460F /* ModelImagesData.swift */; };
+		EA307D7527C4550C0034460F /* CarImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7427C4550C0034460F /* CarImageData.swift */; };
 		EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA307D7627C46F770034460F /* MediaEndPoint.swift */; };
 		EA57AE6127CD8E8F00260F4B /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */; };
-		EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */; };
-		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
-		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
-		EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */; };
-		EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */; };
-		EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */; };
-		EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */; };
-		EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D627BE348400AF22A7 /* ModelSpec.swift */; };
-		EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */; };
-		EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */; };
+		EA5904C627BE2D5600AF22A7 /* NormalDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C427BE2D5600AF22A7 /* NormalDetailsTableViewCell.swift */; };
+		EA5904C727BE2D5600AF22A7 /* NormalDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalDetailsTableViewCell.xib */; };
+		EA5904CA27BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.swift */; };
+		EA5904CB27BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C927BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.xib */; };
+		EA5904D227BE2E6D00AF22A7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D027BE2E6D00AF22A7 /* DetailsViewController.swift */; };
+		EA5904D327BE2E6D00AF22A7 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904D127BE2E6D00AF22A7 /* DetailsViewController.xib */; };
+		EA5904D527BE2F8D00AF22A7 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D427BE2F8D00AF22A7 /* DetailsViewModel.swift */; };
+		EA5904D727BE348400AF22A7 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D627BE348400AF22A7 /* Details.swift */; };
+		EA5904D927BE39E800AF22A7 /* NormalDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D827BE39E800AF22A7 /* NormalDetailsCellViewModel.swift */; };
+		EA5904DB27BE39FF00AF22A7 /* CollectionDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionDetailsCellViewModel.swift */; };
 		EA7EFCA727CE603B00D64FC8 /* CarStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */; };
 		EA7EFCA927CE6A0B00D64FC8 /* CarColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCA827CE6A0B00D64FC8 /* CarColorData.swift */; };
-		EA7EFCB727D02D7400D64FC8 /* CarModelDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */; };
-		EA7EFCB927D02DA300D64FC8 /* CarModelDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */; };
+		EA7EFCB727D02D7400D64FC8 /* CarDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB627D02D7400D64FC8 /* CarDetailsService.swift */; };
+		EA7EFCB927D02DA300D64FC8 /* CarDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB827D02DA300D64FC8 /* CarDetailsProtocol.swift */; };
 		EA7EFCBB27D0349D00D64FC8 /* CollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */; };
 		EA7EFCBD27D0356D00D64FC8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */; };
 		EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */; };
 		EA7EFCC427D041AB00D64FC8 /* StyleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */; };
-		EA7EFCC527D041AB00D64FC8 /* StylesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */; };
+		EA7EFCC527D041AB00D64FC8 /* StyleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC327D041AB00D64FC8 /* StyleViewModel.swift */; };
 		EA7EFCC727D041CE00D64FC8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC627D041CE00D64FC8 /* Style.swift */; };
 		EA7EFCC927D0421C00D64FC8 /* CarStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */; };
 		EA7EFCCB27D0427B00D64FC8 /* CarStyleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */; };
@@ -163,28 +163,28 @@
 		EA307D6327C3E52D0034460F /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		EA307D7027C409E20034460F /* BaseEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndPoint.swift; sourceTree = "<group>"; };
 		EA307D7227C40DA70034460F /* MainEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEndPoints.swift; sourceTree = "<group>"; };
-		EA307D7427C4550C0034460F /* ModelImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelImagesData.swift; sourceTree = "<group>"; };
+		EA307D7427C4550C0034460F /* CarImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageData.swift; sourceTree = "<group>"; };
 		EA307D7627C46F770034460F /* MediaEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEndPoint.swift; sourceTree = "<group>"; };
 		EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
-		EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewController.swift; sourceTree = "<group>"; };
-		EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelDetailsViewController.xib; sourceTree = "<group>"; };
-		EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewModel.swift; sourceTree = "<group>"; };
-		EA5904D627BE348400AF22A7 /* ModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSpec.swift; sourceTree = "<group>"; };
-		EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
-		EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		EA5904C427BE2D5600AF22A7 /* NormalDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		EA5904C527BE2D5600AF22A7 /* NormalDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		EA5904C827BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		EA5904C927BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		EA5904D027BE2E6D00AF22A7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		EA5904D127BE2E6D00AF22A7 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		EA5904D427BE2F8D00AF22A7 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		EA5904D627BE348400AF22A7 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		EA5904D827BE39E800AF22A7 /* NormalDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		EA5904DA27BE39FF00AF22A7 /* CollectionDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailsCellViewModel.swift; sourceTree = "<group>"; };
 		EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleData.swift; sourceTree = "<group>"; };
 		EA7EFCA827CE6A0B00D64FC8 /* CarColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColorData.swift; sourceTree = "<group>"; };
-		EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDetailsService.swift; sourceTree = "<group>"; };
-		EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDetailsProtocol.swift; sourceTree = "<group>"; };
+		EA7EFCB627D02D7400D64FC8 /* CarDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsService.swift; sourceTree = "<group>"; };
+		EA7EFCB827D02DA300D64FC8 /* CarDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsProtocol.swift; sourceTree = "<group>"; };
 		EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCellViewModel.swift; sourceTree = "<group>"; };
-		EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylesViewModel.swift; sourceTree = "<group>"; };
+		EA7EFCC327D041AB00D64FC8 /* StyleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleViewModel.swift; sourceTree = "<group>"; };
 		EA7EFCC627D041CE00D64FC8 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleProtocol.swift; sourceTree = "<group>"; };
 		EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleService.swift; sourceTree = "<group>"; };
@@ -429,7 +429,7 @@
 			children = (
 				EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */,
 				EA307D4727C272290034460F /* CarModelProtocol.swift */,
-				EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */,
+				EA7EFCB827D02DA300D64FC8 /* CarDetailsProtocol.swift */,
 				EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */,
 			);
 			path = UseCases;
@@ -440,7 +440,7 @@
 			children = (
 				EA0F9F7B27BC4B200096CFB0 /* Make.swift */,
 				EA0F9F8427BC51C70096CFB0 /* Model.swift */,
-				EA5904D627BE348400AF22A7 /* ModelSpec.swift */,
+				EA5904D627BE348400AF22A7 /* Details.swift */,
 				EA7EFCC627D041CE00D64FC8 /* Style.swift */,
 			);
 			path = Models;
@@ -459,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7EFCC027D0414C00D64FC8 /* Styles */,
-				EA5904AD27BE03D700AF22A7 /* ModelDetails */,
+				EA5904AD27BE03D700AF22A7 /* Details */,
 				EA0F9F6A27BC456B0096CFB0 /* Models */,
 				EA0F9F6027BC07880096CFB0 /* Makes */,
 			);
@@ -512,7 +512,7 @@
 		EA307D5227C313200034460F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				EA307D7427C4550C0034460F /* ModelImagesData.swift */,
+				EA307D7427C4550C0034460F /* CarImageData.swift */,
 				EA93A3BA27BFDF6A00B0D85B /* CarMakeData.swift */,
 				EA307D4B27C27C7C0034460F /* CarModelData.swift */,
 				EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */,
@@ -552,27 +552,27 @@
 			children = (
 				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
 				EA307D4927C272770034460F /* CarModelService.swift */,
-				EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */,
+				EA7EFCB627D02D7400D64FC8 /* CarDetailsService.swift */,
 				EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		EA5904AD27BE03D700AF22A7 /* ModelDetails */ = {
+		EA5904AD27BE03D700AF22A7 /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				EA5904C127BE2CB100AF22A7 /* ViewControllers */,
 				EA5904C327BE2CDB00AF22A7 /* ViewCells */,
 			);
-			path = ModelDetails;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		EA5904AE27BE03E100AF22A7 /* ModelDetails */ = {
 			isa = PBXGroup;
 			children = (
-				EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */,
-				EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */,
-				EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */,
+				EA5904D427BE2F8D00AF22A7 /* DetailsViewModel.swift */,
+				EA5904D827BE39E800AF22A7 /* NormalDetailsCellViewModel.swift */,
+				EA5904DA27BE39FF00AF22A7 /* CollectionDetailsCellViewModel.swift */,
 			);
 			path = ModelDetails;
 			sourceTree = "<group>";
@@ -616,8 +616,8 @@
 		EA5904C127BE2CB100AF22A7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */,
-				EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */,
+				EA5904D027BE2E6D00AF22A7 /* DetailsViewController.swift */,
+				EA5904D127BE2E6D00AF22A7 /* DetailsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -625,10 +625,10 @@
 		EA5904C327BE2CDB00AF22A7 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA5904C427BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift */,
-				EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */,
-				EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */,
-				EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */,
+				EA5904C427BE2D5600AF22A7 /* NormalDetailsTableViewCell.swift */,
+				EA5904C527BE2D5600AF22A7 /* NormalDetailsTableViewCell.xib */,
+				EA5904C827BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.swift */,
+				EA5904C927BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.xib */,
 				EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */,
 			);
 			path = ViewCells;
@@ -647,7 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */,
-				EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */,
+				EA7EFCC327D041AB00D64FC8 /* StyleViewModel.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -824,12 +824,12 @@
 				EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */,
 				EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */,
 				EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */,
-				EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */,
+				EA5904CB27BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.xib in Resources */,
 				EA7EFCD427D04A3D00D64FC8 /* StyleViewController.xib in Resources */,
-				EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */,
+				EA5904D327BE2E6D00AF22A7 /* DetailsViewController.xib in Resources */,
 				EA7EFCD227D04A3D00D64FC8 /* StyleTableViewCell.xib in Resources */,
 				EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */,
-				EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */,
+				EA5904C727BE2D5600AF22A7 /* NormalDetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,19 +961,19 @@
 				EA7EFCC727D041CE00D64FC8 /* Style.swift in Sources */,
 				EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */,
 				EA7EFCCB27D0427B00D64FC8 /* CarStyleService.swift in Sources */,
-				EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */,
-				EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */,
+				EA5904D927BE39E800AF22A7 /* NormalDetailsCellViewModel.swift in Sources */,
+				EA5904D227BE2E6D00AF22A7 /* DetailsViewController.swift in Sources */,
 				EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */,
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
 				EA7EFCD327D04A3D00D64FC8 /* StyleTableViewCell.swift in Sources */,
-				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
+				EA5904CA27BE2D6E00AF22A7 /* CollectionDetailsTableViewCell.swift in Sources */,
 				EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */,
 				EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
 				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
 				EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */,
-				EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */,
+				EA5904DB27BE39FF00AF22A7 /* CollectionDetailsCellViewModel.swift in Sources */,
 				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
 				EA7EFCBD27D0356D00D64FC8 /* ViewExtension.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
@@ -985,15 +985,15 @@
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,
 				EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */,
-				EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */,
-				EA7EFCB727D02D7400D64FC8 /* CarModelDetailsService.swift in Sources */,
+				EA307D7527C4550C0034460F /* CarImageData.swift in Sources */,
+				EA7EFCB727D02D7400D64FC8 /* CarDetailsService.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
-				EA5904D727BE348400AF22A7 /* ModelSpec.swift in Sources */,
+				EA5904D727BE348400AF22A7 /* Details.swift in Sources */,
 				EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */,
 				EA307D5627C313C90034460F /* NavigationStack.swift in Sources */,
-				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
+				EA5904D527BE2F8D00AF22A7 /* DetailsViewModel.swift in Sources */,
 				EA7EFCD527D04A3D00D64FC8 /* StyleViewController.swift in Sources */,
 				EA307D4C27C27C7C0034460F /* CarModelData.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
@@ -1005,16 +1005,16 @@
 				EA307D4A27C272770034460F /* CarModelService.swift in Sources */,
 				EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */,
 				EA7EFCBB27D0349D00D64FC8 /* CollectionViewCellExtension.swift in Sources */,
-				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
+				EA5904C627BE2D5600AF22A7 /* NormalDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
 				EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */,
-				EA7EFCC527D041AB00D64FC8 /* StylesViewModel.swift in Sources */,
+				EA7EFCC527D041AB00D64FC8 /* StyleViewModel.swift in Sources */,
 				EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */,
 				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
-				EA7EFCB927D02DA300D64FC8 /* CarModelDetailsProtocol.swift in Sources */,
+				EA7EFCB927D02DA300D64FC8 /* CarDetailsProtocol.swift in Sources */,
 				EA8725CC27BED60500860CB4 /* DataError.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 				EA57AE6127CD8E8F00260F4B /* SequenceExtension.swift in Sources */,

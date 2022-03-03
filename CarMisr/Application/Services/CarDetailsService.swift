@@ -7,10 +7,10 @@
 
 import Foundation
 
-class CarModelDetailsService : CarModelDetailsProtocol {
+class CarDetailsService : CarDetailsProtocol {
     
-    func getSpecsForModel(style: Style) -> [ModelSpecs] {
-        var modelSpecs = [ModelSpecs]()
+    func getSpecsForModel(style: Style) -> [Details] {
+        var modelSpecs = [Details]()
         modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Type", value: style.engineType)))
         modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Size", value: style.engineSize)))
         modelSpecs.append(.basic(BasicModelSpecs(key: "Transmission Type", value: style.transmissionType)))

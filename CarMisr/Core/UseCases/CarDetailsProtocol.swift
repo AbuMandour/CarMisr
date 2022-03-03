@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CarModelDetailsProtocol{
-    func getSpecsForModel(style: Style) -> [ModelSpecs]
+protocol CarDetailsProtocol{
+    func getSpecsForModel(style: Style) -> [Details]
 }

@@ -1,8 +1,8 @@
 //
-//  MakeViewModel.swift
+//  StylesViewModel.swift
 //  CarMisr
 //
-//  Created by Muhammad Abumandour on 15/02/2022.
+//  Created by Muhammad Abumandour on 02/03/2022.
 //
 
 import RxSwift
@@ -10,7 +10,7 @@ import RxCocoa
 import Foundation
 import RxAlertViewable
 
-final class StylesViewModel{
+final class StyleViewModel{
         
     // MARK: - Properties
     private var disposeBag = DisposeBag()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ModelSpecs {
+enum Details {
     case basic(BasicModelSpecs)
     case multi(MultiModelSpecs)
 }

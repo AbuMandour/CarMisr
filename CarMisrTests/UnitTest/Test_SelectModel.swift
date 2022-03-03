@@ -49,7 +49,7 @@ class Test_SelectModel : XCTestCase{
         let pageNumber = 1
         let makeNiceName = "honda"
         let expectedModels = [CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "civic", niceName: "civic")]),
-                             ModelImagesData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil, sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil, exactStyleIDS: nil)], photosCount: 1, links: nil)] as [Codable]
+                             CarImageData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil, sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil, exactStyleIDS: nil)], photosCount: 1, links: nil)] as [Codable]
         apiServiceMock.behavior = .alwaysSucceed(expectedModels)
 
         //when
@@ -65,7 +65,7 @@ class Test_SelectModel : XCTestCase{
         let pageNumber = 1
         let makeNiceName = ""
         let expectedModels = [CarModelData(totalNumber: 1, totalPages: 1, models: [ModelData(id: "1", name: "civic", niceName: "civic"),ModelData(id: "1", name: "civic", niceName: "civic")]),
-                                                         ModelImagesData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil, sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil, exactStyleIDS: nil)], photosCount: 1, links: nil)] as [Codable]
+                                                         CarImageData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil, sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil, exactStyleIDS: nil)], photosCount: 1, links: nil)] as [Codable]
         apiServiceMock.behavior = .alwaysSucceed(expectedModels)
 
         //when
@@ -80,7 +80,7 @@ class Test_SelectModel : XCTestCase{
         // given
         let makeNiceName = "honda"
         let modelNiceName = "civic"
-        let expectedModelImages = [ModelImagesData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil,
+        let expectedModelImages = [CarImageData(photosData: [PhotoData(title: nil, category: nil, tags: nil, provider: nil,
                                                                    sources: [Source(link: Link(rel: nil, href: nil), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil,
                                                                    exactStyleIDS: nil)], photosCount: 1, links: nil)]
         apiServiceMock.behavior = .alwaysSucceed(expectedModelImages)
@@ -98,7 +98,7 @@ class Test_SelectModel : XCTestCase{
         let makeNiceName = "honda"
         let modelNiceName = "civic"
         let category : ImageCategory = .exterior
-        let expectedModelImages = [ModelImagesData(photosData: [PhotoData(title: nil, category: category, tags: nil, provider: nil,
+        let expectedModelImages = [CarImageData(photosData: [PhotoData(title: nil, category: category, tags: nil, provider: nil,
                                                                    sources: [Source(link: Link(rel: nil, href: "audi/s7/2013/oem/2013_audi_s7_sedan_prestige_fq_oem_6_1600.jpg"), sourceExtension: nil, size: nil)], years: nil, submodels: nil, trims: nil, modelYearID: nil, shotTypeAbbreviation: nil, styleIDS: nil,
                                                                    exactStyleIDS: nil)], photosCount: 1, links: nil)]
         apiServiceMock.behavior = .alwaysSucceed(expectedModelImages)

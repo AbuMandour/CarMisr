@@ -9,13 +9,13 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class CollectionModelDetailsTableViewCell: UITableViewCell, ViewCellDelegate , UICollectionViewDelegate {
+class CollectionDetailsTableViewCell: UITableViewCell, ViewCellDelegate , UICollectionViewDelegate {
     
     //MARK: - Constants
     let cellIdentifier = "ColorCollectionViewCell"
     
     //MARK: - Properties
-    typealias ViewModel = CollectionModelDetailsCellViewModel
+    typealias ViewModel = CollectionDetailsCellViewModel
     private var disposeBag = DisposeBag()
     private var viewModel : ViewModel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,7 +28,7 @@ class CollectionModelDetailsTableViewCell: UITableViewCell, ViewCellDelegate , U
     override func awakeFromNib() {
         setupColorCollectionView()
     }
-    func configure(_ viewModel: CollectionModelDetailsCellViewModel) {
+    func configure(_ viewModel: CollectionDetailsCellViewModel) {
         self.viewModel = viewModel
         bindViewModel()
     }
@@ -58,7 +58,7 @@ class CollectionModelDetailsTableViewCell: UITableViewCell, ViewCellDelegate , U
     }
 }
 
-extension CollectionModelDetailsTableViewCell : UICollectionViewDelegateFlowLayout{
+extension CollectionDetailsTableViewCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }

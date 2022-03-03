@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class NormalModelDetailsCellViewModel{
+final class NormalDetailsCellViewModel{
     
     //MARK: - Properties
     let basicModelSpecs: BasicModelSpecs

@@ -20,7 +20,7 @@ class StyleViewController: UIViewController, UITableViewDelegate, RxAlertViewabl
     @IBOutlet weak var loadMoreActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
     let refreshControl = UIRefreshControl()
-    private var styleViewModel: StylesViewModel
+    private var styleViewModel: StyleViewModel
     private var disposeBag = DisposeBag()
     
     //MARK: - Overrides
@@ -32,7 +32,7 @@ class StyleViewController: UIViewController, UITableViewDelegate, RxAlertViewabl
     }
     
     //MARK: - Initializer
-    init(styleViewModel: StylesViewModel) {
+    init(styleViewModel: StyleViewModel) {
         self.styleViewModel = styleViewModel
         super.init(nibName: "StyleViewController", bundle: nil)
     }
@@ -58,7 +58,7 @@ class StyleViewController: UIViewController, UITableViewDelegate, RxAlertViewabl
         let refreshTable = refreshControl.rx.controlEvent(.valueChanged).mapToVoid().asDriverComplete()
         let viewDidAppear = rx.sentMessage(#selector(UIViewController.viewDidAppear(_:))).take(1).mapToVoid().asDriverComplete()
         let prefetchDataSource = stylesTableView.rx.prefetchRows
-        let input = StylesViewModel.Input(didAppear: viewDidAppear,
+        let input = StyleViewModel.Input(didAppear: viewDidAppear,
                                         refresh: refreshTable,
                                         styleSelected: stylesTableView.rx.modelSelected(Style.self),
                                         prefetchRows: prefetchDataSource)

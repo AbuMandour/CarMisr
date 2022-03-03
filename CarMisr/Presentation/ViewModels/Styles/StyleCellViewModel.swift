@@ -1,8 +1,8 @@
 //
-//  MakeCellViewModel.swift
+//  StyleCellViewModel.swift
 //  CarMisr
 //
-//  Created by Muhammad Abumandour on 15/02/2022.
+//  Created by Muhammad Abumandour on 02/03/2022.
 //
 
 import RxCocoa

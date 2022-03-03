@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - ModelImagesData
-struct ModelImagesData: Codable {
+struct CarImageData: Codable {
     let photosData: [PhotoData]?
     let photosCount: Int?
     let links: [Link]?

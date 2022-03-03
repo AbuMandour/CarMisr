@@ -39,7 +39,7 @@ class MainCoordinator: AppCoordinator {
     }
     
     func selectStyle(modelNiceName: String) {
-        let styleViewModel = StylesViewModel(carStyleService: CarStyleService(apiService: ApiService()))
+        let styleViewModel = StyleViewModel(carStyleService: CarStyleService(apiService: ApiService()))
         styleViewModel.coordinator = self
         styleViewModel.modelNiceName = modelNiceName
         let styleViewController = StyleViewController(styleViewModel: styleViewModel)
@@ -47,10 +47,10 @@ class MainCoordinator: AppCoordinator {
     }
     
     func showDetails(style: Style) {
-        let modelDetailsViewModel = ModelDetailsViewModel(carModelDetailsService: CarModelDetailsService())
-        modelDetailsViewModel.style = style
-        modelDetailsViewModel.coordinator = self
-        let modelDetailsViewController = ModelDetailsViewController(modelDetailsViewModel: modelDetailsViewModel)
-        navigationStack.push(viewController: modelDetailsViewController)
+        let detailsViewModel = DetailsViewModel(carDetailsService: CarDetailsService())
+        detailsViewModel.style = style
+        detailsViewModel.coordinator = self
+        let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
+        navigationStack.push(viewController: detailsViewController)
     }
 }
