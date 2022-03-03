@@ -69,6 +69,15 @@
 		EA7EFCBB27D0349D00D64FC8 /* CollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */; };
 		EA7EFCBD27D0356D00D64FC8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */; };
 		EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */; };
+		EA7EFCC427D041AB00D64FC8 /* StyleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */; };
+		EA7EFCC527D041AB00D64FC8 /* StylesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */; };
+		EA7EFCC727D041CE00D64FC8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC627D041CE00D64FC8 /* Style.swift */; };
+		EA7EFCC927D0421C00D64FC8 /* CarStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */; };
+		EA7EFCCB27D0427B00D64FC8 /* CarStyleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */; };
+		EA7EFCD227D04A3D00D64FC8 /* StyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFCCD27D04A3D00D64FC8 /* StyleTableViewCell.xib */; };
+		EA7EFCD327D04A3D00D64FC8 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCCE27D04A3D00D64FC8 /* StyleTableViewCell.swift */; };
+		EA7EFCD427D04A3D00D64FC8 /* StyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFCD027D04A3D00D64FC8 /* StyleViewController.xib */; };
+		EA7EFCD527D04A3D00D64FC8 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCD127D04A3D00D64FC8 /* StyleViewController.swift */; };
 		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
 		EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */; };
 		EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */; };
@@ -173,6 +182,15 @@
 		EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCellViewModel.swift; sourceTree = "<group>"; };
+		EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylesViewModel.swift; sourceTree = "<group>"; };
+		EA7EFCC627D041CE00D64FC8 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleProtocol.swift; sourceTree = "<group>"; };
+		EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleService.swift; sourceTree = "<group>"; };
+		EA7EFCCD27D04A3D00D64FC8 /* StyleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StyleTableViewCell.xib; sourceTree = "<group>"; };
+		EA7EFCCE27D04A3D00D64FC8 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleTableViewCell.swift; sourceTree = "<group>"; };
+		EA7EFCD027D04A3D00D64FC8 /* StyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StyleViewController.xib; sourceTree = "<group>"; };
+		EA7EFCD127D04A3D00D64FC8 /* StyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectMake.swift; sourceTree = "<group>"; };
 		EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
@@ -396,6 +414,7 @@
 		EA0F9F4A27BC02CD0096CFB0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EA7EFCC127D0415500D64FC8 /* Styles */,
 				EA5904AE27BE03E100AF22A7 /* ModelDetails */,
 				EA0F9F7627BC4AAA0096CFB0 /* Models */,
 				EA0F9F7527BC4AA30096CFB0 /* Makes */,
@@ -409,6 +428,7 @@
 				EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */,
 				EA307D4727C272290034460F /* CarModelProtocol.swift */,
 				EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */,
+				EA7EFCC827D0421C00D64FC8 /* CarStyleProtocol.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -419,6 +439,7 @@
 				EA0F9F7B27BC4B200096CFB0 /* Make.swift */,
 				EA0F9F8427BC51C70096CFB0 /* Model.swift */,
 				EA5904D627BE348400AF22A7 /* ModelSpec.swift */,
+				EA7EFCC627D041CE00D64FC8 /* Style.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,6 +456,7 @@
 		EA0F9F6127BC07BF0096CFB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA7EFCC027D0414C00D64FC8 /* Styles */,
 				EA5904AD27BE03D700AF22A7 /* ModelDetails */,
 				EA0F9F6A27BC456B0096CFB0 /* Models */,
 				EA0F9F6027BC07880096CFB0 /* Makes */,
@@ -529,6 +551,7 @@
 				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
 				EA307D4927C272770034460F /* CarModelService.swift */,
 				EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */,
+				EA7EFCCA27D0427B00D64FC8 /* CarStyleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -607,6 +630,42 @@
 				EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */,
 			);
 			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EA7EFCC027D0414C00D64FC8 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFCCC27D04A3D00D64FC8 /* ViewCells */,
+				EA7EFCCF27D04A3D00D64FC8 /* ViewControllers */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		EA7EFCC127D0415500D64FC8 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFCC227D041AB00D64FC8 /* StyleCellViewModel.swift */,
+				EA7EFCC327D041AB00D64FC8 /* StylesViewModel.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		EA7EFCCC27D04A3D00D64FC8 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFCCD27D04A3D00D64FC8 /* StyleTableViewCell.xib */,
+				EA7EFCCE27D04A3D00D64FC8 /* StyleTableViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EA7EFCCF27D04A3D00D64FC8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFCD027D04A3D00D64FC8 /* StyleViewController.xib */,
+				EA7EFCD127D04A3D00D64FC8 /* StyleViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		EA8725BD27BEC82600860CB4 /* UnitTest */ = {
@@ -763,7 +822,9 @@
 				EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */,
 				EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */,
 				EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */,
+				EA7EFCD427D04A3D00D64FC8 /* StyleViewController.xib in Resources */,
 				EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */,
+				EA7EFCD227D04A3D00D64FC8 /* StyleTableViewCell.xib in Resources */,
 				EA0F9F7027BC45BD0096CFB0 /* ModelViewController.xib in Resources */,
 				EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */,
 			);
@@ -893,12 +954,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7EFCC427D041AB00D64FC8 /* StyleCellViewModel.swift in Sources */,
+				EA7EFCC727D041CE00D64FC8 /* Style.swift in Sources */,
 				EA307D7127C409E20034460F /* BaseEndPoint.swift in Sources */,
+				EA7EFCCB27D0427B00D64FC8 /* CarStyleService.swift in Sources */,
 				EA5904D927BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift in Sources */,
 				EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */,
 				EA307D6227C3E4BF0034460F /* TableViewCellExtension.swift in Sources */,
 				EA0F9F8127BC50810096CFB0 /* ModelCellViewModel.swift in Sources */,
 				EAE2183727BDC17400065763 /* ReactiveExtension.swift in Sources */,
+				EA7EFCD327D04A3D00D64FC8 /* StyleTableViewCell.swift in Sources */,
 				EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */,
 				EA307D7727C46F770034460F /* MediaEndPoint.swift in Sources */,
 				EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */,
@@ -913,6 +978,7 @@
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
 				EA7EFCA727CE603B00D64FC8 /* CarStyleData.swift in Sources */,
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
+				EA7EFCC927D0421C00D64FC8 /* CarStyleProtocol.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,
 				EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */,
@@ -925,6 +991,7 @@
 				EA93A3B727BFDC8E00B0D85B /* Urls.swift in Sources */,
 				EA307D5627C313C90034460F /* NavigationStack.swift in Sources */,
 				EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */,
+				EA7EFCD527D04A3D00D64FC8 /* StyleViewController.swift in Sources */,
 				EA307D4C27C27C7C0034460F /* CarModelData.swift in Sources */,
 				EA0F9F7A27BC4ADA0096CFB0 /* MakeCellViewModel.swift in Sources */,
 				EA7EFCA927CE6A0B00D64FC8 /* CarColorData.swift in Sources */,
@@ -938,6 +1005,7 @@
 				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
 				EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */,
+				EA7EFCC527D041AB00D64FC8 /* StylesViewModel.swift in Sources */,
 				EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */,
 				EA0F9F6827BC40180096CFB0 /* MakeTableViewCell.swift in Sources */,
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,

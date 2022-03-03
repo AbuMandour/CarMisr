@@ -18,7 +18,6 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(colorHex: String){
-        print(colorHex)
         self.backgroundColor = UIColor(hexString: colorHex)
         self.cornerRadiusPercentageOfHeight = 0.5
         self.layer.borderColor = UIColor.black.cgColor

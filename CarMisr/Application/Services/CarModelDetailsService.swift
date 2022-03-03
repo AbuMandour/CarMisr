@@ -9,15 +9,15 @@ import Foundation
 
 class CarModelDetailsService : CarModelDetailsProtocol {
     
-    func getSpecsForModel(model: Model) -> [ModelSpecs] {
+    func getSpecsForModel(style: Style) -> [ModelSpecs] {
         var modelSpecs = [ModelSpecs]()
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Type", value: model.engineType)))
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Size", value: model.engineSize)))
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Transmission Type", value: model.transmissionType)))
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Vehicle Style", value: model.vehicleStyle)))
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Vehicle Size", value: model.vehicleSize)))
-        modelSpecs.append(.basic(BasicModelSpecs(key: "Number Of Seats", value: model.numberOfSeats)))
-        modelSpecs.append(.multi(MultiModelSpecs(key: "Colors", values: model.colors)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Type", value: style.engineType)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Engine Size", value: style.engineSize)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Transmission Type", value: style.transmissionType)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Vehicle Style", value: style.vehicleStyle)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Vehicle Size", value: style.vehicleSize)))
+        modelSpecs.append(.basic(BasicModelSpecs(key: "Number Of Seats", value: style.numberOfSeats)))
+        modelSpecs.append(.multi(MultiModelSpecs(key: "Colors", values: style.colors)))
         return modelSpecs
     }
     

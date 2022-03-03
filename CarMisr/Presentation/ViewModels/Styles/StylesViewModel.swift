@@ -1,46 +1,45 @@
 //
-//  ModelViewModel.swift
+//  MakeViewModel.swift
 //  CarMisr
 //
 //  Created by Muhammad Abumandour on 15/02/2022.
 //
 
-import Foundation
-import RxCocoa
 import RxSwift
+import RxCocoa
+import Foundation
 import RxAlertViewable
 
-final class ModelViewModel{
+final class StylesViewModel{
+        
     // MARK: - Properties
     private var disposeBag = DisposeBag()
-    private var models = PublishRelay<[Model]>()
+    private var styles = PublishRelay<[Style]>()
     private let alert = PublishRelay<RxAlert>()
-    private var tempModels = [Model]()
+    private var tempStyles = [Style]()
     private var isLoading = BehaviorRelay<Bool>(value: false)
-    private var isRefreshing = BehaviorRelay<Bool>(value: false)
     private var isLoadMore = BehaviorRelay<Bool>(value: false)
     private var canLoadMore = true
     private var pageNumber = 1
-    var makeNiceName:String?
     weak var coordinator: MainCoordinator?
-    var carModelService: CarModelProtocol!
+    var carStyleService: CarStyleProtocol!
+    var modelNiceName:String?
     struct Input {
-        let refresh: Driver<Void>
         let didAppear: Driver<Void>
-        let modelSelected: ControlEvent<Model>
+        let refresh: Driver<Void>
+        let styleSelected: ControlEvent<Style>
         let prefetchRows: ControlEvent<[IndexPath]>
     }
     struct Output{
-        let models: Observable<[Model]>
+        let styles: Observable<[Style]>
         let isloading: Observable<Bool>
         let isloadMore: Observable<Bool>
-        let isRefreshing: Observable<Bool>
         let alert: Observable<RxAlert>
     }
     
     //MARK: - Initailizer
-    init(carModelService: CarModelProtocol) {
-        self.carModelService = carModelService
+    init(carStyleService: CarStyleProtocol) {
+        self.carStyleService = carStyleService
     }
         
     //MARK: - Public Method
@@ -58,10 +57,10 @@ final class ModelViewModel{
                 self.refreshData()
             }.disposed(by: disposeBag)
         
-        input.modelSelected
-            .bind { [weak self] model in
+        input.styleSelected
+            .bind { [weak self] style in
                 guard let self = self else { return }
-                self.showStyles(model: model)
+                self.showSpecs(style: style)
             }.disposed(by: disposeBag)
         
         input.prefetchRows
@@ -70,70 +69,59 @@ final class ModelViewModel{
                 self.loadMore(prefetchRowsAt: indexPaths)
             }.disposed(by: disposeBag)
         
-        return Output(models: models.asObservable(), isloading: isLoading.asObservable(),
-                      isloadMore: isLoadMore.asObservable(), isRefreshing: isRefreshing.asObservable(), alert: alert.asObservable())
+        return Output(styles: styles.asObservable(), isloading: isLoading.asObservable(), isloadMore: isLoadMore.asObservable(),
+                      alert: alert.asObservable())
     }
     
     //MARK: - Internal Method
     private func loadData(){
         Task{
             isLoading.accept(true)
-            tempModels.removeAll()
+            tempStyles.removeAll()
             pageNumber = 1
             canLoadMore = true
-            await requestModels()
+            await requestStyles()
             isLoading.accept(false)
         }
     }
         
     private func refreshData(){
         Task{
-            isRefreshing.accept(true)
-            tempModels.removeAll()
+            tempStyles.removeAll()
             pageNumber = 1
             canLoadMore = true
-            await requestModels()
-            isRefreshing.accept(false)
+            await requestStyles()
+            isLoading.accept(false)
         }
     }
     
     private func loadMore(prefetchRowsAt indexPaths: [IndexPath]){
         for index in indexPaths {
-            if index.row >= tempModels.count - 3 && canLoadMore && !isLoading.value {
+            if index.row >= tempStyles.count - 3 && canLoadMore && !isLoading.value {
                 isLoadMore.accept(true)
                 pageNumber += 1
-                Task{ await requestModels() }
+                Task{ await requestStyles() }
                 isLoadMore.accept(false)
                 break
             }
         }
     }
-    
-    private func requestModels() async {
-        guard let makeNiceName = makeNiceName else {
-            return
-        }
-        let modelsResult = await carModelService.getCarModels(makeNiceName: makeNiceName, pageNumber: pageNumber) as Result<[Model],DataError>
-        switch modelsResult {
-        case .success(let newModels):
-            tempModels.append(contentsOf: newModels)
-            self.models.accept(tempModels)
+    private func requestStyles() async {
+        guard let modelNiceName = modelNiceName else { return}
+        let stylesResult = await carStyleService.getCarStyles(modelNiceName: modelNiceName, pageNumber: pageNumber) as Result<[Style],DataError>
+        switch stylesResult {
+        case .success(let stylesModels):
+            tempStyles.append(contentsOf: stylesModels)
+            styles.accept(tempStyles)
         case .failure(let failureState):
+            if failureState == .error(failureState.description){
+                alert.accept(.error(failureState.description))
+            }
             canLoadMore = false
-            guard tempModels.isEmpty else {return}
-            showNoModelsAlert(message: failureState.description)
         }
     }
     
-    private func showStyles(model: Model){
-        coordinator?.selectStyle(modelNiceName: model.niceName)
+    private func showSpecs(style: Style){
+        coordinator?.showDetails(style: style)
     }
-    
-    private func showNoModelsAlert(message: String){
-        alert.accept(.error(message, onConfirm: { [weak self] in
-            guard let self = self else {return}
-            self.coordinator?.popModels()
-        }))
-    }
-
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CarModelDetailsProtocol{
-    func getSpecsForModel(model: Model) -> [ModelSpecs]
+    func getSpecsForModel(style: Style) -> [ModelSpecs]
 }

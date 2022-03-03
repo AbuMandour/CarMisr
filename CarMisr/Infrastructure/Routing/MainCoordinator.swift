@@ -38,9 +38,17 @@ class MainCoordinator: AppCoordinator {
         navigationStack.pop()
     }
     
-    func showModelDetails(model: Model) {
+    func selectStyle(modelNiceName: String) {
+        let styleViewModel = StylesViewModel(carStyleService: CarStyleService(apiService: ApiService()))
+        styleViewModel.coordinator = self
+        styleViewModel.modelNiceName = modelNiceName
+        let styleViewController = StyleViewController(styleViewModel: styleViewModel)
+        navigationStack.push(viewController: styleViewController)
+    }
+    
+    func showDetails(style: Style) {
         let modelDetailsViewModel = ModelDetailsViewModel(carModelDetailsService: CarModelDetailsService())
-        modelDetailsViewModel.model = model
+        modelDetailsViewModel.style = style
         modelDetailsViewModel.coordinator = self
         let modelDetailsViewController = ModelDetailsViewController(modelDetailsViewModel: modelDetailsViewModel)
         navigationStack.push(viewController: modelDetailsViewController)

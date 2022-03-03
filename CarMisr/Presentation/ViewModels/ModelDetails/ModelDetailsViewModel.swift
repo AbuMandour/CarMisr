@@ -13,7 +13,7 @@ final class ModelDetailsViewModel{
     // MARK: - Properties
     private var disposeBag = DisposeBag()
     private var modelSpecs = PublishRelay<[ModelSpecs]>()
-    var model: Model?
+    var style: Style?
     weak var coordinator: MainCoordinator?
     var carModelDetailsService: CarModelDetailsProtocol?
     struct Input {
@@ -46,8 +46,8 @@ final class ModelDetailsViewModel{
     }
             
     private func requestModelSpecs() {
-        guard let model = model else {return}
-        let specs = carModelDetailsService?.getSpecsForModel(model: model)
+        guard let style = style else {return}
+        let specs = carModelDetailsService?.getSpecsForModel(style: style)
         modelSpecs.accept(specs ?? [ModelSpecs]())
     }
 
