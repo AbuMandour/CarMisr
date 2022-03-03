@@ -5,11 +5,16 @@
 //  Created by Muhammad Abumandour on 21/02/2022.
 //
 
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let userStubData = try? newJSONDecoder().decode(UserStubData.self, from: jsonData)
+
 import Foundation
 
 // MARK: - UserStubData
 struct UserStubData: Codable {
-    let results: [UserData]?
+    let results: [UserResult]?
     let info: Info?
 }
 
@@ -21,7 +26,7 @@ struct Info: Codable {
 }
 
 // MARK: - Result
-struct UserData: Codable {
+struct UserResult: Codable {
     let gender: String?
     let name: Name?
     let location: Location?
@@ -42,13 +47,15 @@ struct Dob: Codable {
 
 // MARK: - ID
 struct ID: Codable {
-    let name, value: String?
+    let name: String?
+    let value: String?
 }
 
 // MARK: - Location
 struct Location: Codable {
     let street: Street?
-    let city, state, country, postcode: String?
+    let city, state, country: String?
+    let postcode: Int?
     let coordinates: Coordinates?
     let timezone: Timezone?
 }
@@ -89,3 +96,4 @@ struct Name: Codable {
 struct Picture: Codable {
     let large, medium, thumbnail: String?
 }
+

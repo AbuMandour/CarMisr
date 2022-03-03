@@ -9,4 +9,5 @@ import Foundation
 
 protocol CarStyleProtocol{
     func getCarStyles(modelNiceName: String , pageNumber: Int) async -> Result<[Style], DataError>
+    func getStylesColors(styleId: Int) async -> [String]?
 }

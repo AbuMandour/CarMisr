@@ -15,7 +15,8 @@ class ApiServiceMock : ApiProtocol{
         case .alwaysFail:
             return .failure(.defaultError)
         case .alwaysSucceed(let codable):
-            return .success(codable as! T)
+            let result = codable.first { ($0 as? T) != nil }!
+            return .success(result as! T)
         case .none:
             return .failure(.defaultError)
         }
@@ -25,5 +26,5 @@ class ApiServiceMock : ApiProtocol{
 
 enum Behavior {
     case alwaysFail
-    case alwaysSucceed(Codable)
+    case alwaysSucceed([Codable])
 }

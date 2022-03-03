@@ -33,7 +33,6 @@ class Test_ApiService: XCTestCase {
             self.errorMessage = error.description
         }
         // then
-        XCTAssertTrue(errorMessage?.isEmpty ?? true)
         XCTAssertNotNil(apiCallStub)
     }
     

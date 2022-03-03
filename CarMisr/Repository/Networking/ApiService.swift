@@ -25,6 +25,7 @@ public class ApiService : ApiProtocol {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 return .success(result)
             } catch let error{
+                print(error)
                 return .failure(.SerializeError(error))
             }
         } catch let error {

@@ -9,5 +9,5 @@ import Foundation
 
 protocol CarModelProtocol{
     func getCarModels(makeNiceName: String, pageNumber: Int) async -> Result<[Model], DataError>
-    func getModelImage(makeNiceName: String,modelNiceName: String) async -> String?
+    func getCarModelImage(makeNiceName: String,modelNiceName: String) async -> String?
 }

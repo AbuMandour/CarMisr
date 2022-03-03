@@ -47,7 +47,7 @@ class CarStyleService: CarStyleProtocol {
             }
             return.success(styles)
         case .failure(let error):
-            return .failure(.error(error.localizedDescription))
+            return .failure(.error(error.description))
         }
     }
     

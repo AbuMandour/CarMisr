@@ -8,7 +8,7 @@
 import Foundation
 
 class CarModelService: CarModelProtocol {
-    
+        
     let apiService: ApiProtocol
     
     init(apiService: ApiProtocol) {
@@ -27,13 +27,16 @@ class CarModelService: CarModelProtocol {
                 guard let modelName = modelData.name,let niceName = modelData.niceName else {
                     return nil
                 }
-                return Model(id: modelData.id ?? "\(makeNiceName)_\(niceName)" ,name: modelName, niceName: niceName, imageUrl: URL(string: Defaults.imageUrl)!)
-            }.compactMap{$0}
+                return Model(id: modelData.id ?? "\(makeNiceName)_\(niceName)" ,
+                             name: modelName,
+                             niceName: niceName,
+                             imageUrl: URL(string: Defaults.imageUrl)!)
+            }.compactMap{$0}.uniqueValues()
             for model in models {
-                let imagePath = await getModelImage(makeNiceName: makeNiceName, modelNiceName: model.niceName)
+                let imagePath = await getCarModelImage(makeNiceName: makeNiceName, modelNiceName: model.niceName)
                 if let imagePath = imagePath {
                     model.imageUrl = MediaEndPoint.image(path: imagePath).url ?? URL(string: Defaults.imageUrl)!
-                }                
+                }
             }
             return.success(models)
         case .failure(let error):
@@ -43,7 +46,7 @@ class CarModelService: CarModelProtocol {
     
     
     // here we will get image url only for 2022 only and without duplicated
-    func getModelImage(makeNiceName: String,modelNiceName: String) async -> String? {
+    func getCarModelImage(makeNiceName: String,modelNiceName: String) async -> String? {
         let modelImagesEndPoint = MainEndPoints.modelImages((makeNiceName, modelNiceName))
         let modelIamges = await apiService.fetchItem(urlRequest: modelImagesEndPoint.urlRequest) as Result<ModelImagesData,ApiError>
         switch modelIamges{

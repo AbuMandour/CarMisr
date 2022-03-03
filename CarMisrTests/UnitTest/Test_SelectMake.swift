@@ -32,7 +32,7 @@ class Test_SelectMake : XCTestCase{
     func test_carMakesShouldReturnEmptyArray() async {
         // given
         let pageNumber = 1
-        let expectedMakes = CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData]())
+        let expectedMakes = [CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData]())]
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         //when
         let result = await carMakeService.getCarMakes(pageNumber: pageNumber) as Result<[Make], DataError>
@@ -43,7 +43,7 @@ class Test_SelectMake : XCTestCase{
     func test_carMakesShouldReturnArrayOfMakes() async throws {
         // given
         let pageNumber = 1
-        let expectedMakes = CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData(id: 1 ,name: "Peugeot", niceName: "peugeot" ),MakeData(id: 2, name: "Audi", niceName: "audi"),MakeData(id: 3, name: "Sokda", niceName: "sokda"),MakeData(id: 5, name: "Honda", niceName: nil)])
+        let expectedMakes = [CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData(id: 1 ,name: "Peugeot", niceName: "peugeot" ),MakeData(id: 2, name: "Audi", niceName: "audi"),MakeData(id: 3, name: "Sokda", niceName: "sokda"),MakeData(id: 5, name: "Honda", niceName: nil)])]
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when
@@ -57,7 +57,7 @@ class Test_SelectMake : XCTestCase{
     func test_carMakesShouldSortedAlphabetically() async throws {
         // given
         let pageNumber = 1
-        let expectedMakes = CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData(id: 1 ,name: "Peugeot", niceName: "peugeot" ),MakeData(id: 2, name: "Audi", niceName: "audi"),MakeData(id: 3, name: "Sokda", niceName: "sokda"),MakeData(id: 4, name: "Honda", niceName: nil)])
+        let expectedMakes = [CarMakeData(totalNumber: nil, totalPages: nil, makes: [MakeData(id: 1 ,name: "Peugeot", niceName: "peugeot" ),MakeData(id: 2, name: "Audi", niceName: "audi"),MakeData(id: 3, name: "Sokda", niceName: "sokda"),MakeData(id: 4, name: "Honda", niceName: nil)])]
         apiServiceMock.behavior = .alwaysSucceed(expectedMakes)
         
         //when

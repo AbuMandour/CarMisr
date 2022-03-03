@@ -78,6 +78,7 @@
 		EA7EFCD327D04A3D00D64FC8 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCCE27D04A3D00D64FC8 /* StyleTableViewCell.swift */; };
 		EA7EFCD427D04A3D00D64FC8 /* StyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFCD027D04A3D00D64FC8 /* StyleViewController.xib */; };
 		EA7EFCD527D04A3D00D64FC8 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCD127D04A3D00D64FC8 /* StyleViewController.swift */; };
+		EA7EFCD727D08CCC00D64FC8 /* Test_SelectStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCD627D08CCC00D64FC8 /* Test_SelectStyle.swift */; };
 		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
 		EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */; };
 		EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */; };
@@ -191,6 +192,7 @@
 		EA7EFCCE27D04A3D00D64FC8 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleTableViewCell.swift; sourceTree = "<group>"; };
 		EA7EFCD027D04A3D00D64FC8 /* StyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StyleViewController.xib; sourceTree = "<group>"; };
 		EA7EFCD127D04A3D00D64FC8 /* StyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		EA7EFCD627D08CCC00D64FC8 /* Test_SelectStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectStyle.swift; sourceTree = "<group>"; };
 		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectMake.swift; sourceTree = "<group>"; };
 		EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
@@ -673,6 +675,7 @@
 			children = (
 				EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */,
 				EA93A3BF27C1721500B0D85B /* Test_SelectModel.swift */,
+				EA7EFCD627D08CCC00D64FC8 /* Test_SelectStyle.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -1029,6 +1032,7 @@
 				EA307D6027C3CC260034460F /* Test_ApiService.swift in Sources */,
 				EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */,
 				EA93A3C027C1721500B0D85B /* Test_SelectModel.swift in Sources */,
+				EA7EFCD727D08CCC00D64FC8 /* Test_SelectStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
