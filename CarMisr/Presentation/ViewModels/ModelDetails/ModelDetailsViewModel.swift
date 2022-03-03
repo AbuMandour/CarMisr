@@ -13,19 +13,20 @@ final class ModelDetailsViewModel{
     // MARK: - Properties
     private var disposeBag = DisposeBag()
     private var modelSpecs = PublishRelay<[ModelSpecs]>()
-    private var isLoading = BehaviorRelay<Bool>(value: false)
+    var model: Model?
     weak var coordinator: MainCoordinator?
-    var modelNiceName: String?
+    var carModelDetailsService: CarModelDetailsProtocol?
     struct Input {
         let didAppear: Driver<Void>
     }    
     struct Output{
         let modelSpecs: Observable<[ModelSpecs]>
-        let isloading: Observable<Bool>
     }
     
     //MARK: - Initailizer
-    init() { }
+    init(carModelDetailsService: CarModelDetailsProtocol) {
+        self.carModelDetailsService = carModelDetailsService
+    }
         
     //MARK: - Public Method
     func transform(input: Input) -> Output{
@@ -34,21 +35,20 @@ final class ModelDetailsViewModel{
                 guard let self = self else { return }
                 self.loadData()
             }.disposed(by: disposeBag)
-        return Output(modelSpecs: modelSpecs.asObservable(), isloading: isLoading.asObservable())
+        return Output(modelSpecs: modelSpecs.asObservable())
     }
     
     //MARK: - Internal Method
     private func loadData(){
         Task{
-            isLoading.accept(true)
-            await requestMakes()
-            isLoading.accept(false)
+            requestModelSpecs()
         }
     }
             
-    private func requestMakes() async{
-        try? await Task.sleep(nanoseconds: 3000000000)
-        modelSpecs.accept([ModelSpecs]())
+    private func requestModelSpecs() {
+        guard let model = model else {return}
+        let specs = carModelDetailsService?.getSpecsForModel(model: model)
+        modelSpecs.accept(specs ?? [ModelSpecs]())
     }
 
 }

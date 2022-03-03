@@ -56,8 +56,6 @@
 		EA5904C727BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */; };
 		EA5904CA27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */; };
 		EA5904CB27BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */; };
-		EA5904CE27BE2D8700AF22A7 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */; };
-		EA5904CF27BE2D8700AF22A7 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */; };
 		EA5904D227BE2E6D00AF22A7 /* ModelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */; };
 		EA5904D327BE2E6D00AF22A7 /* ModelDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */; };
 		EA5904D527BE2F8D00AF22A7 /* ModelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */; };
@@ -66,7 +64,11 @@
 		EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */; };
 		EA7EFCA727CE603B00D64FC8 /* CarStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */; };
 		EA7EFCA927CE6A0B00D64FC8 /* CarColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCA827CE6A0B00D64FC8 /* CarColorData.swift */; };
-		EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */; };
+		EA7EFCB727D02D7400D64FC8 /* CarModelDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */; };
+		EA7EFCB927D02DA300D64FC8 /* CarModelDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */; };
+		EA7EFCBB27D0349D00D64FC8 /* CollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */; };
+		EA7EFCBD27D0356D00D64FC8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */; };
+		EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */; };
 		EA8725BC27BEC39100860CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BB27BEC39100860CB4 /* ColorExtension.swift */; };
 		EA8725BF27BEC86E00860CB4 /* Test_SelectMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */; };
 		EA8725C227BECA3200860CB4 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */; };
@@ -158,8 +160,6 @@
 		EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionModelDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
-		EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA5904D027BE2E6D00AF22A7 /* ModelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewController.swift; sourceTree = "<group>"; };
 		EA5904D127BE2E6D00AF22A7 /* ModelDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelDetailsViewController.xib; sourceTree = "<group>"; };
 		EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -168,7 +168,11 @@
 		EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModelDetailsCellViewModel.swift; sourceTree = "<group>"; };
 		EA7EFCA627CE603B00D64FC8 /* CarStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStyleData.swift; sourceTree = "<group>"; };
 		EA7EFCA827CE6A0B00D64FC8 /* CarColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColorData.swift; sourceTree = "<group>"; };
-		EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
+		EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDetailsService.swift; sourceTree = "<group>"; };
+		EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDetailsProtocol.swift; sourceTree = "<group>"; };
+		EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA8725BB27BEC39100860CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EA8725BE27BEC86E00860CB4 /* Test_SelectMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SelectMake.swift; sourceTree = "<group>"; };
 		EA8725C127BECA3200860CB4 /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
@@ -361,6 +365,8 @@
 				EA307D6127C3E4BF0034460F /* TableViewCellExtension.swift */,
 				EA307D6327C3E52D0034460F /* NameDescribable.swift */,
 				EA57AE6027CD8E8F00260F4B /* SequenceExtension.swift */,
+				EA7EFCBA27D0349D00D64FC8 /* CollectionViewCellExtension.swift */,
+				EA7EFCBC27D0356D00D64FC8 /* ViewExtension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			children = (
 				EA8725C927BED54300860CB4 /* CarMakeProtocol.swift */,
 				EA307D4727C272290034460F /* CarModelProtocol.swift */,
+				EA7EFCB827D02DA300D64FC8 /* CarModelDetailsProtocol.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -521,6 +528,7 @@
 			children = (
 				EA93A3B327BFDBE300B0D85B /* CarMakeService.swift */,
 				EA307D4927C272770034460F /* CarModelService.swift */,
+				EA7EFCB627D02D7400D64FC8 /* CarModelDetailsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -540,7 +548,6 @@
 				EA5904D427BE2F8D00AF22A7 /* ModelDetailsViewModel.swift */,
 				EA5904D827BE39E800AF22A7 /* NormalModelDetailsCellViewModel.swift */,
 				EA5904DA27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift */,
-				EA8725B927BEC0FF00860CB4 /* ColorCellViewModel.swift */,
 			);
 			path = ModelDetails;
 			sourceTree = "<group>";
@@ -597,8 +604,7 @@
 				EA5904C527BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.xib */,
 				EA5904C827BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.swift */,
 				EA5904C927BE2D6E00AF22A7 /* CollectionModelDetailsTableViewCell.xib */,
-				EA5904CC27BE2D8700AF22A7 /* ColorCollectionViewCell.swift */,
-				EA5904CD27BE2D8700AF22A7 /* ColorCollectionViewCell.xib */,
+				EA7EFCBE27D03D1400D64FC8 /* ColorCollectionViewCell.swift */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -753,7 +759,6 @@
 			files = (
 				EA0F9F5F27BC07730096CFB0 /* MakeViewController.xib in Resources */,
 				EA0F9EF327BBFB780096CFB0 /* LaunchScreen.storyboard in Resources */,
-				EA5904CF27BE2D8700AF22A7 /* ColorCollectionViewCell.xib in Resources */,
 				EA0F9EF027BBFB780096CFB0 /* Assets.xcassets in Resources */,
 				EA0F9F7427BC46760096CFB0 /* ModelTableViewCell.xib in Resources */,
 				EA0F9F6927BC40180096CFB0 /* MakeTableViewCell.xib in Resources */,
@@ -899,10 +904,10 @@
 				EA307D7327C40DA70034460F /* MainEndPoints.swift in Sources */,
 				EA0F9F5227BC03700096CFB0 /* ApiProtocol.swift in Sources */,
 				EAE2183327BDB1E100065763 /* ObservableTypeExtension.swift in Sources */,
-				EA5904CE27BE2D8700AF22A7 /* ColorCollectionViewCell.swift in Sources */,
 				EA0F9F7F27BC4CC90096CFB0 /* ViewCellDelegate.swift in Sources */,
 				EA5904DB27BE39FF00AF22A7 /* CollectionModelDetailsCellViewModel.swift in Sources */,
 				EA0F9F6327BC3DEB0096CFB0 /* Colors.swift in Sources */,
+				EA7EFCBD27D0356D00D64FC8 /* ViewExtension.swift in Sources */,
 				EA0F9F5B27BC064D0096CFB0 /* MainCoordinator.swift in Sources */,
 				EA307D4827C272290034460F /* CarModelProtocol.swift in Sources */,
 				EA0F9F5327BC03700096CFB0 /* ApiService.swift in Sources */,
@@ -910,7 +915,9 @@
 				EA0F9F8327BC50900096CFB0 /* ModelViewModel.swift in Sources */,
 				EA0F9EE727BBFB760096CFB0 /* AppDelegate.swift in Sources */,
 				EA307D4E27C2D1520034460F /* Defaults.swift in Sources */,
+				EA7EFCBF27D03D1400D64FC8 /* ColorCollectionViewCell.swift in Sources */,
 				EA307D7527C4550C0034460F /* ModelImagesData.swift in Sources */,
+				EA7EFCB727D02D7400D64FC8 /* CarModelDetailsService.swift in Sources */,
 				EA0F9F6F27BC45BD0096CFB0 /* ModelViewController.swift in Sources */,
 				EA93A3B427BFDBE300B0D85B /* CarMakeService.swift in Sources */,
 				EA0F9F7327BC46760096CFB0 /* ModelTableViewCell.swift in Sources */,
@@ -927,6 +934,7 @@
 				EA0F9F8527BC51C70096CFB0 /* Model.swift in Sources */,
 				EA307D4A27C272770034460F /* CarModelService.swift in Sources */,
 				EA93A3B927BFDCDF00B0D85B /* Keys.swift in Sources */,
+				EA7EFCBB27D0349D00D64FC8 /* CollectionViewCellExtension.swift in Sources */,
 				EA5904C627BE2D5600AF22A7 /* NormalModelDetailsTableViewCell.swift in Sources */,
 				EA0F9F7827BC4AC90096CFB0 /* MakeViewModel.swift in Sources */,
 				EA307D5127C2D8430034460F /* PercentLayoutConstraint.swift in Sources */,
@@ -935,8 +943,8 @@
 				EA0F9F5127BC03700096CFB0 /* ApiError.swift in Sources */,
 				EA0F9F5927BC056F0096CFB0 /* AppCoordinator.swift in Sources */,
 				EA0F9F7C27BC4B200096CFB0 /* Make.swift in Sources */,
+				EA7EFCB927D02DA300D64FC8 /* CarModelDetailsProtocol.swift in Sources */,
 				EA8725CC27BED60500860CB4 /* DataError.swift in Sources */,
-				EA8725BA27BEC0FF00860CB4 /* ColorCellViewModel.swift in Sources */,
 				EAE2183527BDC11F00065763 /* TableViewExtension.swift in Sources */,
 				EA57AE6127CD8E8F00260F4B /* SequenceExtension.swift in Sources */,
 				EA93A3BB27BFDF6A00B0D85B /* CarMakeData.swift in Sources */,

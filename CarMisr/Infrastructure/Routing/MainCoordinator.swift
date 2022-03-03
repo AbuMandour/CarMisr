@@ -38,9 +38,9 @@ class MainCoordinator: AppCoordinator {
         navigationStack.pop()
     }
     
-    func showModelDetails(modelNiceName: String) {
-        let modelDetailsViewModel = ModelDetailsViewModel()
-        modelDetailsViewModel.modelNiceName = modelNiceName
+    func showModelDetails(model: Model) {
+        let modelDetailsViewModel = ModelDetailsViewModel(carModelDetailsService: CarModelDetailsService())
+        modelDetailsViewModel.model = model
         modelDetailsViewModel.coordinator = self
         let modelDetailsViewController = ModelDetailsViewController(modelDetailsViewModel: modelDetailsViewModel)
         navigationStack.push(viewController: modelDetailsViewController)

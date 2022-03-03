@@ -34,6 +34,11 @@ class CollectionModelDetailsTableViewCell: UITableViewCell, ViewCellDelegate , U
     }
     
     //MARK: - Internal Method
+    private func setupColorCollectionView(){
+        collectionView.rx.setDelegate(self).disposed(by: disposeBag)        
+        collectionView.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
     private func bindViewModel() {
         let layoutSubViews = rx.sentMessage(#selector(UITableViewCell.layoutSubviews))
             .take(1)
@@ -47,13 +52,15 @@ class CollectionModelDetailsTableViewCell: UITableViewCell, ViewCellDelegate , U
             .disposed(by: disposeBag)
         output.values
             .bind(to: collectionView.rx.items(cellIdentifier: cellIdentifier, cellType: ColorCollectionViewCell.self)){ (row, color, cell) in
-                
+                cell.configure(colorHex: color)
             }.disposed(by: disposeBag)
 
     }
-    
-    private func setupColorCollectionView(){
-        collectionView.rx.setDelegate(self).disposed(by: disposeBag)        
-        collectionView.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+}
+
+extension CollectionModelDetailsTableViewCell : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
+    
 }

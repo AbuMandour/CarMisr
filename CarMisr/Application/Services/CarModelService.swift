@@ -54,14 +54,15 @@ class CarModelService: CarModelProtocol {
                 return Model(id: modelId,
                              name: name,
                              modelNiceName: modelNiceName,
-                             imageUrl: URL(string: Defaults.imageUrl)!, // we will add image later from another API call
+                             imageUrl: URL(string: Defaults.imageUrl)!, //this default value and we will add image later from another API call
                              styleId: id,
                              transmissionType: styleData.transmissionType ?? "-",
                              engineType: styleData.engineType ?? "-",
                              engineSize: String(styleData.engineSize ?? 0),
                              numberOfSeats: String(styleData.numberOfSeats ?? 0),
+                             vehicleStyle: styleData.categories?.vehicleStyle?.first ?? "-",
                              vehicleType: styleData.categories?.vehicleType?.first ?? "-",
-                             colors: [String]()) // we will add colors later from another API call
+                             colors: [String]()) //this default value and we will add colors later from another API call
             }.compactMap{$0}.uniqueValues()
             return.success(models)
         case .failure(let error):
@@ -97,7 +98,7 @@ class CarModelService: CarModelProtocol {
             guard let colors = modelColorData.colors , !colors.isEmpty else {
                 return nil
             }
-            return colors.compactMap { $0.colorChips?.primary?.hex }
+            return colors.compactMap {  $0.colorChips?.primary?.hex }
         default:
             return nil
         }

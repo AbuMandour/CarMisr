@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModelDetailsViewController" customModule="CarMisr" customModuleProvider="target">
             <connections>
                 <outlet property="detailsTableView" destination="NvT-2H-wpl" id="qta-Lm-XrQ"/>
-                <outlet property="mainActivityIndicator" destination="yQ4-dL-XEi" id="e8B-p9-PZj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,21 +19,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NvT-2H-wpl" userLabel="detailsTableView">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NvT-2H-wpl" userLabel="detailsTableView">
                     <rect key="frame" x="20" y="44" width="374" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yQ4-dL-XEi" userLabel="mainActivityIndicator">
-                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="yQ4-dL-XEi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AAJ-qg-G4n"/>
                 <constraint firstItem="NvT-2H-wpl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JrE-11-Ee7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NvT-2H-wpl" secondAttribute="trailing" constant="20" id="TbC-Hj-HNw"/>
-                <constraint firstItem="yQ4-dL-XEi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YPX-GS-pfm"/>
                 <constraint firstItem="NvT-2H-wpl" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gdX-LO-Rwo"/>
                 <constraint firstItem="NvT-2H-wpl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gkI-ma-HKZ"/>
             </constraints>

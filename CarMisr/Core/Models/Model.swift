@@ -8,7 +8,7 @@
 import Foundation
 
 class Model : Equatable , Hashable {
-    internal init(id: String, name: String, modelNiceName: String, imageUrl: URL, styleId: Int, transmissionType: String, engineType: String, engineSize: String, numberOfSeats: String, vehicleType: String, colors: [String]) {
+    internal init(id: String, name: String, modelNiceName: String, imageUrl: URL, styleId: Int, transmissionType: String, engineType: String, engineSize: String, numberOfSeats: String, vehicleStyle: String, vehicleType: String, colors: [String]) {
         self.id = id
         self.name = name
         self.modelNiceName = modelNiceName
@@ -18,7 +18,8 @@ class Model : Equatable , Hashable {
         self.engineType = engineType
         self.engineSize = engineSize
         self.numberOfSeats = numberOfSeats
-        self.vehicleType = vehicleType
+        self.vehicleStyle = vehicleStyle
+        self.vehicleSize = vehicleType
         self.colors = colors
     }
     
@@ -31,7 +32,8 @@ class Model : Equatable , Hashable {
     var engineType: String
     var engineSize: String
     var numberOfSeats: String
-    var vehicleType: String
+    var vehicleSize: String
+    var vehicleStyle: String
     var colors: [String]
     
     static func == (lhs: Model, rhs: Model) -> Bool {

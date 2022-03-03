@@ -23,7 +23,8 @@ class ModelDetailsViewController: UIViewController , UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupMakeTableView()
+        bind()
     }
     
     //MARK: - Initializer
@@ -37,8 +38,8 @@ class ModelDetailsViewController: UIViewController , UITableViewDelegate {
     
     //MARK: - Internal Method
       private func setupMakeTableView(){
-          detailsTableView.register(MakeTableViewCell.self, forCellReuseIdentifier: normalModelDetailsViewCell)
-          detailsTableView.register(MakeTableViewCell.self, forCellReuseIdentifier: collectionModelDetailsViewCell)
+          detailsTableView.register(NormalModelDetailsTableViewCell.nib(), forCellReuseIdentifier: normalModelDetailsViewCell)
+          detailsTableView.register(CollectionModelDetailsTableViewCell.nib(), forCellReuseIdentifier: collectionModelDetailsViewCell)
           detailsTableView.rx.setDelegate(self).disposed(by: disposeBag)
       }
       
@@ -62,10 +63,5 @@ class ModelDetailsViewController: UIViewController , UITableViewDelegate {
                       return cell
                   }
               }.disposed(by: disposeBag)
-          outup.isloading
-              .observe(on: MainScheduler.instance)
-              .map(!)
-              .bind(to: mainActivityIndicator.rx.isHidden)
-              .disposed(by: disposeBag)
       }
 }
