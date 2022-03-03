@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController , UITableViewDelegate {
     //MARK: - Initializer
     init(detailsViewModel: DetailsViewModel) {
         self.detailsViewModel = detailsViewModel
-        super.init(nibName: "ModelDetailsViewController", bundle: nil)
+        super.init(nibName: "DetailsViewController", bundle: nil)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
