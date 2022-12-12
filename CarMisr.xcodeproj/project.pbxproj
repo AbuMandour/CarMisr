@@ -286,9 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				EA0F9F4327BC02970096CFB0 /* Infrastructure */,
-				EA0F9F3E27BC02470096CFB0 /* Application */,
-				EA0F9F3F27BC02470096CFB0 /* Core */,
-				EA0F9F3D27BC02470096CFB0 /* Repository */,
+				EA0F9F3F27BC02470096CFB0 /* Application */,
+				EA0F9F4427BC02970096CFB0 /* Networking */,
 				EA0F9F4027BC02480096CFB0 /* Presentation */,
 				EA0F9EF427BBFB780096CFB0 /* Info.plist */,
 			);
@@ -315,38 +314,25 @@
 			path = CarMisrUITests;
 			sourceTree = "<group>";
 		};
-		EA0F9F3D27BC02470096CFB0 /* Repository */ = {
+		EA0F9F3F27BC02470096CFB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9F4427BC02970096CFB0 /* Networking */,
-				EA307D5227C313200034460F /* Data */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		EA0F9F3E27BC02470096CFB0 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				EA307D6B27C409790034460F /* EndPoints */,
-				EA93A3B527BFDC8400B0D85B /* Constants */,
-				EA8725CD27BED67D00860CB4 /* Utilities */,
 				EA307D7827C477A00034460F /* Services */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		EA0F9F3F27BC02470096CFB0 /* Core */ = {
-			isa = PBXGroup;
-			children = (
+				EA8725CD27BED67D00860CB4 /* Utilities */,
+				EA93A3B527BFDC8400B0D85B /* Constants */,
+				EA307D6B27C409790034460F /* EndPoints */,
+				EA307D5227C313200034460F /* Data */,
 				EA0F9F4C27BC02E90096CFB0 /* Models */,
 				EA0F9F4B27BC02E20096CFB0 /* UseCases */,
 			);
-			path = Core;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		EA0F9F4027BC02480096CFB0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F9F4727BC02970096CFB0 /* Routing */,
+				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
 				EA0F9F6127BC07BF0096CFB0 /* Views */,
 				EA0F9F4A27BC02CD0096CFB0 /* ViewModels */,
 			);
@@ -359,8 +345,6 @@
 				EA307D4F27C2D82A0034460F /* Bases */,
 				EA0F9F7D27BC4C9E0096CFB0 /* Delegates */,
 				EA0F9F4527BC02970096CFB0 /* Extenstions */,
-				EA0F9F4727BC02970096CFB0 /* Routing */,
-				EA0F9F4827BC02970096CFB0 /* SystemDesign */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
