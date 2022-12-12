@@ -114,13 +114,19 @@
 /* Begin PBXFileReference section */
 		0B7FA9FBD26BF55A4AF6CA8A /* Pods_CarMisrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarMisrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1757DE203DCB3A0A40068A4B /* Pods-CarMisr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr.debug.xcconfig"; path = "Target Support Files/Pods-CarMisr/Pods-CarMisr.debug.xcconfig"; sourceTree = "<group>"; };
+		1825F9B7F67D6EE9B48E3748 /* Pods-CarMisr.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr.debug-development.xcconfig"; path = "Target Support Files/Pods-CarMisr/Pods-CarMisr.debug-development.xcconfig"; sourceTree = "<group>"; };
+		1F2011D78BF05E1FF909F07E /* Pods-CarMisrTests.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisrTests.release-development.xcconfig"; path = "Target Support Files/Pods-CarMisrTests/Pods-CarMisrTests.release-development.xcconfig"; sourceTree = "<group>"; };
+		387DAE6AAE6F83A79F791179 /* Pods-CarMisr-CarMisrUITests.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr-CarMisrUITests.release-development.xcconfig"; path = "Target Support Files/Pods-CarMisr-CarMisrUITests/Pods-CarMisr-CarMisrUITests.release-development.xcconfig"; sourceTree = "<group>"; };
 		5EABD5BA220B00A8BD444BEE /* Pods-CarMisr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr.release.xcconfig"; path = "Target Support Files/Pods-CarMisr/Pods-CarMisr.release.xcconfig"; sourceTree = "<group>"; };
 		60CAC2260CABD4076003EA87 /* Pods-CarMisr-CarMisrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr-CarMisrUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarMisr-CarMisrUITests/Pods-CarMisr-CarMisrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		77F7EB8E15262FC5C4D393A3 /* Pods-CarMisrTests.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisrTests.debug-development.xcconfig"; path = "Target Support Files/Pods-CarMisrTests/Pods-CarMisrTests.debug-development.xcconfig"; sourceTree = "<group>"; };
 		79C961A6C9C2B38FE6A759C2 /* Pods-CarMisr-CarMisrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr-CarMisrUITests.release.xcconfig"; path = "Target Support Files/Pods-CarMisr-CarMisrUITests/Pods-CarMisr-CarMisrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7EA938846703BA71F8E590B1 /* Pods_CarMisr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarMisr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA994B8BF04EE7649C5A11EC /* Pods-CarMisr.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr.release-development.xcconfig"; path = "Target Support Files/Pods-CarMisr/Pods-CarMisr.release-development.xcconfig"; sourceTree = "<group>"; };
 		D43F064CF816FE4C432D82FE /* Pods-CarMisrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisrTests.release.xcconfig"; path = "Target Support Files/Pods-CarMisrTests/Pods-CarMisrTests.release.xcconfig"; sourceTree = "<group>"; };
 		D442F5E60D3B6728CB199B60 /* Pods_CarMisr_CarMisrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarMisr_CarMisrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA0F9EE327BBFB760096CFB0 /* CarMisr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMisr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD539FB6008554B39EA80D06 /* Pods-CarMisr-CarMisrUITests.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarMisr-CarMisrUITests.debug-development.xcconfig"; path = "Target Support Files/Pods-CarMisr-CarMisrUITests/Pods-CarMisr-CarMisrUITests.debug-development.xcconfig"; sourceTree = "<group>"; };
+		EA0F9EE327BBFB760096CFB0 /* CarMisr-Production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarMisr-Production.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0F9EE627BBFB760096CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA0F9EEF27BBFB780096CFB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0F9EF227BBFB780096CFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -256,6 +262,12 @@
 				79C961A6C9C2B38FE6A759C2 /* Pods-CarMisr-CarMisrUITests.release.xcconfig */,
 				FEBAE772881C22B82EA3DEFC /* Pods-CarMisrTests.debug.xcconfig */,
 				D43F064CF816FE4C432D82FE /* Pods-CarMisrTests.release.xcconfig */,
+				1825F9B7F67D6EE9B48E3748 /* Pods-CarMisr.debug-development.xcconfig */,
+				AA994B8BF04EE7649C5A11EC /* Pods-CarMisr.release-development.xcconfig */,
+				DD539FB6008554B39EA80D06 /* Pods-CarMisr-CarMisrUITests.debug-development.xcconfig */,
+				387DAE6AAE6F83A79F791179 /* Pods-CarMisr-CarMisrUITests.release-development.xcconfig */,
+				77F7EB8E15262FC5C4D393A3 /* Pods-CarMisrTests.debug-development.xcconfig */,
+				1F2011D78BF05E1FF909F07E /* Pods-CarMisrTests.release-development.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -275,7 +287,7 @@
 		EA0F9EE427BBFB760096CFB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F9EE327BBFB760096CFB0 /* CarMisr.app */,
+				EA0F9EE327BBFB760096CFB0 /* CarMisr-Production.app */,
 				EA0F9EF927BBFB780096CFB0 /* CarMisrTests.xctest */,
 				EA0F9F0327BBFB780096CFB0 /* CarMisrUITests.xctest */,
 			);
@@ -709,7 +721,7 @@
 			);
 			name = CarMisr;
 			productName = CarMisr;
-			productReference = EA0F9EE327BBFB760096CFB0 /* CarMisr.app */;
+			productReference = EA0F9EE327BBFB760096CFB0 /* CarMisr-Production.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EA0F9EF827BBFB780096CFB0 /* CarMisrTests */ = {
@@ -727,8 +739,6 @@
 				EA0F9EFB27BBFB780096CFB0 /* PBXTargetDependency */,
 			);
 			name = CarMisrTests;
-			packageProductDependencies = (
-			);
 			productName = CarMisrTests;
 			productReference = EA0F9EF927BBFB780096CFB0 /* CarMisrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -785,8 +795,6 @@
 				Base,
 			);
 			mainGroup = EA0F9EDA27BBFB760096CFB0;
-			packageReferences = (
-			);
 			productRefGroup = EA0F9EE427BBFB760096CFB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1107,7 +1115,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1162,7 +1170,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1178,8 +1186,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarMisr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1191,8 +1201,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DPORD";
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr.production;
+				PRODUCT_NAME = "$(TARGET_NAME)-Production";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1205,8 +1218,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarMisr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1218,8 +1233,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DPORD";
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr.production;
+				PRODUCT_NAME = "$(TARGET_NAME)-Production";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1302,6 +1320,262 @@
 			};
 			name = Release;
 		};
+		EA9C395C29475C8E0041EFA1 /* Debug-Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug-Development";
+		};
+		EA9C395D29475C8E0041EFA1 /* Debug-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1825F9B7F67D6EE9B48E3748 /* Pods-CarMisr.debug-development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarMisr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEV";
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr.development;
+				PRODUCT_NAME = "$(TARGET_NAME)-Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Development";
+		};
+		EA9C395E29475C8E0041EFA1 /* Debug-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77F7EB8E15262FC5C4D393A3 /* Pods-CarMisrTests.debug-development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarMisr.app/CarMisr";
+			};
+			name = "Debug-Development";
+		};
+		EA9C395F29475C8E0041EFA1 /* Debug-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD539FB6008554B39EA80D06 /* Pods-CarMisr-CarMisrUITests.debug-development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarMisr;
+			};
+			name = "Debug-Development";
+		};
+		EA9C396029475CA70041EFA1 /* Release-Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-Development";
+		};
+		EA9C396129475CA70041EFA1 /* Release-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA994B8BF04EE7649C5A11EC /* Pods-CarMisr.release-development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarMisr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEV";
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisr.development;
+				PRODUCT_NAME = "$(TARGET_NAME)-Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-Development";
+		};
+		EA9C396229475CA70041EFA1 /* Release-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F2011D78BF05E1FF909F07E /* Pods-CarMisrTests.release-development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarMisr.app/CarMisr";
+			};
+			name = "Release-Development";
+		};
+		EA9C396329475CA70041EFA1 /* Release-Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387DAE6AAE6F83A79F791179 /* Pods-CarMisr-CarMisrUITests.release-development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abumandour.CarMisrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarMisr;
+			};
+			name = "Release-Development";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1309,7 +1583,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0F9F0B27BBFB780096CFB0 /* Debug */,
+				EA9C395C29475C8E0041EFA1 /* Debug-Development */,
 				EA0F9F0C27BBFB780096CFB0 /* Release */,
+				EA9C396029475CA70041EFA1 /* Release-Development */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1318,7 +1594,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0F9F0E27BBFB780096CFB0 /* Debug */,
+				EA9C395D29475C8E0041EFA1 /* Debug-Development */,
 				EA0F9F0F27BBFB780096CFB0 /* Release */,
+				EA9C396129475CA70041EFA1 /* Release-Development */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1327,7 +1605,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0F9F1127BBFB780096CFB0 /* Debug */,
+				EA9C395E29475C8E0041EFA1 /* Debug-Development */,
 				EA0F9F1227BBFB780096CFB0 /* Release */,
+				EA9C396229475CA70041EFA1 /* Release-Development */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1336,7 +1616,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0F9F1427BBFB780096CFB0 /* Debug */,
+				EA9C395F29475C8E0041EFA1 /* Debug-Development */,
 				EA0F9F1527BBFB780096CFB0 /* Release */,
+				EA9C396329475CA70041EFA1 /* Release-Development */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
